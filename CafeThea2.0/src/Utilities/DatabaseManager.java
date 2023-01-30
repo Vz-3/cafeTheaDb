@@ -540,7 +540,7 @@ public class DatabaseManager {
         //cafeTheaDb.deleteOne("menuitem", "1");
         //cafeTheaDb.dropDatabase("cafetheadb");
         //cafeTheaDb.selectAll("menuitem");
-        cafeTheaDb.selectId("menuitem", "3");
+        //cafeTheaDb.selectId("menuitem", "3");
         //cafeTheaDb.selectQuery("menuitem", "menuitemcost", "75");
         //cafeTheaDb.sortById("menuitem", false);
         //cafeTheaDb.sortByQuery("menuitem", "menuitemname", true);
