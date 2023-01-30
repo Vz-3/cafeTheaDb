@@ -16,6 +16,11 @@ public class Database extends javax.swing.JFrame {
     /**
      * Creates new form Database
      */
+    boolean inventory = true;
+    boolean orders = false;
+    boolean services = false;
+    boolean suppliers = false;
+
     public Database() {
         initComponents();
     }
@@ -29,7 +34,14 @@ public class Database extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ordersPanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        invPanelBtn = new javax.swing.JButton();
+        ordersSummBtn = new javax.swing.JButton();
+        servicesSummBtn = new javax.swing.JButton();
+        suppliersSummBtn1 = new javax.swing.JButton();
+        mainPanel = new javax.swing.JPanel();
         inventPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         itemNameTF = new javax.swing.JTextField();
@@ -39,31 +51,107 @@ public class Database extends javax.swing.JFrame {
         createBtn = new javax.swing.JButton();
         editBtn = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
-        editBtn1 = new javax.swing.JButton();
+        backBtn1 = new javax.swing.JButton();
+        ExitBtn1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jPanel2 = new javax.swing.JPanel();
-        invPanelBtn = new javax.swing.JButton();
-        ordersSummBtn = new javax.swing.JButton();
-        servicesSummBtn = new javax.swing.JButton();
+        ordersPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        allOrdersTable = new javax.swing.JTable();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        editOrdersBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
+        exitBtn = new javax.swing.JButton();
+        servicesPanel = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        editServicesBtn = new javax.swing.JButton();
+        backBtn2 = new javax.swing.JButton();
+        exitBtn2 = new javax.swing.JButton();
+        suppliersPanel = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        itemNameTF1 = new javax.swing.JTextField();
+        quantityTF1 = new javax.swing.JTextField();
+        createBtn1 = new javax.swing.JButton();
+        editBtn1 = new javax.swing.JButton();
+        deleteBtn1 = new javax.swing.JButton();
+        backBtn3 = new javax.swing.JButton();
+        ExitBtn2 = new javax.swing.JButton();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 450));
         setResizable(false);
 
-        javax.swing.GroupLayout ordersPanelLayout = new javax.swing.GroupLayout(ordersPanel);
-        ordersPanel.setLayout(ordersPanelLayout);
-        ordersPanelLayout.setHorizontalGroup(
-            ordersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jPanel8.setPreferredSize(new java.awt.Dimension(350, 350));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        ordersPanelLayout.setVerticalGroup(
-            ordersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(ordersPanel, java.awt.BorderLayout.CENTER);
+        jPanel2.add(jPanel8, java.awt.BorderLayout.EAST);
+
+        jPanel9.setPreferredSize(new java.awt.Dimension(450, 450));
+        jPanel9.setLayout(new java.awt.GridLayout(1, 3));
+
+        invPanelBtn.setText("Inventory");
+        invPanelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                invPanelBtnActionPerformed(evt);
+            }
+        });
+        jPanel9.add(invPanelBtn);
+
+        ordersSummBtn.setText("Orders");
+        ordersSummBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ordersSummBtnActionPerformed(evt);
+            }
+        });
+        jPanel9.add(ordersSummBtn);
+
+        servicesSummBtn.setText("Services");
+        servicesSummBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                servicesSummBtnActionPerformed(evt);
+            }
+        });
+        jPanel9.add(servicesSummBtn);
+
+        suppliersSummBtn1.setText("Suppliers");
+        suppliersSummBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                suppliersSummBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(suppliersSummBtn1);
+
+        jPanel2.add(jPanel9, java.awt.BorderLayout.WEST);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.NORTH);
+
+        mainPanel.setLayout(new java.awt.CardLayout());
 
         inventPanel.setPreferredSize(new java.awt.Dimension(600, 450));
         inventPanel.setLayout(new java.awt.BorderLayout());
@@ -112,10 +200,17 @@ public class Database extends javax.swing.JFrame {
 
         deleteBtn.setText("Delete");
 
-        editBtn1.setText("Edit");
-        editBtn1.addActionListener(new java.awt.event.ActionListener() {
+        backBtn1.setText("Back");
+        backBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editBtn1ActionPerformed(evt);
+                backBtn1ActionPerformed(evt);
+            }
+        });
+
+        ExitBtn1.setText("Exit");
+        ExitBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtn1ActionPerformed(evt);
             }
         });
 
@@ -123,9 +218,17 @@ public class Database extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(backBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ExitBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(createBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,11 +258,13 @@ public class Database extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(101, Short.MAX_VALUE))
+                    .addComponent(backBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExitBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         inventPanel.add(jPanel3, java.awt.BorderLayout.EAST);
@@ -189,59 +294,294 @@ public class Database extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setHeaderValue("Quantity");
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setHeaderValue("Supplier");
             jTable1.getColumnModel().getColumn(3).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setHeaderValue("Status");
         }
 
         jPanel4.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         inventPanel.add(jPanel4, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(inventPanel, java.awt.BorderLayout.CENTER);
+        mainPanel.add(inventPanel, "card4");
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(50, 50));
+        ordersPanel.setLayout(new java.awt.BorderLayout());
 
-        invPanelBtn.setText("Inventory");
-        invPanelBtn.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setPreferredSize(new java.awt.Dimension(200, 200));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        allOrdersTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Client", "Orders", "Time Slot", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(allOrdersTable);
+
+        jPanel1.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        ordersPanel.add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        jPanel5.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        jPanel5.add(jPanel6, java.awt.BorderLayout.CENTER);
+
+        jPanel7.setPreferredSize(new java.awt.Dimension(400, 400));
+        jPanel7.setLayout(new java.awt.GridLayout(1, 3));
+
+        editOrdersBtn.setText("Edit");
+        jPanel7.add(editOrdersBtn);
+
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                invPanelBtnActionPerformed(evt);
+                backBtnActionPerformed(evt);
+            }
+        });
+        jPanel7.add(backBtn);
+
+        exitBtn.setText("Exit");
+        exitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtnActionPerformed(evt);
+            }
+        });
+        jPanel7.add(exitBtn);
+
+        jPanel5.add(jPanel7, java.awt.BorderLayout.EAST);
+
+        ordersPanel.add(jPanel5, java.awt.BorderLayout.SOUTH);
+
+        mainPanel.add(ordersPanel, "card3");
+
+        servicesPanel.setPreferredSize(new java.awt.Dimension(600, 450));
+        servicesPanel.setLayout(new java.awt.BorderLayout());
+
+        jPanel10.setLayout(new java.awt.BorderLayout());
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Client", "Service", "Time Slot", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(jTable2);
+
+        jPanel10.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+
+        servicesPanel.add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        jPanel11.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel11.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel11.add(jPanel12, java.awt.BorderLayout.CENTER);
+
+        jPanel13.setPreferredSize(new java.awt.Dimension(400, 400));
+        jPanel13.setLayout(new java.awt.GridLayout(1, 3));
+
+        editServicesBtn.setText("Edit");
+        jPanel13.add(editServicesBtn);
+
+        backBtn2.setText("Back");
+        backBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(backBtn2);
+
+        exitBtn2.setText("Exit");
+        exitBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(exitBtn2);
+
+        jPanel11.add(jPanel13, java.awt.BorderLayout.EAST);
+
+        servicesPanel.add(jPanel11, java.awt.BorderLayout.SOUTH);
+
+        mainPanel.add(servicesPanel, "card2");
+
+        suppliersPanel.setLayout(new java.awt.BorderLayout());
+
+        jPanel14.setPreferredSize(new java.awt.Dimension(250, 250));
+
+        itemNameTF1.setForeground(new java.awt.Color(204, 204, 204));
+        itemNameTF1.setText("Name");
+        itemNameTF1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                itemNameTF1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                itemNameTF1FocusLost(evt);
             }
         });
 
-        ordersSummBtn.setText("Orders");
-        ordersSummBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ordersSummBtnActionPerformed(evt);
+        quantityTF1.setForeground(new java.awt.Color(204, 204, 204));
+        quantityTF1.setText("Contact");
+        quantityTF1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                quantityTF1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                quantityTF1FocusLost(evt);
             }
         });
 
-        servicesSummBtn.setText("Services");
+        createBtn1.setText("Create");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(invPanelBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ordersSummBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(servicesSummBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+        editBtn1.setText("Edit");
+
+        deleteBtn1.setText("Delete");
+
+        backBtn3.setText("Back");
+        backBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn3ActionPerformed(evt);
+            }
+        });
+
+        ExitBtn2.setText("Exit");
+        ExitBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtn2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(deleteBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(66, 66, 66))
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(backBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                                .addComponent(ExitBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                                .addComponent(createBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(editBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(quantityTF1)
+                        .addComponent(itemNameTF1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(servicesSummBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                    .addComponent(ordersSummBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(invPanelBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(itemNameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(quantityTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(deleteBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExitBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
         );
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.NORTH);
+        suppliersPanel.add(jPanel14, java.awt.BorderLayout.EAST);
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel15.setLayout(new java.awt.BorderLayout());
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Name", "Contact"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTable3);
+
+        jPanel15.add(jScrollPane4, java.awt.BorderLayout.CENTER);
+
+        suppliersPanel.add(jPanel15, java.awt.BorderLayout.CENTER);
+
+        mainPanel.add(suppliersPanel, "card5");
+
+        getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -303,19 +643,103 @@ public class Database extends javax.swing.JFrame {
 
     private void invPanelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invPanelBtnActionPerformed
         // TODO add your handling code here:
-        ordersPanel.setVisible(false);
-        inventPanel.setVisible(true);
+        if(ordersPanel.isVisible() || servicesPanel.isVisible() || suppliersPanel.isVisible()){
+            ordersPanel.setVisible(false);
+            servicesPanel.setVisible(false);
+            inventPanel.setVisible(true);
+            suppliersPanel.setVisible(false);
+        }  
     }//GEN-LAST:event_invPanelBtnActionPerformed
 
     private void ordersSummBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ordersSummBtnActionPerformed
         // TODO add your handling code here:
-        ordersPanel.setVisible(true);
-        inventPanel.setVisible(false);
+        if(inventPanel.isVisible() || servicesPanel.isVisible()|| suppliersPanel.isVisible()){
+            inventPanel.setVisible(false);
+            servicesPanel.setVisible(false);
+            ordersPanel.setVisible(true);
+            suppliersPanel.setVisible(false);
+        }    
     }//GEN-LAST:event_ordersSummBtnActionPerformed
 
-    private void editBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtn1ActionPerformed
+    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_editBtn1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitBtnActionPerformed
+
+    private void exitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitBtn2ActionPerformed
+
+    private void backBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+            MainHub mainhub = new MainHub();
+            mainhub.show();
+    }//GEN-LAST:event_backBtn2ActionPerformed
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+            MainHub mainhub = new MainHub();
+            mainhub.show();
+    }//GEN-LAST:event_backBtnActionPerformed
+
+    private void servicesSummBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesSummBtnActionPerformed
+        // TODO add your handling code here:
+        if(ordersPanel.isVisible() || inventPanel.isVisible()|| suppliersPanel.isVisible()){
+            ordersPanel.setVisible(false);
+            inventPanel.setVisible(false);
+            servicesPanel.setVisible(true);
+            suppliersPanel.setVisible(false);
+        }
+    }//GEN-LAST:event_servicesSummBtnActionPerformed
+
+    private void backBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+            MainHub mainhub = new MainHub();
+            mainhub.show();
+    }//GEN-LAST:event_backBtn1ActionPerformed
+
+    private void ExitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtn1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitBtn1ActionPerformed
+
+    private void suppliersSummBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suppliersSummBtn1ActionPerformed
+        // TODO add your handling code here:
+        if(ordersPanel.isVisible() || inventPanel.isVisible()|| servicesPanel.isVisible()){
+            ordersPanel.setVisible(false);
+            inventPanel.setVisible(false);
+            servicesPanel.setVisible(false);
+            suppliersPanel.setVisible(true);
+        }
+    }//GEN-LAST:event_suppliersSummBtn1ActionPerformed
+
+    private void itemNameTF1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF1FocusGained
+
+    private void itemNameTF1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF1FocusLost
+
+    private void quantityTF1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF1FocusGained
+
+    private void quantityTF1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF1FocusLost
+
+    private void backBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backBtn3ActionPerformed
+
+    private void ExitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExitBtn2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,25 +775,61 @@ public class Database extends javax.swing.JFrame {
             }
         });
     }
-
+//hello
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ExitBtn1;
+    private javax.swing.JButton ExitBtn2;
+    private javax.swing.JTable allOrdersTable;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JButton backBtn1;
+    private javax.swing.JButton backBtn2;
+    private javax.swing.JButton backBtn3;
     private javax.swing.JButton createBtn;
+    private javax.swing.JButton createBtn1;
     private javax.swing.JButton deleteBtn;
+    private javax.swing.JButton deleteBtn1;
     private javax.swing.JButton editBtn;
     private javax.swing.JButton editBtn1;
+    private javax.swing.JButton editOrdersBtn;
+    private javax.swing.JButton editServicesBtn;
+    private javax.swing.JButton exitBtn;
+    private javax.swing.JButton exitBtn2;
     private javax.swing.JButton invPanelBtn;
     private javax.swing.JPanel inventPanel;
     private javax.swing.JTextField itemNameTF;
+    private javax.swing.JTextField itemNameTF1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel ordersPanel;
     private javax.swing.JButton ordersSummBtn;
     private javax.swing.JTextField quantityTF;
+    private javax.swing.JTextField quantityTF1;
+    private javax.swing.JPanel servicesPanel;
     private javax.swing.JButton servicesSummBtn;
     private javax.swing.JComboBox<String> statusCB;
     private javax.swing.JTextField supplierTF;
+    private javax.swing.JPanel suppliersPanel;
+    private javax.swing.JButton suppliersSummBtn1;
     // End of variables declaration//GEN-END:variables
 }

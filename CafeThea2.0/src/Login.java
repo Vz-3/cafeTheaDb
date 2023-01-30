@@ -129,8 +129,9 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (userField.getText().equals("admin") && passField.getText().equals("pass")){
             dispose();
-            MainHub mainhub = new MainHub();
-            mainhub.show();
+            DailyOrders orderstoday = new DailyOrders();
+            orderstoday.show();
+            
         }
             
     }//GEN-LAST:event_jButton1ActionPerformed
