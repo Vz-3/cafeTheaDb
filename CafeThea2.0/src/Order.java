@@ -1,8 +1,13 @@
 
+import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 import java.awt.CardLayout;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
+<<<<<<< Updated upstream
+=======
+import javax.swing.table.TableModel;
+>>>>>>> Stashed changes
 
 
 
@@ -16,6 +21,10 @@ import javax.swing.table.DefaultTableModel;
  * @author Adam
  */
 public class Order extends javax.swing.JFrame {
+    
+    
+    int row;
+    int col;
 
     /**
      * Creates new form Order
@@ -23,7 +32,7 @@ public class Order extends javax.swing.JFrame {
     String item;
     double price, itemTotal, totalPrice;
     CardLayout cardLayout;
-    
+    int i;
     public Order() {
         initComponents();
         
@@ -387,9 +396,28 @@ public class Order extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+<<<<<<< Updated upstream
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel12 = new javax.swing.JPanel();
+=======
+        jScrollPane6 = new javax.swing.JScrollPane();
+        orderTable = new javax.swing.JTable();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+>>>>>>> Stashed changes
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -447,7 +475,7 @@ public class Order extends javax.swing.JFrame {
                 .addComponent(SauceButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DetailsButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(580, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -759,19 +787,27 @@ public class Order extends javax.swing.JFrame {
             .addGroup(TrayPanelLayout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addComponent(ImageSSP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 363, Short.MAX_VALUE)
+>>>>>>> Stashed changes
                 .addComponent(ImageLP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(118, 118, 118))
             .addGroup(TrayPanelLayout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(ImageCB, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
+>>>>>>> Stashed changes
                 .addComponent(ImageSP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(121, 121, 121))
             .addGroup(TrayPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
                 .addComponent(ImagePC, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, Short.MAX_VALUE)
                 .addComponent(ImageSH, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(246, 246, 246))
             .addGroup(TrayPanelLayout.createSequentialGroup()
@@ -1253,7 +1289,11 @@ public class Order extends javax.swing.JFrame {
                     .addGroup(DrinksPanelLayout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(ImageSS, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+<<<<<<< Updated upstream
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+>>>>>>> Stashed changes
                 .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
                         .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1491,7 +1531,11 @@ public class Order extends javax.swing.JFrame {
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< Updated upstream
                 .addContainerGap(132, Short.MAX_VALUE))
+=======
+                .addContainerGap(196, Short.MAX_VALUE))
+>>>>>>> Stashed changes
         );
         SaucePanelLayout.setVerticalGroup(
             SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1642,6 +1686,31 @@ public class Order extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(jTable1);
 
+        orderTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Item", "Quantity", "Price", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane6.setViewportView(orderTable);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -1650,22 +1719,37 @@ public class Order extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< Updated upstream
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE))
+=======
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+>>>>>>> Stashed changes
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4)
+<<<<<<< Updated upstream
                 .addGap(164, 164, 164))
+=======
+                .addGap(87, 87, 87))
+>>>>>>> Stashed changes
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< Updated upstream
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4))
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> Stashed changes
         );
 
         jPanel12.setBackground(new java.awt.Color(0, 0, 0));
@@ -1676,9 +1760,130 @@ public class Order extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
+<<<<<<< Updated upstream
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 13, Short.MAX_VALUE)
+=======
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        jPanel7.setBackground(new java.awt.Color(153, 153, 255));
+
+        jPanel27.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel27.setLayout(new java.awt.GridLayout(1, 0));
+
+        jLabel22.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("Services");
+        jPanel27.add(jLabel22);
+
+        buttonGroupService.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton1.setText("Plated Service");
+
+        buttonGroupService.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton2.setText("Semi-Silver Service");
+
+        buttonGroupService.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton3.setText("Full-Silver Service");
+
+        buttonGroupService.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton4.setText("Gueridon Service");
+
+        buttonGroupService.add(jRadioButton5);
+        jRadioButton5.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton5.setText("Buffet Service");
+
+        buttonGroupService.add(jRadioButton6);
+        jRadioButton6.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton6.setText("Cafeteria Service");
+
+        buttonGroupService.add(jRadioButton7);
+        jRadioButton7.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton7.setText("Family-Style Service");
+
+        buttonGroupService.add(jRadioButton8);
+        jRadioButton8.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton8.setText("Wedding Service");
+
+        buttonGroupService.add(jRadioButton9);
+        jRadioButton9.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton9.setText("Debut Service");
+
+        buttonGroupService.add(jRadioButton10);
+        jRadioButton10.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
+        jRadioButton10.setText("Kiddie Meal Service");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton5)
+                            .addComponent(jRadioButton4))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton9)
+                            .addComponent(jRadioButton10)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton3))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton8)
+                            .addComponent(jRadioButton6)
+                            .addComponent(jRadioButton7))))
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton8))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton4)
+                    .addComponent(jRadioButton9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton10)
+                    .addComponent(jRadioButton5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(144, Short.MAX_VALUE)))
+>>>>>>> Stashed changes
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1693,23 +1898,49 @@ public class Order extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
+<<<<<<< Updated upstream
                         .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addGap(0, 0, 0))
+>>>>>>> Stashed changes
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< Updated upstream
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+=======
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+>>>>>>> Stashed changes
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<<<<<<< Updated upstream
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
+=======
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
+>>>>>>> Stashed changes
         );
 
         pack();
@@ -1717,7 +1948,9 @@ public class Order extends javax.swing.JFrame {
 
     private void PlusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCGOActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countCGO++;
+<<<<<<< Updated upstream
         item = "Crunchy Garlic Oil";
         price = 450;
         itemTotal = countCGO * price;
@@ -1735,10 +1968,26 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countCGO * 1700;
+        
+        if(countCGO > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("CGO")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountCGO.setText(" "+countCGO+" ");
+        Object[] cgo = {"Crunchy Garlic Oil", countCGO, price, "OK"};
+        model.addRow(cgo);
+        
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusCGOActionPerformed
 
     private void PlusSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSAActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countSA++;
         item = "Special Atchara";
         price = 450;
@@ -1757,29 +2006,83 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSA++;
+        int price = countSA * 1700;
+        
+        if(countSA > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Special Atchara")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSA.setText(" "+countSA+" ");
+        Object[] sa = {"Special Atchara", countSA, price, "OK"};
+        model.addRow(sa);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSAActionPerformed
 
     private void MinusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCGOActionPerformed
         // TODO add your handling code here:
-        countCGO--;
-        TextCountCGO.setText(" "+countCGO+" ");
+         countCGO--;
+        int price = countCGO * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] cgo = {"Crunchy Garlic Oil", countCGO, price, "OK"};
         
+        if(countCGO > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Crunchy Garlic Oil")){
+                    model.removeRow(i);
+                    model.addRow(cgo);
+                }
+                 
+            }
+        }
+
         if(countCGO<0){
             countCGO=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Crunchy Garlic Oil")){
+                    model.removeRow(i);
+                }
+            }
             TextCountCGO.setText(" "+countCGO+" ");
         }
+        
+        TextCountCGO.setText(" "+countCGO+" ");
     }//GEN-LAST:event_MinusCGOActionPerformed
 
     private void MinusSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSAActionPerformed
         // TODO add your handling code here:
         
-        countSA--;
-        TextCountSA.setText(" "+countSA+" ");
+         countSA--;
+        int price = countSA * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] sa = {"Special Atchara", countSA, price, "OK"};
         
+        if(countSA > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Special Atchara")){
+                    model.removeRow(i);
+                    model.addRow(sa);
+                }
+                 
+            }
+        }
+
         if(countSA<0){
             countSA=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Special Atchara")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSA.setText(" "+countSA+" ");
         }
+        
+        TextCountSA.setText(" "+countSA+" ");
     }//GEN-LAST:event_MinusSAActionPerformed
 
     private void SauceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SauceButtonActionPerformed
@@ -1790,6 +2093,7 @@ public class Order extends javax.swing.JFrame {
 
     private void PlusPWBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusPWBActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countPWB++;  
         item = "Pork w/ Bagoong";
         price = 450;
@@ -1808,32 +2112,87 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countPWB++;
+        int price = countPWB * 1700;
+        
+        if(countPWB > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Pork with Bagoong")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountPWB.setText(" "+countPWB+" ");
+        Object[] pwb = {"Pork with Bagoon", countPWB, price, "OK"};
+        model.addRow(pwb);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusPWBActionPerformed
 
     private void MinusPWBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusPWBActionPerformed
         // TODO add your handling code here:
-        countPWB--;
-        TextCountPWB.setText(" "+countPWB+" ");
+         countPWB--;
+        int price = countPWB * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] pwb = {"Pork with Bagoong", countPWB, price, "OK"};
+        
+        if(countPWB > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pork with Bagoong")){
+                    model.removeRow(i);
+                    model.addRow(pwb);
+                }
+                 
+            }
+        }
 
         if(countPWB<0){
             countPWB=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pork with Bagoong")){
+                    model.removeRow(i);
+                }
+            }
             TextCountPWB.setText(" "+countPWB+" ");
         }
+        
+        TextCountPWB.setText(" "+countPWB+" "); 
     }//GEN-LAST:event_MinusPWBActionPerformed
 
     private void MinusPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusPMActionPerformed
         // TODO add your handling code here:
-        countPM--;
-        TextCountPM.setText(" "+countPM+" ");
+         countPM--;
+        int price = countPM * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] pm = {"Pickled Mangoes", countPM, price, "OK"};
+        
+        if(countPM > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pickled Mangoes")){
+                    model.removeRow(i);
+                    model.addRow(pm);
+                }
+                 
+            }
+        }
 
         if(countPM<0){
             countPM=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pickled Mangoes")){
+                    model.removeRow(i);
+                }
+            }
             TextCountPM.setText(" "+countPM+" ");
         }
+        
+        TextCountPM.setText(" "+countPM+" ");
     }//GEN-LAST:event_MinusPMActionPerformed
 
     private void PlusPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusPMActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countPM++;
         item = "Pickled Mangoes";
         price = 450;
@@ -1852,21 +2211,57 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countPM++;
+        int price = countPM * 1700;
+        
+        if(countPM > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Pickled Mangoes")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountPM.setText(" "+countPM+" ");
+        Object[] pm = {"Pickled Mangoes", countPM, price, "OK"};
+        model.addRow(pm);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusPMActionPerformed
 
     private void MinusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCBActionPerformed
         // TODO add your handling code here:
-        countCB--;
-        TextCountCB.setText(" "+countCB+" ");
+      countCB--;
+        int price = countCB * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] cb = {"Cordon Bleu", countCB, price, "OK"};
+        
+        if(countSGC > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Cordon Bleu")){
+                    model.removeRow(i);
+                    model.addRow(cb);
+                }
+                 
+            }
+        }
 
         if(countCB<0){
             countCB=0;
-            TextCountCB.setText(" "+countCB+" ");
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Cordon Bleu")){
+                    model.removeRow(i);
+                }
+            }
+            TextCountCA.setText(" "+countCB+" ");
         }
+        
+        TextCountCA.setText(" "+countCB+" ");
     }//GEN-LAST:event_MinusCBActionPerformed
 
     private void PlusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCBActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countCB++;
         item = "Cordon Bleu";
         price = 2998;
@@ -1885,22 +2280,57 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countCB++;
+        int price = countCB * 1700;
+        
+        if(countCB > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Cordon Bleu")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountCB.setText(" "+countCB+" ");
+        Object[] CB = {"Cordon Bleu", countCB, price, "OK"};
+        model.addRow(CB);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusCBActionPerformed
 
     private void MinusCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCAActionPerformed
         // TODO add your handling code here:
+      countCA--;
+        int price = countCA * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] ca = {"Carbonara", countCA, price, "OK"};
         
-        countCA--;
-        TextCountCA.setText(" "+countCA+" ");
+        if(countCA > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Carbonara")){
+                    model.removeRow(i);
+                    model.addRow(ca);
+                }
+                 
+            }
+        }
 
         if(countCA<0){
             countCA=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Carbonara")){
+                    model.removeRow(i);
+                }
+            }
             TextCountCA.setText(" "+countCA+" ");
         }
+        
+        TextCountCA.setText(" "+countCA+" ");
     }//GEN-LAST:event_MinusCAActionPerformed
 
     private void PlusCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCAActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countCA++;
         item = "Carbonara";
         price = 1675;
@@ -1919,22 +2349,62 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countCA++;
+        int price = countCA * 1700;
+        
+        if(countCA > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Carbonara")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountCA.setText(" "+countCA+" ");
+        Object[] CA = {"Carbonara", countCA, price, "OK"};
+        model.addRow(CA);
+
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusCAActionPerformed
 
     private void MinusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSSPActionPerformed
         // TODO add your handling code here:
-        countSSP--;
-        TextCountSSP.setText(" "+countSSP+" ");
+      countSSP--;
+        int price = countSSP * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] ssp = {"Sweet & Sour Pork", countSSP, price, "OK"};
+        
+        if(countSSP > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Sweet & Sour Pork")){
+                    model.removeRow(i);
+                    model.addRow(ssp);
+                }
+                 
+            }
+        }
 
         if(countSSP<0){
             countSSP=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Sweer & Sour Pork")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSSP.setText(" "+countSSP+" ");
         }
+        
+        TextCountSSP.setText(" "+countSSP+" ");
+        
+
     }//GEN-LAST:event_MinusSSPActionPerformed
 
     private void PlusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSSPActionPerformed
         // TODO add your handling code here:
+         DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countSSP++;
+<<<<<<< Updated upstream
         item = "Sweet & Sour Pork";
         price = 2700;
         itemTotal = countSSP * price;
@@ -1954,19 +2424,58 @@ public class Order extends javax.swing.JFrame {
         totalPrice += itemTotal;
         
         
+=======
+        int price = countSSP * 1700;
+        
+        if(countSSP > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Sweet & Sour Pork")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSSP.setText(" "+countSSP+" ");
+        Object[] ssp = {"Sweet & Sour Pork", countSSP, price, "OK"};
+        model.addRow(ssp);
+
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSSPActionPerformed
 
     private void MinusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusPCActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countPC = 0;
         TextCountPC.setText(" "+countPC+" ");
         DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
         
+=======
+        countPC--;
+        int price = countPC * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] pc = {"Pancit Canton", countPC, price, "OK"};
+        
+        if(countPC > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pancit Canton")){
+                    model.removeRow(i);
+                    model.addRow(pc);
+                }
+                 
+            }
+        }
+
+>>>>>>> Stashed changes
         if(countPC<0){
             countPC=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Pancit Canton")){
+                    model.removeRow(i);
+                }
+            }
             TextCountPC.setText(" "+countPC+" ");
         }
         
+<<<<<<< Updated upstream
         if (countPC > 1){
             for (int i = 0; i < model.getRowCount(); i++){
                 if (((String)model.getValueAt(i, 0)).equals("Pancit Canton")) {
@@ -1974,11 +2483,16 @@ public class Order extends javax.swing.JFrame {
             }
             }
         }
+=======
+        TextCountPC.setText(" "+countPC+" ");
+        
+>>>>>>> Stashed changes
     }//GEN-LAST:event_MinusPCActionPerformed
 
     private void PlusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusPCActionPerformed
         // TODO add your handling code here:
 
+<<<<<<< Updated upstream
             countPC++;
             item = "Pancit Canton";
             price = 1200;
@@ -1998,8 +2512,27 @@ public class Order extends javax.swing.JFrame {
             }
             totalPrice =  totalPrice + itemTotal;
         
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countPC++;
+        int price = countPC * 1700;
+        
+        if(countPC > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Pancit Canton")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountPC.setText(" "+countPC+" ");
+        Object[] pc = {"Pancit Canton", countPC, price, "OK"};
+        model.addRow(pc); 
+
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusPCActionPerformed
 
+    
+    
     private void TrayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TrayButtonActionPerformed
         // TODO add your handling code here:
         cardLayout.show(jPanel2, "TrayPanel");
@@ -2008,17 +2541,37 @@ public class Order extends javax.swing.JFrame {
 
     private void MinusSHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSHActionPerformed
         // TODO add your handling code here:
-        countSH--;
-        TextCountSH.setText(" "+countSH+" ");
+         countSH--;
+        int price = countSH * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] pc = {"Shanghai", countSH, price, "OK"};
+        
+        if(countSH > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Shanghai")){
+                    model.removeRow(i);
+                    model.addRow(pc);
+                }
+                 
+            }
+        }
 
         if(countSH<0){
             countSH=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Shanghai")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSH.setText(" "+countSH+" ");
         }
+        
+        TextCountSH.setText(" "+countSH+" ");
     }//GEN-LAST:event_MinusSHActionPerformed
 
     private void PlusSHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSHActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
 
         countSH++;
         item = "Shanghai Rolls";
@@ -2038,22 +2591,59 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSH++;
+        int price = countSH * 1700;
+        
+        if(countSH > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Shanghai Rolls")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSH.setText(" "+countSH+" ");
+        Object[] sh = {"Shanghai Rolls", countSH, price, "OK"};
+        model.addRow(sh);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSHActionPerformed
 
     private void MinusLPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusLPActionPerformed
         // TODO add your handling code here:
-        countLP--;
-        TextCountLP.setText(" "+countLP+" ");
+      countLP--;
+        int price = countLP * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] lp = {"Liempo", countLP, price, "OK"};
+        
+        if(countLP > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Liempo")){
+                    model.removeRow(i);
+                    model.addRow(lp);
+                }
+                 
+            }
+        }
 
         if(countLP<0){
             countLP=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Liempo")){
+                    model.removeRow(i);
+                }
+            }
             TextCountLP.setText(" "+countLP+" ");
         }
+        
+        TextCountLP.setText(" "+countLP+" ");
     }//GEN-LAST:event_MinusLPActionPerformed
 
     private void PlusLPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusLPActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countLP++;
+<<<<<<< Updated upstream
         item = "Liempo";
         price = 1800;
         itemTotal = countLP* price;
@@ -2071,23 +2661,58 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countLP * 1700;
+        
+        if(countLP > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Liempo")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountLP.setText(" "+countLP+" ");
+        Object[] LP = {"Liempo", countPC, price, "OK"};
+        model.addRow(LP);
+
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusLPActionPerformed
 
     private void MinusSGCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSGCActionPerformed
         // TODO add your handling code here:
-        countSGC--;
-        TextCountSGC.setText(" "+countSGC+" ");
+      countSGC--;
+        int price = countSGC * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] sgc = {"Soy Garlic Chicken", countSGC, price, "OK"};
+        
+        if(countSGC > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Soy Garlic Chicken")){
+                    model.removeRow(i);
+                    model.addRow(sgc);
+                }
+                 
+            }
+        }
 
         if(countSGC<0){
             countSGC=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Soy Garlic Chicken")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSGC.setText(" "+countSGC+" ");
         }
         
+        TextCountSGC.setText(" "+countSGC+" ");
     }//GEN-LAST:event_MinusSGCActionPerformed
 
     private void PlusSGCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSGCActionPerformed
         // TODO add your handling code here:
+       DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countSGC++;
+<<<<<<< Updated upstream
         item = "Soy Garlic Chicken";
         price = 1350;
         itemTotal = countSGC * price;
@@ -2105,22 +2730,57 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countSGC * 1700;
+        
+        if(countSGC > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Soy Garlic Chicken")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSGC.setText(" "+countSGC+" ");
+        Object[] SGC = {"Soy Garlic Chicken", countSGC, price, "OK"};
+        model.addRow(SGC);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSGCActionPerformed
 
     private void MinusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSPActionPerformed
         // TODO add your handling code here:
-        countSP--;
-        TextCountSP.setText(" "+countSP+" ");
+      countSP--;
+        int price = countSP * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] sp = {"Steak & Potatoes", countSP, price, "OK"};
+        
+        if(countSP > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(   ((String)orderTable.getValueAt(i, 0)).equals("Steak & Potatoes")){
+                    model.removeRow(i);
+                    model.addRow(sp);
+                }
+                 
+            }
+        }
 
         if(countSP<0){
             countSP=0;
-            TextCountSP.setText(" "+countSP+" ");
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Steak & Potatoes")){
+                    model.removeRow(i);
+                }
+            }
+            TextCountCA.setText(" "+countSP+" ");
         }
+        
+        TextCountCA.setText(" "+countSP+" ");
     }//GEN-LAST:event_MinusSPActionPerformed
 
     private void PlusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSPActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countSP++;
+<<<<<<< Updated upstream
         item = "Steak & Potatoes";
         price = 2840;
         itemTotal = countSP * price;
@@ -2138,6 +2798,20 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countSP * 1700;
+        
+        if(countSP > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Steak & Potatoes")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSP.setText(" "+countSP+" ");
+        Object[] SP = {"Steak & Potatoes", countSP, price, "OK"};
+        model.addRow(SP);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSPActionPerformed
 
     private void MinusBFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusBFActionPerformed
@@ -2153,7 +2827,9 @@ public class Order extends javax.swing.JFrame {
 
     private void PlusBFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusBFActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countBF++;
+<<<<<<< Updated upstream
         item = "Breakfast Meals";
         price = 75;
         itemTotal = countBF * price;
@@ -2171,6 +2847,20 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countBF * 1700;
+        
+        if(countBF > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Breakfast Meal")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountBF.setText(" "+countBF+" ");
+        Object[] BF = {"Breakfast Meal", countBF, price, "OK"};
+        model.addRow(BF);;
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusBFActionPerformed
 
     private void MinusLDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusLDActionPerformed
@@ -2186,7 +2876,9 @@ public class Order extends javax.swing.JFrame {
 
     private void PlusLDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusLDActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
         countLD++;
+<<<<<<< Updated upstream
         item = "Lunch/Dinner Meals";
         price = 80;
         itemTotal = countLD * price;
@@ -2204,6 +2896,20 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        int price = countLD * 1700;
+        
+        if(countLD > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("Lunch & Dinner Meal")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountLD.setText(" "+countLD+" ");
+        Object[] LD = {"Lunch & Dinner Meal", countLD, price, "OK"};
+        model.addRow(LD);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusLDActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -2213,18 +2919,39 @@ public class Order extends javax.swing.JFrame {
 
     private void MinusSCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSCActionPerformed
         // TODO add your handling code here:
+          countSC--;
+        int price = countSC * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] sc = {"300ml Coke", countSC, price, "OK"};
         
-        countSC--;
-        TextCountSC.setText(" "+countSC+" ");
+        if(countSC > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Coke")){
+                    model.removeRow(i);
+                    model.addRow(sc);
+                }
+                 
+            }
+        }
 
         if(countSC<0){
             countSC=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Coke")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSC.setText(" "+countSC+" ");
         }
+        
+        TextCountSC.setText(" "+countSC+" ");
+        
+
     }//GEN-LAST:event_MinusSCActionPerformed
 
     private void PlusSCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSCActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countSC++;
         item = "Coke 300ml";
         price = 25;
@@ -2243,22 +2970,58 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSC++;
+        int price = countSC * 1700;
+        
+        if(countSC > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("300ml Coke")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountCA.setText(" "+countSC+" ");
+        Object[] SC = {"300ml Coke", countSC, price, "OK"};
+        model.addRow(SC);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSCActionPerformed
 
     private void MinusSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSSActionPerformed
         // TODO add your handling code here:
+         countSS--;
+        int price = countSS * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] ss = {"300ml Sprite", countSC, price, "OK"};
         
-        countSS--;
-        TextCountSS.setText(" "+countSS+" ");
+        if(countSS > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Sprite")){
+                    model.removeRow(i);
+                    model.addRow(ss);
+                }
+                 
+            }
+        }
 
         if(countSS<0){
             countSS=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Sprite")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSS.setText(" "+countSS+" ");
         }
+        
+        TextCountSS.setText(" "+countSS+" ");
+        
     }//GEN-LAST:event_MinusSSActionPerformed
 
     private void PlusSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSSActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countSS++;
         item = "Sprite 300ml";
         price = 25;
@@ -2277,6 +3040,22 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSS++;
+        int price = countSS * 1700;
+        
+        if(countSS > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("300ml Sprite")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSS.setText(" "+countSS+" ");
+        Object[] ss = {"300ml Sprite", countSS, price, "OK"};
+        model.addRow(ss);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSSActionPerformed
 
     private void MinusCB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCB3ActionPerformed
@@ -2293,18 +3072,37 @@ public class Order extends javax.swing.JFrame {
 
     private void MinusSRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSRActionPerformed
         // TODO add your handling code here:
+         countSR--;
+        int price = countSR * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] sr = {"300ml Royal", countSR, price, "OK"};
         
-        countSR--;
-        TextCountSR.setText(" "+countSR+" ");
+        if(countSR > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Royal")){
+                    model.removeRow(i);
+                    model.addRow(sr);
+                }
+                 
+            }
+        }
 
         if(countSR<0){
             countSR=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Royal")){
+                    model.removeRow(i);
+                }
+            }
             TextCountSR.setText(" "+countSR+" ");
         }
+        
+        TextCountSR.setText(" "+countSR+" ");
     }//GEN-LAST:event_MinusSRActionPerformed
 
     private void PlusSRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSRActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countSR++;
         item = "Royal 300ml";
         price = 25;
@@ -2323,6 +3121,22 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSR++;
+        int price = countSR * 1700;
+        
+        if(countSR > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("300ml Royal")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSR.setText(" "+countSR+" ");
+        Object[] sr = {"300ml Royal", countSR, price, "OK"};
+        model.addRow(sr);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusSRActionPerformed
 
     private void MinusCB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCB5ActionPerformed
@@ -2340,13 +3154,32 @@ public class Order extends javax.swing.JFrame {
     private void MinusCHBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCHBActionPerformed
         // TODO add your handling code here:
         
-        countCHB--;
-        TextCountCHB.setText(" "+countCHB+" ");
+         countCHB--;
+        int price = countCHB * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] chb = {"Coffee House Brew", countCHB, price, "OK"};
+        
+        if(countCHB > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Coffee House Brew")){
+                    model.removeRow(i);
+                    model.addRow(chb);
+                }
+                 
+            }
+        }
 
         if(countCHB<0){
             countCHB=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Coffee House Brew")){
+                    model.removeRow(i);
+                }
+            }
             TextCountCHB.setText(" "+countCHB+" ");
         }
+        
+        TextCountCHB.setText(" "+countCHB+" ");
     }//GEN-LAST:event_MinusCHBActionPerformed
 
     private void PlusCHBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCHBActionPerformed
@@ -2373,18 +3206,37 @@ public class Order extends javax.swing.JFrame {
 
     private void MinusBRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusBRActionPerformed
         // TODO add your handling code here:
+         countBR--;
+        int price = countBR * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] br = {"1.5L Royal", countBR, price, "OK"};
         
-        countBR--;
-        TextCountBR.setText(" "+countBR+" ");
+        if(countBR > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Royal")){
+                    model.removeRow(i);
+                    model.addRow(br);
+                }
+                 
+            }
+        }
 
         if(countBR<0){
             countBR=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Royal")){
+                    model.removeRow(i);
+                }
+            }
             TextCountBR.setText(" "+countBR+" ");
         }
+        
+        TextCountBR.setText(" "+countBR+" ");
     }//GEN-LAST:event_MinusBRActionPerformed
 
     private void PlusBRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusBRActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countBR++;
         item = "Royal 1.5L";
         price = 50;
@@ -2403,18 +3255,53 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countBR++;
+        int price = countBR * 1700;
+        
+        if(countBR > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Royal")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountBR.setText(" "+countBR+" ");
+        Object[] br = {"1.5L Royal", countBR, price, "OK"};
+        model.addRow(br);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusBRActionPerformed
 
     private void MinusWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusWActionPerformed
         // TODO add your handling code here:
         
-        countW--;
-        TextCountW.setText(" "+countW+" ");
+         countW--;
+        int price = countW * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] w = {"Water", countW, price, "OK"};
+        
+        if(countW > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Water")){
+                    model.removeRow(i);
+                    model.addRow(w);
+                }
+                 
+            }
+        }
 
         if(countW<0){
             countW=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("Water")){
+                    model.removeRow(i);
+                }
+            }
             TextCountW.setText(" "+countW+" ");
         }
+        
+        TextCountW.setText(" "+countW+" ");
     }//GEN-LAST:event_MinusWActionPerformed
 
     private void PlusWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusWActionPerformed
@@ -2441,18 +3328,38 @@ public class Order extends javax.swing.JFrame {
 
     private void MinusBSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusBSActionPerformed
         // TODO add your handling code here:
+         countBS--;
+        int price = countBS * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] bs = {"1.5L Sprite", countBS, price, "OK"};
         
-        countBS--;
-        TextCountBS.setText(" "+countBS+" ");
+        if(countBS > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Sprite")){
+                    model.removeRow(i);
+                    model.addRow(bs);
+                }
+                 
+            }
+        }
 
         if(countBS<0){
             countBS=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Sprite")){
+                    model.removeRow(i);
+                }
+            }
             TextCountBS.setText(" "+countBS+" ");
         }
+        
+        TextCountBS.setText(" "+countBS+" ");
+        
     }//GEN-LAST:event_MinusBSActionPerformed
 
     private void PlusBSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusBSActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countBS++;
         item = "Sprite 1.5L";
         price = 50;
@@ -2471,22 +3378,58 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countSS++;
+        int price = countSS * 1700;
+        
+        if(countSS > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Sprite")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountSS.setText(" "+countSS+" ");
+        Object[] bs = {"1.5L Sprite", countSS, price, "OK"};
+        model.addRow(bs);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusBSActionPerformed
 
     private void MinusBCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusBCActionPerformed
         // TODO add your handling code here:
+         countBC--;
+        int price = countBC * 1700;
+        DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        Object[] bc = {"1.5L Coke", countBC, price, "OK"};
         
-        countBC--;
-        TextCountBC.setText(" "+countBC+" ");
+        if(countBC > 0){
+            for(i = 0; i  < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Coke")){
+                    model.removeRow(i);
+                    model.addRow(bc);
+                }
+                 
+            }
+        }
 
         if(countBC<0){
             countBC=0;
+            for(i = 0; i < orderTable.getRowCount(); i++){
+                if(((String)orderTable.getValueAt(i, 0)).equals("300ml Coke")){
+                    model.removeRow(i);
+                }
+            }
             TextCountBC.setText(" "+countBC+" ");
         }
+        
+        TextCountBC.setText(" "+countBC+" ");
+        
     }//GEN-LAST:event_MinusBCActionPerformed
 
     private void PlusBCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusBCActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         countBC++;
         item = "Coke 1.5L";
         price = 50;
@@ -2505,6 +3448,22 @@ public class Order extends javax.swing.JFrame {
         }
         }
         totalPrice += itemTotal;
+=======
+       DefaultTableModel model = (DefaultTableModel) orderTable.getModel();
+        countBC++;
+        int price = countBC * 1700;
+        
+        if(countBC > 1){ 
+            for(i = 0; i < orderTable.getRowCount(); i++){
+            if(((String)orderTable.getValueAt(i, 0)).equals("1.5L Coke")){
+                model.removeRow(i);
+        }    
+            }
+    }
+        TextCountBC.setText(" "+countBC+" ");
+        Object[] BC = {"1.5L Coke", countBC, price, "OK"};
+        model.addRow(BC);
+>>>>>>> Stashed changes
     }//GEN-LAST:event_PlusBCActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -2518,11 +3477,16 @@ public class Order extends javax.swing.JFrame {
         cardLayout.show(jPanel2, "card6");
     }//GEN-LAST:event_DetailsButtonActionPerformed
 
+<<<<<<< Updated upstream
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
+=======
+    
+    
+>>>>>>> Stashed changes
     /**
      * @param args the command line arguments
      */
@@ -2724,10 +3688,15 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+<<<<<<< Updated upstream
     private javax.swing.JTable jTable1;
+=======
+    private javax.swing.JScrollPane jScrollPane6;
+>>>>>>> Stashed changes
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTable orderTable;
     // End of variables declaration//GEN-END:variables
 }

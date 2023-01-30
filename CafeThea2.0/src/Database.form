@@ -76,25 +76,28 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="createBtn" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="editBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="createBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="editBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="statusCB" max="32767" attributes="0"/>
+                                  <Component id="supplierTF" alignment="0" pref="200" max="32767" attributes="0"/>
+                                  <Component id="quantityTF" alignment="0" pref="200" max="32767" attributes="0"/>
+                                  <Component id="itemNameTF" alignment="0" pref="200" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="statusCB" max="32767" attributes="0"/>
-                          <Component id="supplierTF" alignment="0" pref="200" max="32767" attributes="0"/>
-                          <Component id="quantityTF" alignment="0" pref="200" max="32767" attributes="0"/>
-                          <Component id="itemNameTF" alignment="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="deleteBtn" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="22" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="deleteBtn" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -289,8 +292,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ordersSummBtn" min="-2" pref="85" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="servicesSummBtn" min="-2" pref="85" max="-2" attributes="0"/>
-                  <EmptySpace pref="515" max="32767" attributes="0"/>
+                  <Component id="servicesSummBtn" min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace pref="462" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -299,9 +302,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="servicesSummBtn" pref="25" max="32767" attributes="0"/>
-                      <Component id="ordersSummBtn" alignment="1" max="32767" attributes="0"/>
-                      <Component id="invPanelBtn" max="32767" attributes="0"/>
+                      <Component id="servicesSummBtn" pref="30" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="invPanelBtn" alignment="3" max="32767" attributes="0"/>
+                          <Component id="ordersSummBtn" alignment="3" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
