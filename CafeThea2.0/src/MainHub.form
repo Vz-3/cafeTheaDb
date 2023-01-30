@@ -135,9 +135,6 @@
               <Dimension value="[120, 80]"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageOrdersBtnActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="manageDataBtn">
           <Properties>
@@ -148,9 +145,6 @@
               <Dimension value="[120, 80]"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageDataBtnActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="reqSupplyBtn">
           <Properties>
