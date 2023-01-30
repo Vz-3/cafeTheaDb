@@ -75,11 +75,6 @@ public class MainHub extends javax.swing.JFrame {
 
         manageDataBtn.setText("<html><center>"+"Manage Database"+"</center></html>");
         manageDataBtn.setPreferredSize(new java.awt.Dimension(120, 80));
-        manageDataBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageDataBtnActionPerformed(evt);
-            }
-        });
 
         reqSupplyBtn.setText("<html><center>"+"Request Supplies"+"</center></html>");
         reqSupplyBtn.setPreferredSize(new java.awt.Dimension(120, 80));

@@ -2,7 +2,6 @@
 import java.awt.CardLayout;
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import javax.swing.table.DefaultTableModel;
 
 
 
@@ -2424,6 +2423,7 @@ public class Order extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
@@ -2688,7 +2688,6 @@ public class Order extends javax.swing.JFrame {
     }//GEN-LAST:event_MinusCAActionPerformed
 
     private void PlusCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCAActionPerformed
-
     }//GEN-LAST:event_PlusCAActionPerformed
 
     private void MinusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSSPActionPerformed
@@ -2904,7 +2903,6 @@ public class Order extends javax.swing.JFrame {
     }//GEN-LAST:event_MinusSGCActionPerformed
 
     private void PlusSGCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSGCActionPerformed
-
     }//GEN-LAST:event_PlusSGCActionPerformed
 
     private void MinusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSPActionPerformed
