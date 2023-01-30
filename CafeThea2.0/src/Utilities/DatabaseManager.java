@@ -57,7 +57,7 @@ public class DatabaseManager {
     }
     
     public void deleteOne(String tableName, String id) {
-        String idname = getConfigure2(tableName);
+        String idname = getConfigure(tableName);
         String query = "DELETE FROM "+tableName+" WHERE "+idname+" = "+id;
         try {
             System.out.println(query);
@@ -70,8 +70,22 @@ public class DatabaseManager {
     
     public void insertOne(String tableName, String values) {
         try {
+            //get column names
+            String query = "INSERT INTO "+tableName+" (";
+            
+            ResultSet columnNameSet = cursor.executeQuery("SELECT * FROM "+tableName);
+            ResultSetMetaData queryMetaData = columnNameSet.getMetaData();
+            int colCount = queryMetaData.getColumnCount();
+            
+            //i is set to two to skip the primary key that is auto_incremented/generated
+            for (int i=2;i<=colCount;i++) {
+                query += queryMetaData.getColumnName(i)+", ";
+            }
+            query = query.substring(0, query.length()-1);
+            query = query+") values (";
+            
             String temp = getConfigure(tableName);
-            //System.out.println(temp+values+")");
+            System.out.println(temp+values+")");
             cursor.executeUpdate(temp+values+")", cursor.RETURN_GENERATED_KEYS);
             ResultSet resultSet = cursor.getGeneratedKeys();
             
@@ -85,10 +99,8 @@ public class DatabaseManager {
     }
     
     public void updateById(String tableName, int idVal) {
-        //call regex to fix the values and split then
-        //call updateConfigure for the rest of the statement
         try {
-            String idName = getConfigure2(tableName);
+            String idName = getConfigure(tableName);
             String startStatement = "update "+tableName+" set ";
             //String betweenStatement = updateConfigure(tableName);
             
@@ -181,6 +193,7 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
+    
     public void selectAll(String tableName) {
         try {
             ResultSet resultSet = cursor.executeQuery("SELECT * from "+tableName);
@@ -205,7 +218,7 @@ public class DatabaseManager {
     
     public void selectId(String tableName, String idVal) {
         try {
-            String idName = getConfigure2(tableName);
+            String idName = getConfigure(tableName);
             String query = "SELECT * FROM "+tableName+" WHERE "+idName+ " = "+idVal;
             ResultSet resultSet = cursor.executeQuery(query);
             ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
@@ -248,7 +261,7 @@ public class DatabaseManager {
     
     public void sortById(String tableName, boolean asc) {
         try {
-            String idname = getConfigure2(tableName);
+            String idname = getConfigure(tableName);
             String query = "";
             if (asc) {
                  query = "SELECT * FROM "+tableName+" ORDER BY "+idname+" ";
@@ -301,48 +314,48 @@ public class DatabaseManager {
         }
     }
     
-    private String getConfigure(String tableName) {//this is actually obsolete HAHAHAHA
-        String statement = "INSERT INTO "+tableName+" ";
-        String text = "";
-        try {
-            switch (tableName) {
-                case "menuitem":
-                    text = "(menuitemname, menuitemcost) values (";
-                    break;
-                case "supplier":
-                    text = "(suppliername, suppliercontact) values (";
-                    break;
-                case "resource":
-                    text = "(resourcename, resourcecost, resourcequantity, resourcedeductionaverage, supplierid) values (";
-                    break;
-                case "customer":
-                    text = "(customerfirstname, customerlastname, customercontact, customeraddress) values (";
-                    break;
-                case "service":
-                    text = "(servicename, servicecost, resourcedeductionaverage, servicedescription) values (";
-                    break;
-                case "credentials":
-                    text = "(username, password) values (";
-                    break;
-                case "orderrequest":
-                    text = "(serviceid, productids, customerid, userid, datetime, deliverymode, totalcost) values (";
-                    break;
-                case "receipt":
-                    text = "(receiptdatetime, orderid) values (";
-                    break;
-                default:
-                    System.out.println("Out of bounds");
-                    break;
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-                
-        return statement+text;
-    }
+//    private String getConfigure2(String tableName) {//obsolete 
+//        String statement = "INSERT INTO "+tableName+" ";
+//        String text = "";
+//        try {
+//            switch (tableName) {
+//                case "menuitem":
+//                    text = "(menuitemname, menuitemcost) values (";
+//                    break;
+//                case "supplier":
+//                    text = "(suppliername, suppliercontact) values (";
+//                    break;
+//                case "resource":
+//                    text = "(resourcename, resourcecost, resourcequantity, resourcedeductionaverage, supplierid) values (";
+//                    break;
+//                case "customer":
+//                    text = "(customerfirstname, customerlastname, customercontact, customeraddress) values (";
+//                    break;
+//                case "service":
+//                    text = "(servicename, servicecost, resourcedeductionaverage, servicedescription) values (";
+//                    break;
+//                case "credentials":
+//                    text = "(username, password) values (";
+//                    break;
+//                case "orderrequest":
+//                    text = "(serviceid, productids, customerid, userid, datetime, deliverymode, totalcost) values (";
+//                    break;
+//                case "receipt":
+//                    text = "(receiptdatetime, orderid) values (";
+//                    break;
+//                default:
+//                    System.out.println("Out of bounds");
+//                    break;
+//            }
+//        }
+//        catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//                
+//        return statement+text;
+//    }
     
-    private String getConfigure2(String tableName) {
+    private String getConfigure(String tableName) {//obsolete
         String text = "";
         try {
             switch (tableName) {
@@ -527,10 +540,10 @@ public class DatabaseManager {
         //cafeTheaDb.deleteOne("menuitem", "1");
         //cafeTheaDb.dropDatabase("cafetheadb");
         //cafeTheaDb.selectAll("menuitem");
-        //cafeTheaDb.selectId("menuitem", "2");
+        cafeTheaDb.selectId("menuitem", "3");
         //cafeTheaDb.selectQuery("menuitem", "menuitemcost", "75");
         //cafeTheaDb.sortById("menuitem", false);
         //cafeTheaDb.sortByQuery("menuitem", "menuitemname", true);
-        cafeTheaDb.updateById("menuitem", 2);
+        //cafeTheaDb.updateById("menuitem", 2);
     }
 }
