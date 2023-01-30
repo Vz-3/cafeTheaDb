@@ -24,73 +24,11 @@ public class Order extends javax.swing.JFrame {
     
     public Order() {
         initComponents();
-        CGO = new ImageIcon(NewResCGO);
-        ImageCGO.setIcon(CGO); 
-        
-        PWB = new ImageIcon(NewResPWB);
-        ImagePWB.setIcon(PWB); 
-        
-        SA = new ImageIcon(NewResSA);
-        ImageSA.setIcon(SA); 
-        
-        PM = new ImageIcon(NewResPM);
-        ImagePM.setIcon(PM); 
-        
-        CB = new ImageIcon(NewResCB);
-        ImageCB.setIcon(CB); 
-        
-        CA = new ImageIcon(NewResCA);
-        ImageCA.setIcon(CA); 
-        
-        SSP = new ImageIcon(NewResSSP);
-        ImageSSP.setIcon(SSP); 
-        
-        PC = new ImageIcon(NewResPC);
-        ImagePC.setIcon(PC); 
-        
-        SH = new ImageIcon(NewResSH);
-        ImageSH.setIcon(SH); 
-        
-        LP = new ImageIcon(NewResLP);
-        ImageLP.setIcon(LP); 
-        
-        SGC = new ImageIcon(NewResSGC);
-        ImageSGC.setIcon(SGC); 
-        
-        SP = new ImageIcon(NewResSP);
-        ImageSP.setIcon(SP); 
+        LD = new ImageIcon(NewResLD);
+        ImageBF.setIcon(LD); 
         
         BF = new ImageIcon(NewResBF);
         ImageBF.setIcon(BF); 
-        
-        LD = new ImageIcon(NewResLD);
-        ImageLD.setIcon(LD); 
-        
-         SC= new ImageIcon(NewResSC);
-        ImageSC.setIcon(SC); 
-        
-         BC = new ImageIcon(NewResBC);
-        ImageBC.setIcon(BC); 
-        
-         SS = new ImageIcon(NewResSS);
-        ImageSS.setIcon(SS); 
-        
-        BS = new ImageIcon(NewResBS);
-        ImageBS.setIcon(BS); 
-        
-         SR = new ImageIcon(NewResSR);
-        ImageSR.setIcon(SR); 
-        
-         BR = new ImageIcon(NewResBR);
-        ImageBR.setIcon(BR); 
-        
-        
-        CHB = new ImageIcon(NewResCHB);
-        ImageCHB.setIcon(CHB); 
-        
-        W = new ImageIcon(NewResW);
-        ImageW.setIcon(W); 
-        
         
         cardLayout = (CardLayout)(jPanel2.getLayout());
     }
@@ -103,8 +41,8 @@ public class Order extends javax.swing.JFrame {
     private int countCA = 0;
     private int countSSP = 0;
     private int countPC = 0;
-    private int countSH = 0;
-    private int countLP = 0;
+    private int countS = 0;
+    private int countL = 0;
     private int countSGC = 0;
     private int countSP = 0;
     private int countLD = 0;
@@ -118,95 +56,15 @@ public class Order extends javax.swing.JFrame {
     private int countCHB = 0;
     private int countW = 0;
     
-    ImageIcon CGO = new ImageIcon("Sauce1.jpg");
-    Image ResCGO = CGO.getImage();
-    Image NewResCGO = ResCGO.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
+    ImageIcon LD = new ImageIcon("meal2.jpg");
     
-    ImageIcon PWB = new ImageIcon("Sauce2.jpg");
-    Image ResPWB = PWB.getImage();
-    Image NewResPWB = ResPWB.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SA = new ImageIcon("Sauce3.png");
-    Image ResSA = SA.getImage();
-    Image NewResSA = ResSA.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon PM = new ImageIcon("Sauce3.png");
-    Image ResPM = PM.getImage();
-    Image NewResPM = ResPM.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon CB = new ImageIcon("Tray1.jpg");
-    Image ResCB = CB.getImage();
-    Image NewResCB = ResCB.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon CA = new ImageIcon("Tray2.jpg");
-    Image ResCA = CA.getImage();
-    Image NewResCA = ResCA.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SSP = new ImageIcon("Tray3.jpg");
-    Image ResSSP = SSP.getImage();
-    Image NewResSSP = ResSSP.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon PC = new ImageIcon("Tray4.jpg");
-    Image ResPC = PC.getImage();
-    Image NewResPC = ResPC.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SH = new ImageIcon("Tray5.jpg");
-    Image ResSH = SH.getImage();
-    Image NewResSH = ResSH.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon LP = new ImageIcon("Tray6.jpg");
-    Image ResLP = LP.getImage();
-    Image NewResLP = ResLP.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SGC = new ImageIcon("Tray7.jpg");
-    Image ResSGC = SGC.getImage();
-    Image NewResSGC = ResSGC.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SP = new ImageIcon("Tray8.jpg");
-    Image ResSP = SP.getImage();
-    Image NewResSP = ResSP.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon BF = new ImageIcon("Meal1.jpg");
-    Image ResBF = BF.getImage();
-    Image NewResBF = ResBF.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon LD = new ImageIcon("Meal2.jpg");
     Image ResLD = LD.getImage();
     Image NewResLD = ResLD.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
     
-    ImageIcon SC = new ImageIcon("drink1.jpg");
-    Image ResSC = SC.getImage();
-    Image NewResSC = ResSC.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon BC = new ImageIcon("drink2.png");
-    Image ResBC = BC.getImage();
-    Image NewResBC = ResBC.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SS = new ImageIcon("drink3.png");
-    Image ResSS = SS.getImage();
-    Image NewResSS = ResSS.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon BS = new ImageIcon("drink4.jpeg");
-    Image ResBS = BS.getImage();
-    Image NewResBS = ResBS.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon SR = new ImageIcon("drink5.png");
-    Image ResSR = SR.getImage();
-    Image NewResSR = ResSR.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon BR = new ImageIcon("drink6.jpg");
-    Image ResBR = BR.getImage();
-    Image NewResBR = ResBR.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon CHB = new ImageIcon("drink7.jpg");
-    Image ResCHB = CHB.getImage();
-    Image NewResCHB = ResCHB.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    ImageIcon W = new ImageIcon("drink8.jpg");
-    Image ResW = W.getImage();
-    Image NewResW = ResW.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
-    
-    
+    ImageIcon BF = new ImageIcon("meal1.jpg");
+    Image ResBF = BF.getImage();
+    Image NewResBF = ResBF.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -219,61 +77,67 @@ public class Order extends javax.swing.JFrame {
         buttonGroupService = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         TrayButton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        MealButton = new javax.swing.JButton();
+        DrinkButton = new javax.swing.JButton();
         SauceButton = new javax.swing.JButton();
         DetailsButton = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         TrayPanel = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        MinusCB = new javax.swing.JButton();
-        TextCountCB = new javax.swing.JLabel();
-        PlusCB = new javax.swing.JButton();
-        ImageCB = new javax.swing.JLabel();
-        jPanel16 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        MinusCA = new javax.swing.JButton();
-        TextCountCA = new javax.swing.JLabel();
-        PlusCA = new javax.swing.JButton();
-        ImageSSP = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        MinusSSP = new javax.swing.JButton();
-        TextCountSSP = new javax.swing.JLabel();
-        PlusSSP = new javax.swing.JButton();
-        ImageCA = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
+        PanelPC = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jPanel29 = new javax.swing.JPanel();
+        jPanel35 = new javax.swing.JPanel();
         MinusPC = new javax.swing.JButton();
         TextCountPC = new javax.swing.JLabel();
         PlusPC = new javax.swing.JButton();
-        ImagePC = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
+        PanelCB = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        MinusSH = new javax.swing.JButton();
-        TextCountSH = new javax.swing.JLabel();
-        PlusSH = new javax.swing.JButton();
-        ImageSH = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanel36 = new javax.swing.JPanel();
+        jPanel37 = new javax.swing.JPanel();
+        MinusCB = new javax.swing.JButton();
+        TextCountCB = new javax.swing.JLabel();
+        PlusCB = new javax.swing.JButton();
+        PanelSSP = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        MinusLP = new javax.swing.JButton();
-        TextCountLP = new javax.swing.JLabel();
-        PlusLP = new javax.swing.JButton();
-        ImageLP = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        MinusSGC = new javax.swing.JButton();
-        TextCountSGC = new javax.swing.JLabel();
-        PlusSGC = new javax.swing.JButton();
-        ImageSGC = new javax.swing.JLabel();
-        jPanel22 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanel38 = new javax.swing.JPanel();
+        jPanel39 = new javax.swing.JPanel();
+        MinusSSP = new javax.swing.JButton();
+        TextCountSSP = new javax.swing.JLabel();
+        PlusSSP = new javax.swing.JButton();
+        PanelS = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanel44 = new javax.swing.JPanel();
+        jPanel45 = new javax.swing.JPanel();
+        MinusS = new javax.swing.JButton();
+        TextCountS = new javax.swing.JLabel();
+        PlusS = new javax.swing.JButton();
+        PanelSP = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jPanel42 = new javax.swing.JPanel();
+        jPanel43 = new javax.swing.JPanel();
         MinusSP = new javax.swing.JButton();
         TextCountSP = new javax.swing.JLabel();
         PlusSP = new javax.swing.JButton();
-        ImageSP = new javax.swing.JLabel();
+        PanelL = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jPanel40 = new javax.swing.JPanel();
+        jPanel41 = new javax.swing.JPanel();
+        MinusL = new javax.swing.JButton();
+        TextCountL = new javax.swing.JLabel();
+        PlusL = new javax.swing.JButton();
         MealPanel = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -285,8 +149,8 @@ public class Order extends javax.swing.JFrame {
         MinusLD = new javax.swing.JButton();
         TextCountLD = new javax.swing.JLabel();
         PlusLD = new javax.swing.JButton();
-        ImageLD = new javax.swing.JLabel();
         ImageBF = new javax.swing.JLabel();
+        ImageLD = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -294,78 +158,113 @@ public class Order extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         DrinksPanel = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
+        PanelSC = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel46 = new javax.swing.JPanel();
         MinusSC = new javax.swing.JButton();
         TextCountSC = new javax.swing.JLabel();
         PlusSC = new javax.swing.JButton();
-        jPanel26 = new javax.swing.JPanel();
+        PanelSS = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
+        jPanel49 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanel47 = new javax.swing.JPanel();
+        jPanel48 = new javax.swing.JPanel();
         MinusSS = new javax.swing.JButton();
         TextCountSS = new javax.swing.JLabel();
         PlusSS = new javax.swing.JButton();
-        jPanel28 = new javax.swing.JPanel();
+        PanelSR = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
         MinusSR = new javax.swing.JButton();
         TextCountSR = new javax.swing.JLabel();
         PlusSR = new javax.swing.JButton();
-        jPanel30 = new javax.swing.JPanel();
+        PanelCHB = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
+        jPanel50 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanel51 = new javax.swing.JPanel();
+        jPanel52 = new javax.swing.JPanel();
         MinusCHB = new javax.swing.JButton();
         TextCountCHB = new javax.swing.JLabel();
         PlusCHB = new javax.swing.JButton();
-        jPanel31 = new javax.swing.JPanel();
+        PanelBC = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanel30 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel53 = new javax.swing.JPanel();
+        MinusBC = new javax.swing.JButton();
+        TextCountBC = new javax.swing.JLabel();
+        PlusBC = new javax.swing.JButton();
+        PanelBS = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanel55 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jPanel54 = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        MinusBS = new javax.swing.JButton();
+        TextCountBS = new javax.swing.JLabel();
+        PlusBS = new javax.swing.JButton();
+        PanelBR = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
+        jPanel58 = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jPanel57 = new javax.swing.JPanel();
+        jPanel56 = new javax.swing.JPanel();
         MinusBR = new javax.swing.JButton();
         TextCountBR = new javax.swing.JLabel();
         PlusBR = new javax.swing.JButton();
         jPanel32 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
+        jPanel61 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jPanel59 = new javax.swing.JPanel();
+        jPanel60 = new javax.swing.JPanel();
         MinusW = new javax.swing.JButton();
         TextCountW = new javax.swing.JLabel();
         PlusW = new javax.swing.JButton();
-        jPanel33 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        MinusBS = new javax.swing.JButton();
-        TextCountBS = new javax.swing.JLabel();
-        PlusBS = new javax.swing.JButton();
-        jPanel34 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        MinusBC = new javax.swing.JButton();
-        TextCountBC = new javax.swing.JLabel();
-        PlusBC = new javax.swing.JButton();
-        ImageBC = new javax.swing.JLabel();
-        ImageSC = new javax.swing.JLabel();
-        ImageBS = new javax.swing.JLabel();
-        ImageSS = new javax.swing.JLabel();
-        ImageBR = new javax.swing.JLabel();
-        ImageSR = new javax.swing.JLabel();
-        ImageCHB = new javax.swing.JLabel();
-        ImageW = new javax.swing.JLabel();
         SaucePanel = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        PanelCGO = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel63 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jPanel62 = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
         MinusCGO = new javax.swing.JButton();
         TextCountCGO = new javax.swing.JLabel();
         PlusCGO = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
+        PanelPWB = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jPanel66 = new javax.swing.JPanel();
+        jPanel68 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jPanel64 = new javax.swing.JPanel();
+        jPanel65 = new javax.swing.JPanel();
         MinusPWB = new javax.swing.JButton();
         TextCountPWB = new javax.swing.JLabel();
         PlusPWB = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
+        PanelSA = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel67 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        jPanel70 = new javax.swing.JPanel();
+        jPanel69 = new javax.swing.JPanel();
         MinusSA = new javax.swing.JButton();
         TextCountSA = new javax.swing.JLabel();
         PlusSA = new javax.swing.JButton();
-        ImageCGO = new javax.swing.JLabel();
-        ImagePWB = new javax.swing.JLabel();
-        ImageSA = new javax.swing.JLabel();
-        ImagePM = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
+        PanelPM = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jPanel71 = new javax.swing.JPanel();
+        jLabel50 = new javax.swing.JLabel();
+        jPanel72 = new javax.swing.JPanel();
+        jPanel73 = new javax.swing.JPanel();
         MinusPM = new javax.swing.JButton();
         TextCountPM = new javax.swing.JLabel();
         PlusPM = new javax.swing.JButton();
@@ -413,17 +312,17 @@ public class Order extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Meals");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        MealButton.setText("Meals");
+        MealButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                MealButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Drinks");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        DrinkButton.setText("Drinks");
+        DrinkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                DrinkButtonActionPerformed(evt);
             }
         });
 
@@ -449,9 +348,9 @@ public class Order extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addComponent(TrayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DrinkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SauceButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -464,8 +363,8 @@ public class Order extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TrayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DrinkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SauceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DetailsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(9, Short.MAX_VALUE))
@@ -475,116 +374,67 @@ public class Order extends javax.swing.JFrame {
 
         TrayPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel15.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel15.setLayout(new java.awt.GridLayout(1, 0));
-
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("<html><center>Cordon <br>bleu</br></html>");
-        jPanel15.add(jLabel6);
-
-        MinusCB.setText("-");
-        MinusCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusCBActionPerformed(evt);
-            }
-        });
-        jPanel15.add(MinusCB);
-
-        TextCountCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountCB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountCB.setText("0");
-        jPanel15.add(TextCountCB);
-
-        PlusCB.setText("+");
-        PlusCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusCBActionPerformed(evt);
-            }
-        });
-        jPanel15.add(PlusCB);
-
-        ImageCB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageCB.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageCB.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel16.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel16.setLayout(new java.awt.GridLayout(1, 0));
-
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Carbonara");
-        jPanel16.add(jLabel7);
-
-        MinusCA.setText("-");
-        MinusCA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusCAActionPerformed(evt);
-            }
-        });
-        jPanel16.add(MinusCA);
-
-        TextCountCA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountCA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountCA.setText("0");
-        jPanel16.add(TextCountCA);
-
-        PlusCA.setText("+");
-        PlusCA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusCAActionPerformed(evt);
-            }
-        });
-        jPanel16.add(PlusCA);
-
-        ImageSSP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSSP.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSSP.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel17.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel17.setLayout(new java.awt.GridLayout(1, 0));
-
-        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("<html><center>Sweet&Sour<br>Pork</br></html>");
-        jPanel17.add(jLabel8);
-
-        MinusSSP.setText("-");
-        MinusSSP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusSSPActionPerformed(evt);
-            }
-        });
-        jPanel17.add(MinusSSP);
-
-        TextCountSSP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountSSP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountSSP.setText("0");
-        jPanel17.add(TextCountSSP);
-
-        PlusSSP.setText("+");
-        PlusSSP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusSSPActionPerformed(evt);
-            }
-        });
-        jPanel17.add(PlusSSP);
-
-        ImageCA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageCA.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageCA.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel18.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel18.setLayout(new java.awt.GridLayout(1, 0));
+        PanelPC.setBackground(new java.awt.Color(204, 204, 255));
+        PanelPC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelPC.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("<html><center>Pancit<br>Canton</br></html>");
-        jPanel18.add(jLabel9);
+        PanelPC.add(jLabel9);
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelPC.add(jPanel12);
+
+        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelPC.add(jLabel20);
+
+        jPanel29.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel29.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelPC.add(jPanel29);
+
+        jPanel35.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel35.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelPC.add(jPanel35);
 
         MinusPC.setText("-");
         MinusPC.addActionListener(new java.awt.event.ActionListener() {
@@ -592,12 +442,12 @@ public class Order extends javax.swing.JFrame {
                 MinusPCActionPerformed(evt);
             }
         });
-        jPanel18.add(MinusPC);
+        PanelPC.add(MinusPC);
 
         TextCountPC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         TextCountPC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountPC.setText("0");
-        jPanel18.add(TextCountPC);
+        PanelPC.add(TextCountPC);
 
         PlusPC.setText("+");
         PlusPC.addActionListener(new java.awt.event.ActionListener() {
@@ -605,122 +455,318 @@ public class Order extends javax.swing.JFrame {
                 PlusPCActionPerformed(evt);
             }
         });
-        jPanel18.add(PlusPC);
+        PanelPC.add(PlusPC);
 
-        ImagePC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImagePC.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImagePC.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel19.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel19.setLayout(new java.awt.GridLayout(1, 0));
+        PanelCB.setBackground(new java.awt.Color(204, 204, 255));
+        PanelCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelCB.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
 
         jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("<html><center>Shanghai<br>Rolls</br></html>");
-        jPanel19.add(jLabel10);
+        jLabel10.setText("<html><center>Cordon<br>Bleu</br></html>");
+        PanelCB.add(jLabel10);
 
-        MinusSH.setText("-");
-        MinusSH.addActionListener(new java.awt.event.ActionListener() {
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCB.add(jPanel15);
+
+        jLabel32.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelCB.add(jLabel32);
+
+        jPanel36.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel36.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
+        jPanel36.setLayout(jPanel36Layout);
+        jPanel36Layout.setHorizontalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel36Layout.setVerticalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCB.add(jPanel36);
+
+        jPanel37.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel37.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCB.add(jPanel37);
+
+        MinusCB.setText("-");
+        MinusCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusSHActionPerformed(evt);
+                MinusCBActionPerformed(evt);
             }
         });
-        jPanel19.add(MinusSH);
+        PanelCB.add(MinusCB);
 
-        TextCountSH.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountSH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountSH.setText("0");
-        jPanel19.add(TextCountSH);
+        TextCountCB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountCB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountCB.setText("0");
+        PanelCB.add(TextCountCB);
 
-        PlusSH.setText("+");
-        PlusSH.addActionListener(new java.awt.event.ActionListener() {
+        PlusCB.setText("+");
+        PlusCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusSHActionPerformed(evt);
+                PlusCBActionPerformed(evt);
             }
         });
-        jPanel19.add(PlusSH);
+        PanelCB.add(PlusCB);
 
-        ImageSH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSH.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSH.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel20.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel20.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSSP.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSSP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSSP.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Liempo");
-        jPanel20.add(jLabel11);
+        jLabel11.setText("<html><center>Sweet &<br>Sour Pork</br></html>");
+        PanelSSP.add(jLabel11);
 
-        MinusLP.setText("-");
-        MinusLP.addActionListener(new java.awt.event.ActionListener() {
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSSP.add(jPanel16);
+
+        jLabel33.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelSSP.add(jLabel33);
+
+        jPanel38.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel38.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
+        jPanel38.setLayout(jPanel38Layout);
+        jPanel38Layout.setHorizontalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel38Layout.setVerticalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSSP.add(jPanel38);
+
+        jPanel39.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel39.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSSP.add(jPanel39);
+
+        MinusSSP.setText("-");
+        MinusSSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusLPActionPerformed(evt);
+                MinusSSPActionPerformed(evt);
             }
         });
-        jPanel20.add(MinusLP);
+        PanelSSP.add(MinusSSP);
 
-        TextCountLP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountLP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountLP.setText("0");
-        jPanel20.add(TextCountLP);
+        TextCountSSP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountSSP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountSSP.setText("0");
+        PanelSSP.add(TextCountSSP);
 
-        PlusLP.setText("+");
-        PlusLP.addActionListener(new java.awt.event.ActionListener() {
+        PlusSSP.setText("+");
+        PlusSSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusLPActionPerformed(evt);
+                PlusSSPActionPerformed(evt);
             }
         });
-        jPanel20.add(PlusLP);
+        PanelSSP.add(PlusSSP);
 
-        ImageLP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageLP.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageLP.setMinimumSize(new java.awt.Dimension(150, 150));
+        PanelS.setBackground(new java.awt.Color(204, 204, 255));
+        PanelS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelS.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
 
-        jPanel21.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel21.setLayout(new java.awt.GridLayout(1, 0));
+        jLabel36.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("<html><center>Shang-hai<br>Roll</br></html>");
+        PanelS.add(jLabel36);
 
-        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("<html><center>Soy Garlic<br>Chicken</br></html>");
-        jPanel21.add(jLabel12);
+        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setOpaque(false);
 
-        MinusSGC.setText("-");
-        MinusSGC.addActionListener(new java.awt.event.ActionListener() {
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelS.add(jPanel19);
+
+        jLabel37.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelS.add(jLabel37);
+
+        jPanel44.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel44.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
+        jPanel44.setLayout(jPanel44Layout);
+        jPanel44Layout.setHorizontalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel44Layout.setVerticalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelS.add(jPanel44);
+
+        jPanel45.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel45.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
+        jPanel45.setLayout(jPanel45Layout);
+        jPanel45Layout.setHorizontalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel45Layout.setVerticalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelS.add(jPanel45);
+
+        MinusS.setText("-");
+        MinusS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusSGCActionPerformed(evt);
+                MinusSActionPerformed(evt);
             }
         });
-        jPanel21.add(MinusSGC);
+        PanelS.add(MinusS);
 
-        TextCountSGC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountSGC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountSGC.setText("0");
-        jPanel21.add(TextCountSGC);
+        TextCountS.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountS.setText("0");
+        PanelS.add(TextCountS);
 
-        PlusSGC.setText("+");
-        PlusSGC.addActionListener(new java.awt.event.ActionListener() {
+        PlusS.setText("+");
+        PlusS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusSGCActionPerformed(evt);
+                PlusSActionPerformed(evt);
             }
         });
-        jPanel21.add(PlusSGC);
+        PanelS.add(PlusS);
 
-        ImageSGC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSGC.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSGC.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        jPanel22.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel22.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSP.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSP.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
 
         jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("<html><center>Steak &<br>Potatoes</br></html>");
-        jPanel22.add(jLabel13);
+        PanelSP.add(jLabel13);
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelSP.add(jPanel18);
+
+        jLabel35.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelSP.add(jLabel35);
+
+        jPanel42.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel42.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
+        jPanel42.setLayout(jPanel42Layout);
+        jPanel42Layout.setHorizontalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel42Layout.setVerticalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelSP.add(jPanel42);
+
+        jPanel43.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel43.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
+        jPanel43.setLayout(jPanel43Layout);
+        jPanel43Layout.setHorizontalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel43Layout.setVerticalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelSP.add(jPanel43);
 
         MinusSP.setText("-");
         MinusSP.addActionListener(new java.awt.event.ActionListener() {
@@ -728,12 +774,12 @@ public class Order extends javax.swing.JFrame {
                 MinusSPActionPerformed(evt);
             }
         });
-        jPanel22.add(MinusSP);
+        PanelSP.add(MinusSP);
 
         TextCountSP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         TextCountSP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountSP.setText("0");
-        jPanel22.add(TextCountSP);
+        PanelSP.add(TextCountSP);
 
         PlusSP.setText("+");
         PlusSP.addActionListener(new java.awt.event.ActionListener() {
@@ -741,95 +787,124 @@ public class Order extends javax.swing.JFrame {
                 PlusSPActionPerformed(evt);
             }
         });
-        jPanel22.add(PlusSP);
+        PanelSP.add(PlusSP);
 
-        ImageSP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSP.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSP.setMinimumSize(new java.awt.Dimension(150, 150));
+        PanelL.setBackground(new java.awt.Color(204, 204, 255));
+        PanelL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelL.setLayout(new java.awt.GridLayout(2, 4, 0, 1));
+
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Liempo");
+        PanelL.add(jLabel12);
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelL.add(jPanel17);
+
+        jLabel34.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("<html><center>Price:<br>$$$</br></html>");
+        PanelL.add(jLabel34);
+
+        jPanel40.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel40.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
+        jPanel40.setLayout(jPanel40Layout);
+        jPanel40Layout.setHorizontalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel40Layout.setVerticalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelL.add(jPanel40);
+
+        jPanel41.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel41.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
+        jPanel41.setLayout(jPanel41Layout);
+        jPanel41Layout.setHorizontalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+        );
+        jPanel41Layout.setVerticalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 41, Short.MAX_VALUE)
+        );
+
+        PanelL.add(jPanel41);
+
+        MinusL.setText("-");
+        MinusL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusLActionPerformed(evt);
+            }
+        });
+        PanelL.add(MinusL);
+
+        TextCountL.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountL.setText("0");
+        PanelL.add(TextCountL);
+
+        PlusL.setText("+");
+        PlusL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlusLActionPerformed(evt);
+            }
+        });
+        PanelL.add(PlusL);
 
         javax.swing.GroupLayout TrayPanelLayout = new javax.swing.GroupLayout(TrayPanel);
         TrayPanel.setLayout(TrayPanelLayout);
         TrayPanelLayout.setHorizontalGroup(
             TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(12, 12, 12)
+                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelS, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(PanelPC, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelSP, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelCB, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40))
-            .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addComponent(ImageSSP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
-                .addComponent(ImageLP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(118, 118, 118))
-            .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(ImageCB, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
-                .addComponent(ImageSP, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(124, 124, 124))
-            .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(ImagePC, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ImageSH, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
-            .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(ImageCA, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ImageSGC, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(118, 118, 118))
+                    .addComponent(PanelSSP, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelL, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         TrayPanelLayout.setVerticalGroup(
             TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TrayPanelLayout.createSequentialGroup()
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TrayPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ImagePC, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ImageSH, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TrayPanelLayout.createSequentialGroup()
-                        .addComponent(ImageSSP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(ImageLP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ImageCA, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ImageSGC, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(TrayPanelLayout.createSequentialGroup()
-                        .addComponent(ImageCB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(TrayPanelLayout.createSequentialGroup()
-                        .addComponent(ImageSP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(15, 15, 15))
+                .addGap(26, 26, 26)
+                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelCB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelSSP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(TrayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelSP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelL, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1626, Short.MAX_VALUE))
         );
 
         jPanel2.add(TrayPanel, "TrayPanel");
@@ -896,13 +971,13 @@ public class Order extends javax.swing.JFrame {
         });
         jPanel25.add(PlusLD);
 
-        ImageLD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageLD.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageLD.setMinimumSize(new java.awt.Dimension(150, 150));
-
         ImageBF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ImageBF.setMaximumSize(new java.awt.Dimension(150, 150));
         ImageBF.setMinimumSize(new java.awt.Dimension(150, 150));
+
+        ImageLD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ImageLD.setMaximumSize(new java.awt.Dimension(150, 150));
+        ImageLD.setMinimumSize(new java.awt.Dimension(150, 150));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -925,24 +1000,25 @@ public class Order extends javax.swing.JFrame {
         MealPanel.setLayout(MealPanelLayout);
         MealPanelLayout.setHorizontalGroup(
             MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MealPanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+            .addGroup(MealPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ImageBF, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ImageLD, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MealPanelLayout.createSequentialGroup()
-                        .addComponent(ImageLD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)))
-                    .addGroup(MealPanelLayout.createSequentialGroup()
-                        .addComponent(ImageBF, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+                            .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
                             .addComponent(jLabel14)
-                            .addComponent(jScrollPane2))))
-                .addGap(44, 44, 44))
+                            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MealPanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel17)
+                        .addGap(334, 334, 334))))
         );
         MealPanelLayout.setVerticalGroup(
             MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -953,10 +1029,10 @@ public class Order extends javax.swing.JFrame {
                         .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel14)
-                        .addGap(2, 2, 2)
-                        .addComponent(jScrollPane2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(ImageBF, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
+                .addGap(18, 18, 18)
                 .addGroup(MealPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MealPanelLayout.createSequentialGroup()
                         .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -965,21 +1041,71 @@ public class Order extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(ImageLD, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1151, Short.MAX_VALUE))
         );
 
         jPanel2.add(MealPanel, "MealPanel");
 
         DrinksPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel23.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel23.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSC.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSC.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("<html><center>Coke <br>300ml</br></html>");
-        jPanel23.add(jLabel18);
+        PanelSC.add(jLabel18);
+
+        jPanel21.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSC.add(jPanel21);
+
+        jLabel39.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("Price: $$$");
+        PanelSC.add(jLabel39);
+
+        jPanel22.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSC.add(jPanel22);
+
+        jPanel46.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
+        jPanel46.setLayout(jPanel46Layout);
+        jPanel46Layout.setHorizontalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel46Layout.setVerticalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSC.add(jPanel46);
 
         MinusSC.setText("-");
         MinusSC.addActionListener(new java.awt.event.ActionListener() {
@@ -987,12 +1113,12 @@ public class Order extends javax.swing.JFrame {
                 MinusSCActionPerformed(evt);
             }
         });
-        jPanel23.add(MinusSC);
+        PanelSC.add(MinusSC);
 
-        TextCountSC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountSC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         TextCountSC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountSC.setText("0");
-        jPanel23.add(TextCountSC);
+        PanelSC.add(TextCountSC);
 
         PlusSC.setText("+");
         PlusSC.addActionListener(new java.awt.event.ActionListener() {
@@ -1000,16 +1126,66 @@ public class Order extends javax.swing.JFrame {
                 PlusSCActionPerformed(evt);
             }
         });
-        jPanel23.add(PlusSC);
+        PanelSC.add(PlusSC);
 
-        jPanel26.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel26.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSS.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSS.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("<html><center>Sprite<br>300ml</br></html>");
-        jPanel26.add(jLabel19);
+        PanelSS.add(jLabel19);
+
+        jPanel49.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
+        jPanel49.setLayout(jPanel49Layout);
+        jPanel49Layout.setHorizontalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel49Layout.setVerticalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSS.add(jPanel49);
+
+        jLabel40.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("Price: $$$");
+        PanelSS.add(jLabel40);
+
+        jPanel47.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
+        jPanel47.setLayout(jPanel47Layout);
+        jPanel47Layout.setHorizontalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel47Layout.setVerticalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSS.add(jPanel47);
+
+        jPanel48.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
+        jPanel48.setLayout(jPanel48Layout);
+        jPanel48Layout.setHorizontalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel48Layout.setVerticalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSS.add(jPanel48);
 
         MinusSS.setText("-");
         MinusSS.addActionListener(new java.awt.event.ActionListener() {
@@ -1017,12 +1193,12 @@ public class Order extends javax.swing.JFrame {
                 MinusSSActionPerformed(evt);
             }
         });
-        jPanel26.add(MinusSS);
+        PanelSS.add(MinusSS);
 
-        TextCountSS.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountSS.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         TextCountSS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountSS.setText("0");
-        jPanel26.add(TextCountSS);
+        PanelSS.add(TextCountSS);
 
         PlusSS.setText("+");
         PlusSS.addActionListener(new java.awt.event.ActionListener() {
@@ -1030,16 +1206,66 @@ public class Order extends javax.swing.JFrame {
                 PlusSSActionPerformed(evt);
             }
         });
-        jPanel26.add(PlusSS);
+        PanelSS.add(PlusSS);
 
-        jPanel28.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel28.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSR.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSR.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("<html><center>Royal<br>300ml</br></html>");
-        jPanel28.add(jLabel21);
+        PanelSR.add(jLabel21);
+
+        jPanel28.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSR.add(jPanel28);
+
+        jLabel41.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("Price: $$$");
+        PanelSR.add(jLabel41);
+
+        jPanel23.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSR.add(jPanel23);
+
+        jPanel26.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelSR.add(jPanel26);
 
         MinusSR.setText("-");
         MinusSR.addActionListener(new java.awt.event.ActionListener() {
@@ -1047,12 +1273,12 @@ public class Order extends javax.swing.JFrame {
                 MinusSRActionPerformed(evt);
             }
         });
-        jPanel28.add(MinusSR);
+        PanelSR.add(MinusSR);
 
-        TextCountSR.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountSR.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         TextCountSR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountSR.setText("0");
-        jPanel28.add(TextCountSR);
+        PanelSR.add(TextCountSR);
 
         PlusSR.setText("+");
         PlusSR.addActionListener(new java.awt.event.ActionListener() {
@@ -1060,16 +1286,66 @@ public class Order extends javax.swing.JFrame {
                 PlusSRActionPerformed(evt);
             }
         });
-        jPanel28.add(PlusSR);
+        PanelSR.add(PlusSR);
 
-        jPanel30.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel30.setLayout(new java.awt.GridLayout(1, 0));
+        PanelCHB.setBackground(new java.awt.Color(204, 204, 255));
+        PanelCHB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelCHB.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("<html><center>Coffee <br>House Brew</br></html>");
-        jPanel30.add(jLabel23);
+        PanelCHB.add(jLabel23);
+
+        jPanel50.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
+        jPanel50.setLayout(jPanel50Layout);
+        jPanel50Layout.setHorizontalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel50Layout.setVerticalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCHB.add(jPanel50);
+
+        jLabel42.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel42.setText("Price: $$$");
+        PanelCHB.add(jLabel42);
+
+        jPanel51.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
+        jPanel51.setLayout(jPanel51Layout);
+        jPanel51Layout.setHorizontalGroup(
+            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel51Layout.setVerticalGroup(
+            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCHB.add(jPanel51);
+
+        jPanel52.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
+        jPanel52.setLayout(jPanel52Layout);
+        jPanel52Layout.setHorizontalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel52Layout.setVerticalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelCHB.add(jPanel52);
 
         MinusCHB.setText("-");
         MinusCHB.addActionListener(new java.awt.event.ActionListener() {
@@ -1077,12 +1353,12 @@ public class Order extends javax.swing.JFrame {
                 MinusCHBActionPerformed(evt);
             }
         });
-        jPanel30.add(MinusCHB);
+        PanelCHB.add(MinusCHB);
 
         TextCountCHB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         TextCountCHB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountCHB.setText("0");
-        jPanel30.add(TextCountCHB);
+        PanelCHB.add(TextCountCHB);
 
         PlusCHB.setText("+");
         PlusCHB.addActionListener(new java.awt.event.ActionListener() {
@@ -1090,16 +1366,226 @@ public class Order extends javax.swing.JFrame {
                 PlusCHBActionPerformed(evt);
             }
         });
-        jPanel30.add(PlusCHB);
+        PanelCHB.add(PlusCHB);
 
-        jPanel31.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel31.setLayout(new java.awt.GridLayout(1, 0));
+        PanelBC.setBackground(new java.awt.Color(204, 204, 255));
+        PanelBC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelBC.setLayout(new java.awt.GridLayout(2, 4));
+
+        jLabel27.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("<html><center>Coke<br>1.5L</br></html>");
+        PanelBC.add(jLabel27);
+
+        jPanel30.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
+        jPanel30.setLayout(jPanel30Layout);
+        jPanel30Layout.setHorizontalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel30Layout.setVerticalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBC.add(jPanel30);
+
+        jLabel43.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel43.setText("Price: $$$");
+        PanelBC.add(jLabel43);
+
+        jPanel34.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
+        jPanel34.setLayout(jPanel34Layout);
+        jPanel34Layout.setHorizontalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel34Layout.setVerticalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBC.add(jPanel34);
+
+        jPanel53.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
+        jPanel53.setLayout(jPanel53Layout);
+        jPanel53Layout.setHorizontalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel53Layout.setVerticalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBC.add(jPanel53);
+
+        MinusBC.setText("-");
+        MinusBC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusBCActionPerformed(evt);
+            }
+        });
+        PanelBC.add(MinusBC);
+
+        TextCountBC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountBC.setText("0");
+        PanelBC.add(TextCountBC);
+
+        PlusBC.setText("+");
+        PlusBC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlusBCActionPerformed(evt);
+            }
+        });
+        PanelBC.add(PlusBC);
+
+        PanelBS.setBackground(new java.awt.Color(204, 204, 255));
+        PanelBS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelBS.setLayout(new java.awt.GridLayout(2, 4));
+
+        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("<html><center>Sprite<br>1.5L</br></html>");
+        PanelBS.add(jLabel26);
+
+        jPanel55.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
+        jPanel55.setLayout(jPanel55Layout);
+        jPanel55Layout.setHorizontalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel55Layout.setVerticalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBS.add(jPanel55);
+
+        jLabel44.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("Price: $$$");
+        PanelBS.add(jLabel44);
+
+        jPanel54.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
+        jPanel54.setLayout(jPanel54Layout);
+        jPanel54Layout.setHorizontalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel54Layout.setVerticalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBS.add(jPanel54);
+
+        jPanel33.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
+        jPanel33.setLayout(jPanel33Layout);
+        jPanel33Layout.setHorizontalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel33Layout.setVerticalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBS.add(jPanel33);
+
+        MinusBS.setText("-");
+        MinusBS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusBSActionPerformed(evt);
+            }
+        });
+        PanelBS.add(MinusBS);
+
+        TextCountBS.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        TextCountBS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextCountBS.setText("0");
+        PanelBS.add(TextCountBS);
+
+        PlusBS.setText("+");
+        PlusBS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlusBSActionPerformed(evt);
+            }
+        });
+        PanelBS.add(PlusBS);
+
+        PanelBR.setBackground(new java.awt.Color(204, 204, 255));
+        PanelBR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelBR.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("<html><center>Royal <br>1.5L</br></html>");
-        jPanel31.add(jLabel24);
+        PanelBR.add(jLabel24);
+
+        jPanel58.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
+        jPanel58.setLayout(jPanel58Layout);
+        jPanel58Layout.setHorizontalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel58Layout.setVerticalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBR.add(jPanel58);
+
+        jLabel45.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("Price: $$$");
+        PanelBR.add(jLabel45);
+
+        jPanel57.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
+        jPanel57.setLayout(jPanel57Layout);
+        jPanel57Layout.setHorizontalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel57Layout.setVerticalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBR.add(jPanel57);
+
+        jPanel56.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
+        jPanel56.setLayout(jPanel56Layout);
+        jPanel56Layout.setHorizontalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel56Layout.setVerticalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        PanelBR.add(jPanel56);
 
         MinusBR.setText("-");
         MinusBR.addActionListener(new java.awt.event.ActionListener() {
@@ -1107,12 +1593,12 @@ public class Order extends javax.swing.JFrame {
                 MinusBRActionPerformed(evt);
             }
         });
-        jPanel31.add(MinusBR);
+        PanelBR.add(MinusBR);
 
         TextCountBR.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         TextCountBR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountBR.setText("0");
-        jPanel31.add(TextCountBR);
+        PanelBR.add(TextCountBR);
 
         PlusBR.setText("+");
         PlusBR.addActionListener(new java.awt.event.ActionListener() {
@@ -1120,16 +1606,66 @@ public class Order extends javax.swing.JFrame {
                 PlusBRActionPerformed(evt);
             }
         });
-        jPanel31.add(PlusBR);
+        PanelBR.add(PlusBR);
 
         jPanel32.setBackground(new java.awt.Color(204, 204, 255));
         jPanel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel32.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel32.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("<html><center>Water <br>500ml</br></html>");
         jPanel32.add(jLabel25);
+
+        jPanel61.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
+        jPanel61.setLayout(jPanel61Layout);
+        jPanel61Layout.setHorizontalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel61Layout.setVerticalGroup(
+            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        jPanel32.add(jPanel61);
+
+        jLabel46.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("Price: $$$");
+        jPanel32.add(jLabel46);
+
+        jPanel59.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
+        jPanel59.setLayout(jPanel59Layout);
+        jPanel59Layout.setHorizontalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel59Layout.setVerticalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        jPanel32.add(jPanel59);
+
+        jPanel60.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
+        jPanel60.setLayout(jPanel60Layout);
+        jPanel60Layout.setHorizontalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 77, Short.MAX_VALUE)
+        );
+        jPanel60Layout.setVerticalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        jPanel32.add(jPanel60);
 
         MinusW.setText("-");
         MinusW.addActionListener(new java.awt.event.ActionListener() {
@@ -1152,206 +1688,114 @@ public class Order extends javax.swing.JFrame {
         });
         jPanel32.add(PlusW);
 
-        jPanel33.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel33.setLayout(new java.awt.GridLayout(1, 0));
-
-        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("<html><center>Sprite<br>1.5L</br></html>");
-        jPanel33.add(jLabel26);
-
-        MinusBS.setText("-");
-        MinusBS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusBSActionPerformed(evt);
-            }
-        });
-        jPanel33.add(MinusBS);
-
-        TextCountBS.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountBS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountBS.setText("0");
-        jPanel33.add(TextCountBS);
-
-        PlusBS.setText("+");
-        PlusBS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusBSActionPerformed(evt);
-            }
-        });
-        jPanel33.add(PlusBS);
-
-        jPanel34.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel34.setLayout(new java.awt.GridLayout(1, 0));
-
-        jLabel27.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("<html><center>Coke<br>1.5L</br></html>");
-        jPanel34.add(jLabel27);
-
-        MinusBC.setText("-");
-        MinusBC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusBCActionPerformed(evt);
-            }
-        });
-        jPanel34.add(MinusBC);
-
-        TextCountBC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TextCountBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextCountBC.setText("0");
-        jPanel34.add(TextCountBC);
-
-        PlusBC.setText("+");
-        PlusBC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlusBCActionPerformed(evt);
-            }
-        });
-        jPanel34.add(PlusBC);
-
-        ImageBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageBC.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageBC.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageSC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSC.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSC.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageBS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageBS.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageBS.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageSS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSS.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSS.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageBR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageBR.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageBR.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageSR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageSR.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageSR.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageCHB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageCHB.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageCHB.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImageW.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageW.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageW.setMinimumSize(new java.awt.Dimension(150, 150));
-
         javax.swing.GroupLayout DrinksPanelLayout = new javax.swing.GroupLayout(DrinksPanel);
         DrinksPanel.setLayout(DrinksPanelLayout);
         DrinksPanelLayout.setHorizontalGroup(
             DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DrinksPanelLayout.createSequentialGroup()
+                .addContainerGap(107, Short.MAX_VALUE)
+                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PanelCHB, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelSR, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelSC, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelSS, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
                 .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DrinksPanelLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(DrinksPanelLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(ImageSC, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DrinksPanelLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(ImageSS, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                        .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                        .addComponent(ImageBS, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                        .addComponent(ImageBC, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(131, 131, 131))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(ImageSR, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ImageBR, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(ImageW, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ImageCHB, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
+                    .addComponent(jPanel32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelBS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelBR, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelBC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
         );
         DrinksPanelLayout.setVerticalGroup(
             DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DrinksPanelLayout.createSequentialGroup()
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap()
+                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DrinksPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ImageBC, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DrinksPanelLayout.createSequentialGroup()
-                        .addComponent(ImageSC, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ImageBS, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ImageSS, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PanelSC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PanelSR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DrinksPanelLayout.createSequentialGroup()
+                        .addComponent(PanelBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PanelBR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
                 .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ImageBR, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ImageSR, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ImageCHB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ImageW, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                    .addComponent(PanelSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelBS, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DrinksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelCHB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1484, Short.MAX_VALUE))
         );
 
         jPanel2.add(DrinksPanel, "DrinksPanel");
 
         SaucePanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel4.setMaximumSize(new java.awt.Dimension(200, 200));
-        jPanel4.setMinimumSize(new java.awt.Dimension(200, 200));
-        jPanel4.setName(""); // NOI18N
-        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
-
-        jPanel10.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel10.setMaximumSize(new java.awt.Dimension(150, 150));
-        jPanel10.setMinimumSize(new java.awt.Dimension(150, 150));
-        jPanel10.setPreferredSize(new java.awt.Dimension(22, 22));
-        jPanel10.setLayout(new java.awt.GridLayout(1, 0));
+        PanelCGO.setBackground(new java.awt.Color(204, 204, 255));
+        PanelCGO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelCGO.setMaximumSize(new java.awt.Dimension(200, 200));
+        PanelCGO.setMinimumSize(new java.awt.Dimension(200, 200));
+        PanelCGO.setName(""); // NOI18N
+        PanelCGO.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html>Crunchy <br>Garlic Oil</br></html>");
-        jPanel10.add(jLabel1);
+        PanelCGO.add(jLabel1);
+
+        jPanel63.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
+        jPanel63.setLayout(jPanel63Layout);
+        jPanel63Layout.setHorizontalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel63Layout.setVerticalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelCGO.add(jPanel63);
+
+        jLabel47.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel47.setText("Price: $$$");
+        PanelCGO.add(jLabel47);
+
+        jPanel62.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
+        jPanel62.setLayout(jPanel62Layout);
+        jPanel62Layout.setHorizontalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel62Layout.setVerticalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelCGO.add(jPanel62);
+
+        jPanel31.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelCGO.add(jPanel31);
 
         MinusCGO.setText("-");
         MinusCGO.setMaximumSize(new java.awt.Dimension(7, 7));
@@ -1361,12 +1805,12 @@ public class Order extends javax.swing.JFrame {
                 MinusCGOActionPerformed(evt);
             }
         });
-        jPanel10.add(MinusCGO);
+        PanelCGO.add(MinusCGO);
 
         TextCountCGO.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         TextCountCGO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountCGO.setText("0");
-        jPanel10.add(TextCountCGO);
+        PanelCGO.add(TextCountCGO);
 
         PlusCGO.setText("+");
         PlusCGO.setMaximumSize(new java.awt.Dimension(7, 7));
@@ -1376,22 +1820,85 @@ public class Order extends javax.swing.JFrame {
                 PlusCGOActionPerformed(evt);
             }
         });
-        jPanel10.add(PlusCGO);
+        PanelCGO.add(PlusCGO);
 
-        jPanel4.add(jPanel10);
-
-        jPanel8.setLayout(new java.awt.GridLayout(1, 0));
-
-        jPanel11.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel11.setPreferredSize(new java.awt.Dimension(22, 22));
-        jPanel11.setLayout(new java.awt.GridLayout(1, 4));
+        PanelPWB.setBackground(new java.awt.Color(204, 204, 255));
+        PanelPWB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelPWB.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("<html><center>Pork<br> with Bagoong</br></html>");
         jLabel2.setToolTipText("");
-        jPanel11.add(jLabel2);
+        PanelPWB.add(jLabel2);
+
+        jPanel66.setOpaque(false);
+
+        jPanel68.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
+        jPanel68.setLayout(jPanel68Layout);
+        jPanel68Layout.setHorizontalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+        jPanel68Layout.setVerticalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
+        jPanel66.setLayout(jPanel66Layout);
+        jPanel66Layout.setHorizontalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel66Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel66Layout.setVerticalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel66Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        PanelPWB.add(jPanel66);
+
+        jLabel48.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Price: $$$");
+        PanelPWB.add(jLabel48);
+
+        jPanel64.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel64Layout = new javax.swing.GroupLayout(jPanel64);
+        jPanel64.setLayout(jPanel64Layout);
+        jPanel64Layout.setHorizontalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel64Layout.setVerticalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelPWB.add(jPanel64);
+
+        jPanel65.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
+        jPanel65.setLayout(jPanel65Layout);
+        jPanel65Layout.setHorizontalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel65Layout.setVerticalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelPWB.add(jPanel65);
 
         MinusPWB.setText("-");
         MinusPWB.addActionListener(new java.awt.event.ActionListener() {
@@ -1399,12 +1906,12 @@ public class Order extends javax.swing.JFrame {
                 MinusPWBActionPerformed(evt);
             }
         });
-        jPanel11.add(MinusPWB);
+        PanelPWB.add(MinusPWB);
 
         TextCountPWB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         TextCountPWB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountPWB.setText("0");
-        jPanel11.add(TextCountPWB);
+        PanelPWB.add(TextCountPWB);
 
         PlusPWB.setText("+");
         PlusPWB.addActionListener(new java.awt.event.ActionListener() {
@@ -1412,18 +1919,66 @@ public class Order extends javax.swing.JFrame {
                 PlusPWBActionPerformed(evt);
             }
         });
-        jPanel11.add(PlusPWB);
+        PanelPWB.add(PlusPWB);
 
-        jPanel8.add(jPanel11);
-
-        jPanel9.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel9.setLayout(new java.awt.GridLayout(1, 0));
+        PanelSA.setBackground(new java.awt.Color(204, 204, 255));
+        PanelSA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelSA.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("<html>Special <br>Atchara</br></html>");
-        jPanel9.add(jLabel3);
+        PanelSA.add(jLabel3);
+
+        jPanel67.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel67Layout = new javax.swing.GroupLayout(jPanel67);
+        jPanel67.setLayout(jPanel67Layout);
+        jPanel67Layout.setHorizontalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel67Layout.setVerticalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelSA.add(jPanel67);
+
+        jLabel49.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel49.setText("Price: $$$");
+        PanelSA.add(jLabel49);
+
+        jPanel70.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
+        jPanel70.setLayout(jPanel70Layout);
+        jPanel70Layout.setHorizontalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel70Layout.setVerticalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelSA.add(jPanel70);
+
+        jPanel69.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
+        jPanel69.setLayout(jPanel69Layout);
+        jPanel69Layout.setHorizontalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel69Layout.setVerticalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelSA.add(jPanel69);
 
         MinusSA.setText("-");
         MinusSA.addActionListener(new java.awt.event.ActionListener() {
@@ -1431,12 +1986,12 @@ public class Order extends javax.swing.JFrame {
                 MinusSAActionPerformed(evt);
             }
         });
-        jPanel9.add(MinusSA);
+        PanelSA.add(MinusSA);
 
         TextCountSA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         TextCountSA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountSA.setText("0");
-        jPanel9.add(TextCountSA);
+        PanelSA.add(TextCountSA);
 
         PlusSA.setText("+");
         PlusSA.addActionListener(new java.awt.event.ActionListener() {
@@ -1444,22 +1999,66 @@ public class Order extends javax.swing.JFrame {
                 PlusSAActionPerformed(evt);
             }
         });
-        jPanel9.add(PlusSA);
+        PanelSA.add(PlusSA);
 
-        ImageCGO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ImageCGO.setMaximumSize(new java.awt.Dimension(150, 150));
-        ImageCGO.setMinimumSize(new java.awt.Dimension(150, 150));
-
-        ImagePWB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        jPanel14.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
+        PanelPM.setBackground(new java.awt.Color(204, 204, 255));
+        PanelPM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        PanelPM.setLayout(new java.awt.GridLayout(2, 4));
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("<html><center>Pickled <br>Mangoes</br></html>");
-        jPanel14.add(jLabel5);
+        PanelPM.add(jLabel5);
+
+        jPanel71.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel71Layout = new javax.swing.GroupLayout(jPanel71);
+        jPanel71.setLayout(jPanel71Layout);
+        jPanel71Layout.setHorizontalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel71Layout.setVerticalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelPM.add(jPanel71);
+
+        jLabel50.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("Price: $$$");
+        PanelPM.add(jLabel50);
+
+        jPanel72.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
+        jPanel72.setLayout(jPanel72Layout);
+        jPanel72Layout.setHorizontalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel72Layout.setVerticalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelPM.add(jPanel72);
+
+        jPanel73.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
+        jPanel73.setLayout(jPanel73Layout);
+        jPanel73Layout.setHorizontalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        jPanel73Layout.setVerticalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 37, Short.MAX_VALUE)
+        );
+
+        PanelPM.add(jPanel73);
 
         MinusPM.setText("-");
         MinusPM.addActionListener(new java.awt.event.ActionListener() {
@@ -1467,12 +2066,12 @@ public class Order extends javax.swing.JFrame {
                 MinusPMActionPerformed(evt);
             }
         });
-        jPanel14.add(MinusPM);
+        PanelPM.add(MinusPM);
 
         TextCountPM.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         TextCountPM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextCountPM.setText("0");
-        jPanel14.add(TextCountPM);
+        PanelPM.add(TextCountPM);
 
         PlusPM.setText("+");
         PlusPM.addActionListener(new java.awt.event.ActionListener() {
@@ -1480,56 +2079,35 @@ public class Order extends javax.swing.JFrame {
                 PlusPMActionPerformed(evt);
             }
         });
-        jPanel14.add(PlusPM);
+        PanelPM.add(PlusPM);
 
         javax.swing.GroupLayout SaucePanelLayout = new javax.swing.GroupLayout(SaucePanel);
         SaucePanel.setLayout(SaucePanelLayout);
         SaucePanelLayout.setHorizontalGroup(
             SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SaucePanelLayout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ImagePM, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(ImageCGO, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                        .addComponent(ImagePWB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(ImageSA, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
                 .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(148, Short.MAX_VALUE))
+                    .addComponent(PanelCGO, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelSA, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PanelPWB, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelPM, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         SaucePanelLayout.setVerticalGroup(
             SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SaucePanelLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SaucePanelLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(SaucePanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ImageCGO, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ImagePWB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
+                    .addComponent(PanelCGO, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelPWB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(SaucePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(SaucePanelLayout.createSequentialGroup()
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(124, 124, 124))
-                    .addGroup(SaucePanelLayout.createSequentialGroup()
-                        .addComponent(ImageSA, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ImagePM, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(101, 101, 101))))
+                    .addComponent(PanelSA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelPM, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1644, Short.MAX_VALUE))
         );
 
         jPanel2.add(SaucePanel, "SaucePanel");
@@ -1587,7 +2165,7 @@ public class Order extends javax.swing.JFrame {
                     .addComponent(jLabel29)
                     .addComponent(jLabel31)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1649,7 +2227,7 @@ public class Order extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1671,7 +2249,7 @@ public class Order extends javax.swing.JFrame {
 
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
         jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel27.setLayout(new java.awt.GridLayout());
+        jPanel27.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel22.setBackground(new java.awt.Color(255, 255, 255));
         jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
@@ -1794,7 +2372,7 @@ public class Order extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1804,29 +2382,22 @@ public class Order extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void PlusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCGOActionPerformed
-        // TODO add your handling code here:
-        countCGO++;
-        TextCountCGO.setText(" "+countCGO+" ");
-        
-    }//GEN-LAST:event_PlusCGOActionPerformed
 
     private void PlusSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSAActionPerformed
         // TODO add your handling code here:
@@ -1834,17 +2405,6 @@ public class Order extends javax.swing.JFrame {
         countSA++;
         TextCountSA.setText(" "+countSA+" ");
     }//GEN-LAST:event_PlusSAActionPerformed
-
-    private void MinusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCGOActionPerformed
-        // TODO add your handling code here:
-        countCGO--;
-        TextCountCGO.setText(" "+countCGO+" ");
-        
-        if(countCGO<0){
-            countCGO=0;
-            TextCountCGO.setText(" "+countCGO+" ");
-        }
-    }//GEN-LAST:event_MinusCGOActionPerformed
 
     private void MinusSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSAActionPerformed
         // TODO add your handling code here:
@@ -1900,151 +2460,11 @@ public class Order extends javax.swing.JFrame {
         TextCountPM.setText(" "+countPM+" ");
     }//GEN-LAST:event_PlusPMActionPerformed
 
-    private void MinusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCBActionPerformed
-        // TODO add your handling code here:
-        countCB--;
-        TextCountCB.setText(" "+countCB+" ");
-
-        if(countCB<0){
-            countCB=0;
-            TextCountCB.setText(" "+countCB+" ");
-        }
-    }//GEN-LAST:event_MinusCBActionPerformed
-
-    private void PlusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCBActionPerformed
-        // TODO add your handling code here:
-        
-        countCB++;
-        TextCountCB.setText(" "+countCB+" ");
-    }//GEN-LAST:event_PlusCBActionPerformed
-
-    private void MinusCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCAActionPerformed
-        // TODO add your handling code here:
-        
-        countCA--;
-        TextCountCA.setText(" "+countCA+" ");
-
-        if(countCA<0){
-            countCA=0;
-            TextCountCA.setText(" "+countCA+" ");
-        }
-    }//GEN-LAST:event_MinusCAActionPerformed
-
-    private void PlusCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCAActionPerformed
-        // TODO add your handling code here:
-        
-        countCA++;
-        TextCountCA.setText(" "+countCA+" ");
-    }//GEN-LAST:event_PlusCAActionPerformed
-
-    private void MinusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSSPActionPerformed
-        // TODO add your handling code here:
-        countSSP--;
-        TextCountSSP.setText(" "+countSSP+" ");
-
-        if(countSSP<0){
-            countSSP=0;
-            TextCountSSP.setText(" "+countSSP+" ");
-        }
-    }//GEN-LAST:event_MinusSSPActionPerformed
-
-    private void PlusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSSPActionPerformed
-        // TODO add your handling code here:
-        countSSP++;
-        TextCountSSP.setText(" "+countSSP+" ");
-    }//GEN-LAST:event_PlusSSPActionPerformed
-
-    private void MinusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusPCActionPerformed
-        // TODO add your handling code here:
-        countPC--;
-        TextCountPC.setText(" "+countPC+" ");
-
-        if(countPC<0){
-            countPC=0;
-            TextCountPC.setText(" "+countPC+" ");
-        }
-    }//GEN-LAST:event_MinusPCActionPerformed
-
-    private void PlusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusPCActionPerformed
-        // TODO add your handling code here:
-        countPC++;
-        TextCountPC.setText(" "+countPC+" ");
-    }//GEN-LAST:event_PlusPCActionPerformed
-
     private void TrayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TrayButtonActionPerformed
         // TODO add your handling code here:
         cardLayout.show(jPanel2, "TrayPanel");
         
     }//GEN-LAST:event_TrayButtonActionPerformed
-
-    private void MinusSHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSHActionPerformed
-        // TODO add your handling code here:
-        countSH--;
-        TextCountSH.setText(" "+countSH+" ");
-
-        if(countSH<0){
-            countSH=0;
-            TextCountSH.setText(" "+countSH+" ");
-        }
-    }//GEN-LAST:event_MinusSHActionPerformed
-
-    private void PlusSHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSHActionPerformed
-        // TODO add your handling code here:
-        countSH++;
-        TextCountSH.setText(" "+countSH+" ");
-    }//GEN-LAST:event_PlusSHActionPerformed
-
-    private void MinusLPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusLPActionPerformed
-        // TODO add your handling code here:
-        countLP--;
-        TextCountLP.setText(" "+countLP+" ");
-
-        if(countLP<0){
-            countLP=0;
-            TextCountLP.setText(" "+countLP+" ");
-        }
-    }//GEN-LAST:event_MinusLPActionPerformed
-
-    private void PlusLPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusLPActionPerformed
-        // TODO add your handling code here:
-        countLP++;
-        TextCountLP.setText(" "+countLP+" ");
-    }//GEN-LAST:event_PlusLPActionPerformed
-
-    private void MinusSGCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSGCActionPerformed
-        // TODO add your handling code here:
-        countSGC--;
-        TextCountSGC.setText(" "+countSGC+" ");
-
-        if(countSGC<0){
-            countSGC=0;
-            TextCountSGC.setText(" "+countSGC+" ");
-        }
-        
-    }//GEN-LAST:event_MinusSGCActionPerformed
-
-    private void PlusSGCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSGCActionPerformed
-        // TODO add your handling code here:
-        countSGC++;
-        TextCountSGC.setText(" "+countSGC+" ");
-    }//GEN-LAST:event_PlusSGCActionPerformed
-
-    private void MinusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSPActionPerformed
-        // TODO add your handling code here:
-        countSP--;
-        TextCountSP.setText(" "+countSP+" ");
-
-        if(countSP<0){
-            countSP=0;
-            TextCountSP.setText(" "+countSP+" ");
-        }
-    }//GEN-LAST:event_MinusSPActionPerformed
-
-    private void PlusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSPActionPerformed
-        // TODO add your handling code here:
-        countSP++;
-        TextCountSP.setText(" "+countSP+" ");
-    }//GEN-LAST:event_PlusSPActionPerformed
 
     private void MinusBFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusBFActionPerformed
         // TODO add your handling code here:
@@ -2080,10 +2500,10 @@ public class Order extends javax.swing.JFrame {
         TextCountLD.setText(" "+countLD+" ");
     }//GEN-LAST:event_PlusLDActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void MealButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MealButtonActionPerformed
         // TODO add your handling code here:
         cardLayout.show(jPanel2, "MealPanel");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_MealButtonActionPerformed
 
     private void MinusSCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSCActionPerformed
         // TODO add your handling code here:
@@ -2123,18 +2543,6 @@ public class Order extends javax.swing.JFrame {
         TextCountSS.setText(" "+countSS+" ");
     }//GEN-LAST:event_PlusSSActionPerformed
 
-    private void MinusCB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCB3ActionPerformed
-        // TODO add your handling code here:
-        
-        //DISREGARD
-    }//GEN-LAST:event_MinusCB3ActionPerformed
-
-    private void PlusCB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCB3ActionPerformed
-        // TODO add your handling code here:
-        
-        //DISREGARD
-    }//GEN-LAST:event_PlusCB3ActionPerformed
-
     private void MinusSRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSRActionPerformed
         // TODO add your handling code here:
         
@@ -2153,18 +2561,6 @@ public class Order extends javax.swing.JFrame {
         countSR++;
         TextCountSR.setText(" "+countSR+" ");
     }//GEN-LAST:event_PlusSRActionPerformed
-
-    private void MinusCB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCB5ActionPerformed
-        // TODO add your handling code here:
-        
-        //DISREGARD
-    }//GEN-LAST:event_MinusCB5ActionPerformed
-
-    private void PlusCB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCB5ActionPerformed
-        // TODO add your handling code here:
-        
-        //DISREGARD
-    }//GEN-LAST:event_PlusCB5ActionPerformed
 
     private void MinusCHBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCHBActionPerformed
         // TODO add your handling code here:
@@ -2261,16 +2657,136 @@ public class Order extends javax.swing.JFrame {
         TextCountBC.setText(" "+countBC+" ");
     }//GEN-LAST:event_PlusBCActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void DrinkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinkButtonActionPerformed
         // TODO add your handling code here:
         
        cardLayout.show(jPanel2, "DrinksPanel");
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_DrinkButtonActionPerformed
 
     private void DetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsButtonActionPerformed
         // TODO add your handling code here:
         cardLayout.show(jPanel2, "card6");
     }//GEN-LAST:event_DetailsButtonActionPerformed
+
+    private void PlusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusPCActionPerformed
+        // TODO add your handling code here:
+        countPC++;
+        TextCountPC.setText(" "+countPC+" ");
+    }//GEN-LAST:event_PlusPCActionPerformed
+
+    private void MinusPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusPCActionPerformed
+        // TODO add your handling code here:
+        countPC--;
+        TextCountPC.setText(" "+countPC+" ");
+
+        if(countPC<0){
+            countPC=0;
+            TextCountPC.setText(" "+countPC+" ");
+        }
+    }//GEN-LAST:event_MinusPCActionPerformed
+
+    private void MinusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCBActionPerformed
+        // TODO add your handling code here:
+        countCB--;
+        TextCountCB.setText(" "+countCB+" ");
+
+        if(countCB<0){
+            countCB=0;
+            TextCountCB.setText(" "+countCB+" ");
+        }
+    }//GEN-LAST:event_MinusCBActionPerformed
+
+    private void PlusCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCBActionPerformed
+        // TODO add your handling code here:
+        countCB++;
+        TextCountCB.setText(" "+countCB+" ");
+    }//GEN-LAST:event_PlusCBActionPerformed
+
+    private void MinusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSSPActionPerformed
+        // TODO add your handling code here:
+        countSSP--;
+        TextCountSSP.setText(" "+countSSP+" ");
+
+        if(countSSP<0){
+            countSSP=0;
+            TextCountSSP.setText(" "+countSSP+" ");
+        }
+    }//GEN-LAST:event_MinusSSPActionPerformed
+
+    private void PlusSSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSSPActionPerformed
+        // TODO add your handling code here:
+        countSSP++;
+        TextCountSSP.setText(" "+countSSP+" ");
+    }//GEN-LAST:event_PlusSSPActionPerformed
+
+    private void MinusLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusLActionPerformed
+        // TODO add your handling code here:
+        countL--;
+        TextCountL.setText(" "+countL+" ");
+
+        if(countL<0){
+            countL=0;
+            TextCountL.setText(" "+countL+" ");
+        }
+    }//GEN-LAST:event_MinusLActionPerformed
+
+    private void PlusLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusLActionPerformed
+        // TODO add your handling code here:
+        countL++;
+        TextCountL.setText(" "+countL+" ");
+    }//GEN-LAST:event_PlusLActionPerformed
+
+    private void MinusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSPActionPerformed
+        // TODO add your handling code here:
+        countSP--;
+        TextCountSP.setText(" "+countSP+" ");
+
+        if(countSP<0){
+            countSP=0;
+            TextCountSP.setText(" "+countSP+" ");
+        }
+    }//GEN-LAST:event_MinusSPActionPerformed
+
+    private void PlusSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSPActionPerformed
+        // TODO add your handling code here:
+        countSP++;
+        TextCountSP.setText(" "+countSP+" ");
+    }//GEN-LAST:event_PlusSPActionPerformed
+
+    private void MinusSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusSActionPerformed
+        // TODO add your handling code here:
+        countS--;
+        TextCountS.setText(" "+countS+" ");
+
+        if(countS<0){
+            countS=0;
+            TextCountS.setText(" "+countS+" ");
+        }
+    }//GEN-LAST:event_MinusSActionPerformed
+
+    private void PlusSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusSActionPerformed
+        // TODO add your handling code here:
+        countS++;
+        TextCountS.setText(" "+countS+" ");
+    }//GEN-LAST:event_PlusSActionPerformed
+
+    private void PlusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusCGOActionPerformed
+        // TODO add your handling code here:
+        countCGO++;
+        TextCountCGO.setText(" "+countCGO+" ");
+
+    }//GEN-LAST:event_PlusCGOActionPerformed
+
+    private void MinusCGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusCGOActionPerformed
+        // TODO add your handling code here:
+        countCGO--;
+        TextCountCGO.setText(" "+countCGO+" ");
+
+        if(countCGO<0){
+            countCGO=0;
+            TextCountCGO.setText(" "+countCGO+" ");
+        }
+    }//GEN-LAST:event_MinusCGOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2309,69 +2825,65 @@ public class Order extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DetailsButton;
+    private javax.swing.JButton DrinkButton;
     private javax.swing.JPanel DrinksPanel;
-    private javax.swing.JLabel ImageBC;
     private javax.swing.JLabel ImageBF;
-    private javax.swing.JLabel ImageBR;
-    private javax.swing.JLabel ImageBS;
-    private javax.swing.JLabel ImageCA;
-    private javax.swing.JLabel ImageCB;
-    private javax.swing.JLabel ImageCGO;
-    private javax.swing.JLabel ImageCHB;
     private javax.swing.JLabel ImageLD;
-    private javax.swing.JLabel ImageLP;
-    private javax.swing.JLabel ImagePC;
-    private javax.swing.JLabel ImagePM;
-    private javax.swing.JLabel ImagePWB;
-    private javax.swing.JLabel ImageSA;
-    private javax.swing.JLabel ImageSC;
-    private javax.swing.JLabel ImageSGC;
-    private javax.swing.JLabel ImageSH;
-    private javax.swing.JLabel ImageSP;
-    private javax.swing.JLabel ImageSR;
-    private javax.swing.JLabel ImageSS;
-    private javax.swing.JLabel ImageSSP;
-    private javax.swing.JLabel ImageW;
+    private javax.swing.JButton MealButton;
     private javax.swing.JPanel MealPanel;
     private javax.swing.JButton MinusBC;
     private javax.swing.JButton MinusBF;
     private javax.swing.JButton MinusBR;
     private javax.swing.JButton MinusBS;
-    private javax.swing.JButton MinusCA;
     private javax.swing.JButton MinusCB;
     private javax.swing.JButton MinusCGO;
     private javax.swing.JButton MinusCHB;
+    private javax.swing.JButton MinusL;
     private javax.swing.JButton MinusLD;
-    private javax.swing.JButton MinusLP;
     private javax.swing.JButton MinusPC;
     private javax.swing.JButton MinusPM;
     private javax.swing.JButton MinusPWB;
+    private javax.swing.JButton MinusS;
     private javax.swing.JButton MinusSA;
     private javax.swing.JButton MinusSC;
-    private javax.swing.JButton MinusSGC;
-    private javax.swing.JButton MinusSH;
     private javax.swing.JButton MinusSP;
     private javax.swing.JButton MinusSR;
     private javax.swing.JButton MinusSS;
     private javax.swing.JButton MinusSSP;
     private javax.swing.JButton MinusW;
+    private javax.swing.JPanel PanelBC;
+    private javax.swing.JPanel PanelBR;
+    private javax.swing.JPanel PanelBS;
+    private javax.swing.JPanel PanelCB;
+    private javax.swing.JPanel PanelCB4;
+    private javax.swing.JPanel PanelCGO;
+    private javax.swing.JPanel PanelCHB;
+    private javax.swing.JPanel PanelL;
+    private javax.swing.JPanel PanelPC;
+    private javax.swing.JPanel PanelPM;
+    private javax.swing.JPanel PanelPWB;
+    private javax.swing.JPanel PanelS;
+    private javax.swing.JPanel PanelSA;
+    private javax.swing.JPanel PanelSC;
+    private javax.swing.JPanel PanelSP;
+    private javax.swing.JPanel PanelSR;
+    private javax.swing.JPanel PanelSS;
+    private javax.swing.JPanel PanelSSP;
     private javax.swing.JButton PlusBC;
     private javax.swing.JButton PlusBF;
     private javax.swing.JButton PlusBR;
     private javax.swing.JButton PlusBS;
-    private javax.swing.JButton PlusCA;
     private javax.swing.JButton PlusCB;
     private javax.swing.JButton PlusCGO;
     private javax.swing.JButton PlusCHB;
+    private javax.swing.JButton PlusL;
     private javax.swing.JButton PlusLD;
-    private javax.swing.JButton PlusLP;
     private javax.swing.JButton PlusPC;
     private javax.swing.JButton PlusPM;
     private javax.swing.JButton PlusPWB;
+    private javax.swing.JButton PlusS;
     private javax.swing.JButton PlusSA;
     private javax.swing.JButton PlusSC;
-    private javax.swing.JButton PlusSGC;
-    private javax.swing.JButton PlusSH;
     private javax.swing.JButton PlusSP;
     private javax.swing.JButton PlusSR;
     private javax.swing.JButton PlusSS;
@@ -2383,19 +2895,17 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JLabel TextCountBF;
     private javax.swing.JLabel TextCountBR;
     private javax.swing.JLabel TextCountBS;
-    private javax.swing.JLabel TextCountCA;
     private javax.swing.JLabel TextCountCB;
     private javax.swing.JLabel TextCountCGO;
     private javax.swing.JLabel TextCountCHB;
+    private javax.swing.JLabel TextCountL;
     private javax.swing.JLabel TextCountLD;
-    private javax.swing.JLabel TextCountLP;
     private javax.swing.JLabel TextCountPC;
     private javax.swing.JLabel TextCountPM;
     private javax.swing.JLabel TextCountPWB;
+    private javax.swing.JLabel TextCountS;
     private javax.swing.JLabel TextCountSA;
     private javax.swing.JLabel TextCountSC;
-    private javax.swing.JLabel TextCountSGC;
-    private javax.swing.JLabel TextCountSH;
     private javax.swing.JLabel TextCountSP;
     private javax.swing.JLabel TextCountSR;
     private javax.swing.JLabel TextCountSS;
@@ -2404,8 +2914,6 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JButton TrayButton;
     private javax.swing.JPanel TrayPanel;
     private javax.swing.ButtonGroup buttonGroupService;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -2422,6 +2930,7 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2434,17 +2943,31 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
@@ -2460,18 +2983,55 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton2;
