@@ -67,6 +67,21 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
+    
+    public String getColumnName(String tableName, int position) {
+        String sql = "SELECT * FROM "+tableName; 
+        String columnName = null;
+        try {
+            ResultSet set = cursor.executeQuery(sql);
+            ResultSetMetaData meta = set.getMetaData();
+            columnName = meta.getColumnName(position);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return columnName;
+    }
+    
     public ResultSet getTableSet(String tableName) {//working
         String sql = "SELECT * FROM "+tableName;
         ResultSet stringReturn = null;
