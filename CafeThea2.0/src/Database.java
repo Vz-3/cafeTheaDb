@@ -60,22 +60,32 @@ public class Database extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         allOrdersTable = new javax.swing.JTable();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        editOrdersBtn = new javax.swing.JButton();
-        backBtn = new javax.swing.JButton();
-        exitBtn = new javax.swing.JButton();
+        itemNameTF3 = new javax.swing.JTextField();
+        quantityTF3 = new javax.swing.JTextField();
+        supplierTF2 = new javax.swing.JTextField();
+        statusCB2 = new javax.swing.JComboBox<>();
+        createBtn3 = new javax.swing.JButton();
+        editBtn3 = new javax.swing.JButton();
+        deleteBtn3 = new javax.swing.JButton();
+        backBtn5 = new javax.swing.JButton();
+        ExitBtn4 = new javax.swing.JButton();
         servicesPanel = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jPanel16 = new javax.swing.JPanel();
+        itemNameTF4 = new javax.swing.JTextField();
+        quantityTF4 = new javax.swing.JTextField();
+        supplierTF3 = new javax.swing.JTextField();
+        statusCB3 = new javax.swing.JComboBox<>();
+        createBtn4 = new javax.swing.JButton();
+        editBtn4 = new javax.swing.JButton();
+        deleteBtn4 = new javax.swing.JButton();
+        backBtn6 = new javax.swing.JButton();
+        ExitBtn5 = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        editServicesBtn = new javax.swing.JButton();
-        backBtn2 = new javax.swing.JButton();
-        exitBtn2 = new javax.swing.JButton();
         suppliersPanel = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         itemNameTF1 = new javax.swing.JTextField();
@@ -103,11 +113,11 @@ public class Database extends javax.swing.JFrame {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
         jPanel2.add(jPanel8, java.awt.BorderLayout.EAST);
@@ -195,6 +205,11 @@ public class Database extends javax.swing.JFrame {
         statusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Not Available" }));
 
         createBtn.setText("Create");
+        createBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createBtnActionPerformed(evt);
+            }
+        });
 
         editBtn.setText("Edit");
 
@@ -234,13 +249,9 @@ public class Database extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(editBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(statusCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(supplierTF)
-                    .addComponent(quantityTF)
-                    .addComponent(itemNameTF)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(editBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(supplierTF, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(quantityTF, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(itemNameTF, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -260,7 +271,7 @@ public class Database extends javax.swing.JFrame {
                     .addComponent(editBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ExitBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -275,10 +286,7 @@ public class Database extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Item", "Quantity", "Supplier", "Status"
@@ -295,11 +303,8 @@ public class Database extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Quantity");
             jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Supplier");
             jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Status");
         }
 
         jPanel4.add(jScrollPane1, java.awt.BorderLayout.CENTER);
@@ -315,10 +320,7 @@ public class Database extends javax.swing.JFrame {
 
         allOrdersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Client", "Orders", "Time Slot", "Status"
@@ -336,49 +338,116 @@ public class Database extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
+        jPanel7.setPreferredSize(new java.awt.Dimension(250, 250));
+
+        itemNameTF3.setForeground(new java.awt.Color(204, 204, 204));
+        itemNameTF3.setText("Item Name");
+        itemNameTF3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                itemNameTF3FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                itemNameTF3FocusLost(evt);
+            }
+        });
+
+        quantityTF3.setForeground(new java.awt.Color(204, 204, 204));
+        quantityTF3.setText("Orders");
+        quantityTF3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                quantityTF3FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                quantityTF3FocusLost(evt);
+            }
+        });
+
+        supplierTF2.setForeground(new java.awt.Color(204, 204, 204));
+        supplierTF2.setText("Time Slot");
+        supplierTF2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                supplierTF2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                supplierTF2FocusLost(evt);
+            }
+        });
+
+        statusCB2.setForeground(new java.awt.Color(204, 204, 204));
+        statusCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Not Available" }));
+
+        createBtn3.setText("Create");
+
+        editBtn3.setText("Edit");
+
+        deleteBtn3.setText("Delete");
+
+        backBtn5.setText("Back");
+        backBtn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn5ActionPerformed(evt);
+            }
+        });
+
+        ExitBtn4.setText("Exit");
+        ExitBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtn4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deleteBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(backBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ExitBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(createBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(editBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(statusCB2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(supplierTF2, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(quantityTF3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(itemNameTF3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(itemNameTF3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(quantityTF3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(supplierTF2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(statusCB2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(deleteBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExitBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel1.add(jPanel7, java.awt.BorderLayout.EAST);
+
         ordersPanel.add(jPanel1, java.awt.BorderLayout.CENTER);
-
-        jPanel5.setPreferredSize(new java.awt.Dimension(50, 50));
-        jPanel5.setLayout(new java.awt.BorderLayout());
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        jPanel5.add(jPanel6, java.awt.BorderLayout.CENTER);
-
-        jPanel7.setPreferredSize(new java.awt.Dimension(400, 400));
-        jPanel7.setLayout(new java.awt.GridLayout(1, 3));
-
-        editOrdersBtn.setText("Edit");
-        jPanel7.add(editOrdersBtn);
-
-        backBtn.setText("Back");
-        backBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtnActionPerformed(evt);
-            }
-        });
-        jPanel7.add(backBtn);
-
-        exitBtn.setText("Exit");
-        exitBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtnActionPerformed(evt);
-            }
-        });
-        jPanel7.add(exitBtn);
-
-        jPanel5.add(jPanel7, java.awt.BorderLayout.EAST);
-
-        ordersPanel.add(jPanel5, java.awt.BorderLayout.SOUTH);
 
         mainPanel.add(ordersPanel, "card3");
 
@@ -389,10 +458,7 @@ public class Database extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Client", "Service", "Time Slot", "Status"
@@ -410,6 +476,115 @@ public class Database extends javax.swing.JFrame {
 
         jPanel10.add(jScrollPane3, java.awt.BorderLayout.CENTER);
 
+        jPanel16.setPreferredSize(new java.awt.Dimension(250, 250));
+
+        itemNameTF4.setForeground(new java.awt.Color(204, 204, 204));
+        itemNameTF4.setText("Client");
+        itemNameTF4.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                itemNameTF4FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                itemNameTF4FocusLost(evt);
+            }
+        });
+
+        quantityTF4.setForeground(new java.awt.Color(204, 204, 204));
+        quantityTF4.setText("Service");
+        quantityTF4.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                quantityTF4FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                quantityTF4FocusLost(evt);
+            }
+        });
+
+        supplierTF3.setForeground(new java.awt.Color(204, 204, 204));
+        supplierTF3.setText("Time Slot");
+        supplierTF3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                supplierTF3FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                supplierTF3FocusLost(evt);
+            }
+        });
+
+        statusCB3.setForeground(new java.awt.Color(204, 204, 204));
+        statusCB3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Not Available" }));
+
+        createBtn4.setText("Create");
+
+        editBtn4.setText("Edit");
+
+        deleteBtn4.setText("Delete");
+
+        backBtn6.setText("Back");
+        backBtn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn6ActionPerformed(evt);
+            }
+        });
+
+        ExitBtn5.setText("Exit");
+        ExitBtn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtn5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(deleteBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(backBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ExitBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                        .addComponent(createBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(editBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(statusCB3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(supplierTF3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(quantityTF4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(itemNameTF4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(itemNameTF4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(quantityTF4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(supplierTF3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(statusCB3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(deleteBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExitBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel10.add(jPanel16, java.awt.BorderLayout.EAST);
+
         servicesPanel.add(jPanel10, java.awt.BorderLayout.CENTER);
 
         jPanel11.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -419,38 +594,14 @@ public class Database extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
         jPanel11.add(jPanel12, java.awt.BorderLayout.CENTER);
-
-        jPanel13.setPreferredSize(new java.awt.Dimension(400, 400));
-        jPanel13.setLayout(new java.awt.GridLayout(1, 3));
-
-        editServicesBtn.setText("Edit");
-        jPanel13.add(editServicesBtn);
-
-        backBtn2.setText("Back");
-        backBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn2ActionPerformed(evt);
-            }
-        });
-        jPanel13.add(backBtn2);
-
-        exitBtn2.setText("Exit");
-        exitBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn2ActionPerformed(evt);
-            }
-        });
-        jPanel13.add(exitBtn2);
-
-        jPanel11.add(jPanel13, java.awt.BorderLayout.EAST);
 
         servicesPanel.add(jPanel11, java.awt.BorderLayout.SOUTH);
 
@@ -541,7 +692,7 @@ public class Database extends javax.swing.JFrame {
                     .addComponent(editBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(deleteBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ExitBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -556,10 +707,7 @@ public class Database extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Name", "Contact"
@@ -661,30 +809,6 @@ public class Database extends javax.swing.JFrame {
         }    
     }//GEN-LAST:event_ordersSummBtnActionPerformed
 
-    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_exitBtnActionPerformed
-
-    private void exitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn2ActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_exitBtn2ActionPerformed
-
-    private void backBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn2ActionPerformed
-        // TODO add your handling code here:
-        dispose();
-            MainHub mainhub = new MainHub();
-            mainhub.show();
-    }//GEN-LAST:event_backBtn2ActionPerformed
-
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        // TODO add your handling code here:
-        dispose();
-            MainHub mainhub = new MainHub();
-            mainhub.show();
-    }//GEN-LAST:event_backBtnActionPerformed
-
     private void servicesSummBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesSummBtnActionPerformed
         // TODO add your handling code here:
         if(ordersPanel.isVisible() || inventPanel.isVisible()|| suppliersPanel.isVisible()){
@@ -741,6 +865,74 @@ public class Database extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ExitBtn2ActionPerformed
 
+    private void itemNameTF3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF3FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF3FocusGained
+
+    private void itemNameTF3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF3FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF3FocusLost
+
+    private void quantityTF3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF3FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF3FocusGained
+
+    private void quantityTF3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF3FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF3FocusLost
+
+    private void supplierTF2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_supplierTF2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_supplierTF2FocusGained
+
+    private void supplierTF2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_supplierTF2FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_supplierTF2FocusLost
+
+    private void backBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backBtn5ActionPerformed
+
+    private void ExitBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExitBtn4ActionPerformed
+
+    private void itemNameTF4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF4FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF4FocusGained
+
+    private void itemNameTF4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_itemNameTF4FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemNameTF4FocusLost
+
+    private void quantityTF4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF4FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF4FocusGained
+
+    private void quantityTF4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_quantityTF4FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTF4FocusLost
+
+    private void supplierTF3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_supplierTF3FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_supplierTF3FocusGained
+
+    private void supplierTF3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_supplierTF3FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_supplierTF3FocusLost
+
+    private void backBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backBtn6ActionPerformed
+
+    private void ExitBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtn5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExitBtn5ActionPerformed
+
+    private void createBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -779,37 +971,41 @@ public class Database extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ExitBtn1;
     private javax.swing.JButton ExitBtn2;
+    private javax.swing.JButton ExitBtn4;
+    private javax.swing.JButton ExitBtn5;
     private javax.swing.JTable allOrdersTable;
-    private javax.swing.JButton backBtn;
     private javax.swing.JButton backBtn1;
-    private javax.swing.JButton backBtn2;
     private javax.swing.JButton backBtn3;
+    private javax.swing.JButton backBtn5;
+    private javax.swing.JButton backBtn6;
     private javax.swing.JButton createBtn;
     private javax.swing.JButton createBtn1;
+    private javax.swing.JButton createBtn3;
+    private javax.swing.JButton createBtn4;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JButton deleteBtn1;
+    private javax.swing.JButton deleteBtn3;
+    private javax.swing.JButton deleteBtn4;
     private javax.swing.JButton editBtn;
     private javax.swing.JButton editBtn1;
-    private javax.swing.JButton editOrdersBtn;
-    private javax.swing.JButton editServicesBtn;
-    private javax.swing.JButton exitBtn;
-    private javax.swing.JButton exitBtn2;
+    private javax.swing.JButton editBtn3;
+    private javax.swing.JButton editBtn4;
     private javax.swing.JButton invPanelBtn;
     private javax.swing.JPanel inventPanel;
     private javax.swing.JTextField itemNameTF;
     private javax.swing.JTextField itemNameTF1;
+    private javax.swing.JTextField itemNameTF3;
+    private javax.swing.JTextField itemNameTF4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
@@ -825,10 +1021,16 @@ public class Database extends javax.swing.JFrame {
     private javax.swing.JButton ordersSummBtn;
     private javax.swing.JTextField quantityTF;
     private javax.swing.JTextField quantityTF1;
+    private javax.swing.JTextField quantityTF3;
+    private javax.swing.JTextField quantityTF4;
     private javax.swing.JPanel servicesPanel;
     private javax.swing.JButton servicesSummBtn;
     private javax.swing.JComboBox<String> statusCB;
+    private javax.swing.JComboBox<String> statusCB2;
+    private javax.swing.JComboBox<String> statusCB3;
     private javax.swing.JTextField supplierTF;
+    private javax.swing.JTextField supplierTF2;
+    private javax.swing.JTextField supplierTF3;
     private javax.swing.JPanel suppliersPanel;
     private javax.swing.JButton suppliersSummBtn1;
     // End of variables declaration//GEN-END:variables
