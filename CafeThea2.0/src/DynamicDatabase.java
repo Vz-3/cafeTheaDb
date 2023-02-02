@@ -36,6 +36,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
         newDM = new DatabaseManager();
         fieldsPanelCard = (CardLayout)(fieldsPanel.getLayout());
         switchPanels(0);
+        databaseTable.getTableHeader().setReorderingAllowed(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -108,6 +109,13 @@ public class DynamicDatabase extends javax.swing.JFrame {
             }
         ));
         databaseTable.setFillsViewportHeight(true);
+        databaseTable.setShowHorizontalLines(true);
+        databaseTable.setShowVerticalLines(true);
+        databaseTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                databaseTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(databaseTable);
 
         menuitem.setText("Menu");
@@ -694,7 +702,54 @@ public class DynamicDatabase extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_findBtnActionPerformed
 
-    public void updateById() {
+    private void databaseTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseTableMouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel)databaseTable.getModel();
+        idField.setText(model.getValueAt(databaseTable.getSelectedRow(), 0).toString());
+        switch (currentTableName) {
+                case "menuitem":
+                    mNameField.setText(model.getValueAt(databaseTable.getSelectedRow(), 1).toString());
+                    mCostField.setText(model.getValueAt(databaseTable.getSelectedRow(), 2).toString());
+                    String category = model.getValueAt(databaseTable.getSelectedRow(), 3).toString();
+                    if (category.equals("meals")) {
+                        category = "1";
+                    }
+                    else if (category.equals("drinks")) {
+                        category = "2";
+                    }
+                    else if (category.equals("tray dishes")) {
+                        category = "0";
+                    }
+                    else if (category.equals("jar products")) {
+                        category = "3";
+                    }
+                    System.out.println("Category:"+category);
+                    mComboBox.setSelectedIndex(Integer.parseInt(category));
+                    break;
+                case "service":
+                    sNameField.setText(model.getValueAt(databaseTable.getSelectedRow(), 1).toString());
+                    sCostField.setText(model.getValueAt(databaseTable.getSelectedRow(), 2).toString());
+                    sDesField.setText(model.getValueAt(databaseTable.getSelectedRow(), 3).toString());
+                    break;
+                case "resource":
+                    rNameField.setText(model.getValueAt(databaseTable.getSelectedRow(), 1).toString());
+                    rCostField.setText(model.getValueAt(databaseTable.getSelectedRow(), 2).toString());
+                    rQtyField.setText(model.getValueAt(databaseTable.getSelectedRow(), 3).toString());
+                    rSupField.setText(model.getValueAt(databaseTable.getSelectedRow(), 4).toString());
+                    break;
+                case "supplier":
+                    suNameField.setText(model.getValueAt(databaseTable.getSelectedRow(), 1).toString());
+                    suConField.setText(model.getValueAt(databaseTable.getSelectedRow(), 2).toString());
+                    break;
+                default:
+                    System.out.println("Error !!!");
+                    break;
+            }
+        
+        
+    }//GEN-LAST:event_databaseTableMouseClicked
+
+    private void updateById() {
         try {
             String tableName = currentTableName;
             int idVal = 0;
