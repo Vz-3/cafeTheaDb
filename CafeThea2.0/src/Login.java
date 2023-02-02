@@ -139,8 +139,21 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         ResultSet instance = newDM.getTableSet("credentials");
         try {
-            String name = instance.getString("username");
-            System.out.println(name);
+            String name, pass;
+            name = userField.getText();
+            pass = passField.getText();
+            int count = 0;
+            while(instance.next()) { //to avoid before start of result set error.
+                if (name.equals(instance.getString(2)) && pass.equals(instance.getString(3))) {
+                    dispose();
+                    DailyOrders windowInstance = new DailyOrders();
+                    windowInstance.show();
+                } 
+                else {
+                    userField.setText("");
+                    passField.setText("");
+                }
+            }
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -528,7 +528,7 @@ public class DatabaseManager {
         insertOne("credentials", "'Ellis','hahaha'");
         insertOne("credentials", "'Bryce','ch1xx'");
         insertOne("credentials", "'Adam','n3v3'");
-        //pain cant continue on orderrequest coz of date specifics, requires prepared statement else gg ; so manual; NOW() = date
+        //so in constraint chks, it ignores case thx
         
         insertOne("orderrequest", "1, 1, 1, '1x2x3x4x5', '2023-02-02 23:00:00', 'Dine In', 'no dairy' , 606.00, 'Completed'");
         insertOne("orderrequest", "2, 2, 2, '1x2x3x4x5', '2023-02-02 23:00:00', 'pick up', 'no cream' , 616.00, 'Paid'");
