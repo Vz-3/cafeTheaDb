@@ -1,12 +1,14 @@
 
 import java.sql.ResultSet;
 import Utilities.DatabaseManager;
+import javax.swing.table.DefaultTableModel;
 import java.awt.CardLayout;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -23,12 +25,11 @@ public class DynamicDatabase extends javax.swing.JFrame {
      */
     
     CardLayout fieldsPanelCard;
-    
     DatabaseManager newDM;
     public DynamicDatabase() {
         initComponents();
         this.setResizable(false);
-        this.setSize(915, 610);
+        this.setSize(916, 610);
         this.setTitle("CafeThea Database");
         this.setLocationRelativeTo(null);
         newDM = new DatabaseManager();
@@ -78,7 +79,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
         rCostLabel = new javax.swing.JLabel();
         rQtyLabel = new javax.swing.JLabel();
         supplierPanel = new javax.swing.JPanel();
-        suName = new javax.swing.JTextField();
+        suNameField = new javax.swing.JTextField();
         suConField = new javax.swing.JTextField();
         suNameLabel = new javax.swing.JLabel();
         suConLabel = new javax.swing.JLabel();
@@ -231,26 +232,8 @@ public class DynamicDatabase extends javax.swing.JFrame {
         sNameLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         sNameLabel.setText("Name");
 
-        sNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sNameFieldActionPerformed(evt);
-            }
-        });
-
         sCostLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         sCostLabel.setText("Cost");
-
-        sCostField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sCostFieldActionPerformed(evt);
-            }
-        });
-
-        sDesField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sDesFieldActionPerformed(evt);
-            }
-        });
 
         sDesLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         sDesLabel.setText("Description");
@@ -287,8 +270,8 @@ public class DynamicDatabase extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(sDesLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sDesField, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addComponent(sDesField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         fieldsPanel.add(servicePanel, "card3");
@@ -367,7 +350,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(supplierPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(suConField, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                    .addComponent(suName, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(suNameField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(suNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(suConLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -378,7 +361,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(suNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(suName, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(suNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(suConLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -522,14 +505,89 @@ public class DynamicDatabase extends javax.swing.JFrame {
                 break;
         }
         //System.out.println("-"+currentTableName);;
-        //setDynamicTable(currentTableName); 
+        setDynamicTable(currentTableName); 
     }
     
     private void setDynamicTable(String tableName) {
+        DefaultTableModel dynModel=(DefaultTableModel)databaseTable.getModel();
+        dynModel.setRowCount(0);
+        dynModel.setColumnCount(0);
+        try {
+            ResultSet deets = newDM.getTableSet(tableName);
+            ResultSetMetaData metadeets = deets.getMetaData();
+            if (deets.next()) {
+                for (int i = 1;i<=metadeets.getColumnCount();i++) {
+                    dynModel.addColumn(metadeets.getColumnName(i));
+                }
+            }
+            //populate data
+            ResultSet deets2 = newDM.getTableSet(tableName);
+            ResultSetMetaData metadeets2 = deets2.getMetaData();
+            while (deets2.next()) { //we only need to fetch the first (orderid) and the 6th, (scheddatetime)
+                Vector row = new Vector();
+                for (int i = 1; i <= metadeets2.getColumnCount(); i++) {
+                    row.add(deets2.getString(i));
+                }
+                dynModel.addRow(row);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    private void clearAllFields() {
+        idField.setText("");
+        mNameField.setText("");
+        mCostField.setText("");
+        mComboBox.setSelectedIndex(0);
+        sNameField.setText("");
+        sCostField.setText("");
+        sDesField.setText("");
+        rNameField.setText("");
+        rCostField.setText("");
+        rQtyField.setText("");
+        rSupField.setText("");
+        suNameField.setText("");
+        suConField.setText("");
         
     }
+    
+    private String getValueString() {
+        String valuesString = "";
+        switch (currentTableName) {
+            case "menuitem":
+                valuesString = "'"+mNameField.getText()+"',"+mCostField.getText()+",'"+mComboBox.getSelectedItem().toString()+"'";
+                break;
+            case "service":
+                valuesString = "'"+sNameField.getText()+"',"+sCostField.getText()+",'"+sDesField.getText()+"'";
+                break;
+            case "resource":
+                valuesString = "'"+rNameField.getText()+"',"+rCostField.getText()+","+rQtyField.getText()+","+rSupField.getText();
+                break;
+            case "supplier":
+                valuesString = "'"+suNameField.getText()+"',"+suConField.getText();
+                break;
+            default:
+                System.out.println("Error !!!");
+                break;
+        }
+        return valuesString;
+    }
+    
     private void createBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBtnActionPerformed
         // TODO add your handling code here:
+        try {
+            String str = getValueString();
+            newDM.insertOne(currentTableName, str);
+        }
+        catch (Exception e) {
+            e.printStackTrace();    
+        }
+        finally {
+            setDynamicTable(currentTableName);
+        }
+        clearAllFields();
     }//GEN-LAST:event_createBtnActionPerformed
 
     private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
@@ -537,6 +595,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
         MainHub main = new MainHub();
         dispose();
         main.setVisible(true);
+        
     }//GEN-LAST:event_HomeBtnActionPerformed
 
     private void menuitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuitemActionPerformed
@@ -561,27 +620,18 @@ public class DynamicDatabase extends javax.swing.JFrame {
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
+        clearAllFields();
     }//GEN-LAST:event_updateBtnActionPerformed
 
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
         // TODO add your handling code here:
+        clearAllFields();
     }//GEN-LAST:event_deleteBtnActionPerformed
 
     private void findBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findBtnActionPerformed
         // TODO add your handling code here:
+        clearAllFields();
     }//GEN-LAST:event_findBtnActionPerformed
-
-    private void sNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sNameFieldActionPerformed
-
-    private void sCostFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sCostFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sCostFieldActionPerformed
-
-    private void sDesFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sDesFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sDesFieldActionPerformed
 
     public void updateById() {
         try {
@@ -754,7 +804,7 @@ public class DynamicDatabase extends javax.swing.JFrame {
     private javax.swing.JPanel servicePanel;
     private javax.swing.JTextField suConField;
     private javax.swing.JLabel suConLabel;
-    private javax.swing.JTextField suName;
+    private javax.swing.JTextField suNameField;
     private javax.swing.JLabel suNameLabel;
     private javax.swing.JButton supplier;
     private javax.swing.JPanel supplierPanel;

@@ -6,6 +6,7 @@ package Utilities;
 import java.sql.*;
 import java.util.Calendar;
 import java.util.Date;
+import javax.swing.JOptionPane;
 /**
  *
  * @author V
@@ -125,7 +126,8 @@ public class DatabaseManager {
             
             if (resultSet.next()) {
                 int primaryId = resultSet.getInt(1);
-                System.out.println("Primary ID of the inserted row: " + primaryId);
+                //System.out.println("Primary ID of the inserted row: " + primaryId);
+                JOptionPane.showMessageDialog(null, "Primary ID of the inserted row:"+primaryId,"System",JOptionPane.INFORMATION_MESSAGE);
             }
         } catch (SQLException e) {
             e.printStackTrace();

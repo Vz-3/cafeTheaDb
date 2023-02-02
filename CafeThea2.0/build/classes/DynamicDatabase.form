@@ -340,8 +340,8 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="sDesLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="sDesField" min="-2" pref="108" max="-2" attributes="0"/>
-                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                          <Component id="sDesField" min="-2" pref="39" max="-2" attributes="0"/>
+                          <EmptySpace pref="93" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -356,9 +356,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="sNameField">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sNameFieldActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="sCostLabel">
                   <Properties>
@@ -369,14 +366,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="sCostField">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sCostFieldActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="sDesField">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sDesFieldActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="sDesLabel">
                   <Properties>
@@ -510,7 +501,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="suConField" pref="234" max="32767" attributes="0"/>
-                              <Component id="suName" alignment="1" max="32767" attributes="0"/>
+                              <Component id="suNameField" alignment="1" max="32767" attributes="0"/>
                               <Component id="suNameLabel" alignment="0" max="32767" attributes="0"/>
                               <Component id="suConLabel" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -524,7 +515,7 @@
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Component id="suNameLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="suName" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="suNameField" min="-2" pref="39" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="suConLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -535,7 +526,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="suName">
+                <Component class="javax.swing.JTextField" name="suNameField">
                 </Component>
                 <Component class="javax.swing.JTextField" name="suConField">
                 </Component>
