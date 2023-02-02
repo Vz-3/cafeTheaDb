@@ -25,6 +25,7 @@ public class DailyOrders extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(true);
+        this.setSize(300, 400);
         todayDM = new DatabaseManager();
         setupTable("orderrequest");
     }
@@ -42,8 +43,14 @@ public class DailyOrders extends javax.swing.JFrame {
         while (deets.next()) { //we only need to fetch the first (orderid) and the 6th, (scheddatetime)
             Vector row = new Vector();
             for (int i = 1; i <= metadeets.getColumnCount(); i++) {
-                if (i == 1 || i == 6) {
+                if (i == 1) {
                      row.add(deets.getString(i));
+                }
+                else if (i == 6) {
+                    String str = deets.getString(i);
+                    //now we have to use regex or at least since the string value is static in terms of position and length, there we shortcut into
+                    str = str.substring(11, str.length());
+                    row.add(str);
                 }
             }
             dynModel.addRow(row);
@@ -111,7 +118,7 @@ public class DailyOrders extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 247, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +142,7 @@ public class DailyOrders extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
