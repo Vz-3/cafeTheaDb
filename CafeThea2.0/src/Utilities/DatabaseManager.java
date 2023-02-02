@@ -94,12 +94,55 @@ public class DatabaseManager {
             e.printStackTrace();
         }
         return columnName;
+    } 
+    
+    public String getConfigure(String tableName) {//obsolete
+        String text = "";
+        try {
+            switch (tableName) {
+                case "menuitem":
+                    text = "menuitemid";
+                    break;
+                case "supplier":
+                    text = "supplierid";
+                    break;
+                case "resource":
+                    text = "resourceid";
+                    break;
+                case "customer":
+                    text = "customerid";
+                    break;
+                case "service":
+                    text = "serviceid";
+                    break;
+                case "credentials":
+                    text = "userid";
+                    break;
+                case "orderrequest":
+                    text = "orderid";
+                    break;
+                case "receipt":
+                    text = "receiptid";
+                    break;
+                default:
+                    System.out.println("Out of bounds");
+                    break;
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return text;
     }
-    public String getIdRow(String tableName) {
-        String idRow = "";
-        
-        return idRow;
-    }
+    
+//    public String getIdRow(String tableName) {
+//        String idRow = "";
+//        String regex = "!";
+//        
+//        
+//        
+//        return idRow;
+//    }
     public ResultSet getTableSet(String tableName) {//working
         String sql = "SELECT * FROM "+tableName;
         ResultSet stringReturn = null;
@@ -239,6 +282,26 @@ public class DatabaseManager {
         }
     }
     
+    public List<String> regexQuery(String query) {
+        List<String> list = new ArrayList<>();
+        
+        for (String word:query.split("!")) {
+            list.add(word);
+        }
+        
+        return list;
+    }
+    
+    public List<String> regexQuery(String query, String regex) {
+        List<String> list = new ArrayList<>();
+        
+        for (String word:query.split(regex)) {
+            list.add(word);
+        }
+        
+        return list;
+    }
+    
     public void selectAll(String tableName) {
         try {
             ResultSet resultSet = cursor.executeQuery("SELECT * from "+tableName);
@@ -261,26 +324,28 @@ public class DatabaseManager {
         }
     }   
     
-    public void selectId(String tableName, String idVal) {
+    public String selectId(String tableName, String idVal) {
         try {
             String idName = getConfigure(tableName);
             String query = "SELECT * FROM "+tableName+" WHERE "+idName+ " = "+idVal;
             ResultSet resultSet = cursor.executeQuery(query);
             ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
-
+            String values = "";
             // Get the number of columns in the ResultSet
             int columnCount = resultSetMetaData.getColumnCount();
             while (resultSet.next()) {
               // Loop through all columns of the current row
               for (int i = 1; i <= columnCount; i++) {
-                System.out.print(resultSet.getString(i) + " ");
+                 values += resultSet.getString(i) + "!";
               }
-              System.out.println();
             }
+            values = values.substring(0,values.length()-1);
+            return values;
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
             
     public void selectQuery(String tableName, String statement, String statementVal) {
@@ -359,45 +424,6 @@ public class DatabaseManager {
         }
     }
     
-    public String getConfigure(String tableName) {//obsolete
-        String text = "";
-        try {
-            switch (tableName) {
-                case "menuitem":
-                    text = "menuitemid";
-                    break;
-                case "supplier":
-                    text = "supplierid";
-                    break;
-                case "resource":
-                    text = "resourceid";
-                    break;
-                case "customer":
-                    text = "customerid";
-                    break;
-                case "service":
-                    text = "serviceid";
-                    break;
-                case "credentials":
-                    text = "userid";
-                    break;
-                case "orderrequest":
-                    text = "orderid";
-                    break;
-                case "receipt":
-                    text = "receiptid";
-                    break;
-                default:
-                    System.out.println("Out of bounds");
-                    break;
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return text;
-    }
-    
     public void useDatabase(String dbName) {
         try {
             cursor.execute("use database "+dbName);
@@ -425,12 +451,6 @@ public class DatabaseManager {
         catch (Exception e) {
             System.out.println(e);
         }
-    }
-    
-    private String regexQuery(String query) {
-        List<String> list = new ArrayList<>();
-        
-        return null;
     }
     
     public class DatabaseSetup {

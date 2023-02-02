@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.Vector;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -640,8 +641,50 @@ public class DynamicDatabase extends javax.swing.JFrame {
     private void findBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findBtnActionPerformed
         // TODO add your handling code here:
         try {
-            String str = getValueString();
-            newDM.getIdRow(currentTableName);
+            List<String> list = newDM.regexQuery(newDM.selectId(currentTableName, idField.getText()));
+            for (String lisp:list) {
+                //System.out.println(":"+lisp);
+            }
+            idField.setText(list.get(0));
+            switch (currentTableName) {
+                case "menuitem":
+                    mNameField.setText(list.get(1));
+                    mCostField.setText(list.get(2));
+                    String category = list.get(3);
+                    if (category.equals("meals")) {
+                        category = "1";
+                    }
+                    else if (category.equals("drinks")) {
+                        category = "2";
+                    }
+                    else if (category.equals("tray dishes")) {
+                        category = "0";
+                    }
+                    else if (category.equals("jar products")) {
+                        category = "3";
+                    }
+                    System.out.println("Category:"+category);
+                    mComboBox.setSelectedIndex(Integer.parseInt(category));
+                    break;
+                case "service":
+                    sNameField.setText(list.get(1));
+                    sCostField.setText(list.get(2));
+                    sDesField.setText(list.get(3));
+                    break;
+                case "resource":
+                    rNameField.setText(list.get(1));
+                    rCostField.setText(list.get(2));
+                    rQtyField.setText(list.get(3));
+                    rSupField.setText(list.get(4));
+                    break;
+                case "supplier":
+                    suNameField.setText(list.get(1));
+                    suConField.setText(list.get(2));
+                    break;
+                default:
+                    System.out.println("Error !!!");
+                    break;
+            }
         }
         catch (Exception e) {
             e.printStackTrace();    
@@ -649,7 +692,6 @@ public class DynamicDatabase extends javax.swing.JFrame {
         finally {
             setDynamicTable(currentTableName);
         }
-        clearAllFields();
     }//GEN-LAST:event_findBtnActionPerformed
 
     public void updateById() {
