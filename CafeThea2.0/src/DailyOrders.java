@@ -15,6 +15,8 @@ public class DailyOrders extends javax.swing.JFrame {
      */
     public DailyOrders() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

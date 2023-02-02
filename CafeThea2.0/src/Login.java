@@ -1,6 +1,7 @@
 
 import java.awt.Color;
-
+import Utilities.DatabaseManager;
+import java.sql.ResultSet;
 
 
 /*
@@ -18,10 +19,12 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    DatabaseManager newDM;
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        newDM = new DatabaseManager();
     }
 
     /**
@@ -64,6 +67,11 @@ public class Login extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 passFieldFocusLost(evt);
+            }
+        });
+        passField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passFieldMouseClicked(evt);
             }
         });
 
@@ -129,13 +137,22 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if (userField.getText().equals("admin") && passField.getText().equals("pass")){
-            dispose();
-            DailyOrders orderstoday = new DailyOrders();
-            orderstoday.show();
-            
+        ResultSet instance = newDM.getTableSet("credentials");
+        try {
+            String name = instance.getString("username");
+            System.out.println(name);
         }
-            
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+//        if (userField.getText().equalsIgnoreCase(instance.getString("username"))) {
+//            dispose();
+//            DailyOrders orderstoday = new DailyOrders();
+//            orderstoday.show();
+//        }
+//        else {
+//            JOptionPane.showMessageDialog(null, "Wrong credentials!", "System Error", JOptionPane.ERROR_MESSAGE);
+//        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void userFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFieldFocusGained
@@ -173,6 +190,11 @@ public class Login extends javax.swing.JFrame {
             passField.setForeground(new Color(153,153,153));
         }
     }//GEN-LAST:event_passFieldFocusLost
+
+    private void passFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passFieldMouseClicked
+        // TODO add your handling code here
+        passField.setText("");
+    }//GEN-LAST:event_passFieldMouseClicked
 
     /**
      * @param args the command line arguments

@@ -15,6 +15,8 @@ public class MainHub extends javax.swing.JFrame {
      */
     public MainHub() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

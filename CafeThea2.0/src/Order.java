@@ -69,7 +69,6 @@ public class Order extends javax.swing.JFrame {
         MealButton = new javax.swing.JButton();
         DrinkButton = new javax.swing.JButton();
         SauceButton = new javax.swing.JButton();
-        DetailsButton = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         TrayPanel = new javax.swing.JPanel();
@@ -324,13 +323,6 @@ public class Order extends javax.swing.JFrame {
             }
         });
 
-        DetailsButton.setText("Order Details");
-        DetailsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DetailsButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -344,9 +336,7 @@ public class Order extends javax.swing.JFrame {
                 .addComponent(DrinkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SauceButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DetailsButton)
-                .addContainerGap(582, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,8 +346,7 @@ public class Order extends javax.swing.JFrame {
                     .addComponent(TrayButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MealButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DrinkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SauceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DetailsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SauceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
@@ -2716,10 +2705,6 @@ public class Order extends javax.swing.JFrame {
        cardLayout.show(jPanel2, "DrinksPanel");
     }//GEN-LAST:event_DrinkButtonActionPerformed
 
-    private void DetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DetailsButtonActionPerformed
-        cardLayout.show(jPanel2, "card6");
-    }//GEN-LAST:event_DetailsButtonActionPerformed
-
     private void PlaceOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlaceOrderButtonActionPerformed
 
     }//GEN-LAST:event_PlaceOrderButtonActionPerformed
@@ -2770,7 +2755,6 @@ public class Order extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DetailsButton;
     private javax.swing.JButton DrinkButton;
     private javax.swing.JPanel DrinksPanel;
     private javax.swing.JLabel ImageBF;

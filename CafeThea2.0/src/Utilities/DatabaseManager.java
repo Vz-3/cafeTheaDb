@@ -68,6 +68,30 @@ public class DatabaseManager {
         }
     }
     
+    public ResultSet getTableSet(String tableName) {
+        String sql = "SELECT * FROM "+tableName;
+        ResultSet stringReturn = null;
+        try {
+            stringReturn = cursor.executeQuery(sql);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringReturn;
+    }
+    
+    public ResultSetMetaData getTableMetaSet(String tableName) {
+        String sql = "SELECT * FROM "+tableName;
+        ResultSetMetaData stringReturn = null;
+        try {
+            ResultSet set = cursor.executeQuery(sql);
+            stringReturn = set.getMetaData();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringReturn;
+    }
     public void insertOne(String tableName, String values) {
         try {
             //get column names
@@ -81,12 +105,12 @@ public class DatabaseManager {
             for (int i=2;i<=colCount;i++) {
                 query += queryMetaData.getColumnName(i)+", ";
             }
-            query = query.substring(0, query.length()-1);
-            query = query+") values (";
+            query = query.substring(0, query.length()-2);
+            query += ") values (";
             
-            String temp = getConfigure(tableName);
-            System.out.println(temp+values+")");
-            cursor.executeUpdate(temp+values+")", cursor.RETURN_GENERATED_KEYS);
+            //String temp = getConfigure(tableName);
+            System.out.println(query+values+")");
+            cursor.executeUpdate(query+values+")", cursor.RETURN_GENERATED_KEYS);
             ResultSet resultSet = cursor.getGeneratedKeys();
             
             if (resultSet.next()) {
@@ -314,47 +338,6 @@ public class DatabaseManager {
         }
     }
     
-//    private String getConfigure2(String tableName) {//obsolete 
-//        String statement = "INSERT INTO "+tableName+" ";
-//        String text = "";
-//        try {
-//            switch (tableName) {
-//                case "menuitem":
-//                    text = "(menuitemname, menuitemcost) values (";
-//                    break;
-//                case "supplier":
-//                    text = "(suppliername, suppliercontact) values (";
-//                    break;
-//                case "resource":
-//                    text = "(resourcename, resourcecost, resourcequantity, resourcedeductionaverage, supplierid) values (";
-//                    break;
-//                case "customer":
-//                    text = "(customerfirstname, customerlastname, customercontact, customeraddress) values (";
-//                    break;
-//                case "service":
-//                    text = "(servicename, servicecost, resourcedeductionaverage, servicedescription) values (";
-//                    break;
-//                case "credentials":
-//                    text = "(username, password) values (";
-//                    break;
-//                case "orderrequest":
-//                    text = "(serviceid, productids, customerid, userid, datetime, deliverymode, totalcost) values (";
-//                    break;
-//                case "receipt":
-//                    text = "(receiptdatetime, orderid) values (";
-//                    break;
-//                default:
-//                    System.out.println("Out of bounds");
-//                    break;
-//            }
-//        }
-//        catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//                
-//        return statement+text;
-//    }
-    
     private String getConfigure(String tableName) {//obsolete
         String text = "";
         try {
@@ -393,45 +376,6 @@ public class DatabaseManager {
         }
         return text;
     }
-    
-//    private String updateConfigure(String tableName) {//obsolete
-//        String text = "";
-//        try {
-//            switch (tableName) {
-//                case "menuitem":
-//                    text = "menuitemid = ?, menuitemname = ?, menuitemcost = ?, resourceDeductionAverage =?";
-//                    break;
-//                case "supplier":
-//                    text = "supplierid = ?, suppliername = ?, suppliercontact = ?";
-//                    break;
-//                case "resource":
-//                    text = "resourceid = ?, resourcename = ?, resourcecost = ?, resourcequantity = ?, resourcedeductionaverage = ?, supplierid = ?";
-//                    break;
-//                case "customer":
-//                    text = "customerid = ?, customerfirstname = ?, customerlastname = ?, customercontact = ?, customeraddress = ?";
-//                    break;
-//                case "service":
-//                    text = "serviceid = ?, servicename = ?, servicecost = ?, resourcedeductionaverage = ?, servicedescription = ?";
-//                    break;
-//                case "credentials":
-//                    text = "userid = ?, username = ?, password = ?";
-//                    break;
-//                case "orderrequest"://ignore, do not allow edit, instead create a new one but deleting the old one simultaneously.
-//                    text = "orderid = ?,  serviceids = ?, customerid = ?, userid = ?, productids = ?, scheddatetime = ?, deliverymode = ?, serviceinstruction = ?, totalcost = ?";
-//                    break;
-//                case "receipt":
-//                    text = "receiptid = ?, receiptdatetime = ?, orderid = ?";
-//                    break;
-//                default:
-//                    System.out.println("Out of bounds");
-//                    break;
-//            }
-//        }
-//        catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return text;
-//    }
     
     public void useDatabase(String dbName) {
         try {
@@ -506,13 +450,13 @@ public class DatabaseManager {
         
         private void initiateTables(String db, String user, String pass) {  
             final String[] dbTables = {
-                "CREATE TABLE MENUITEM (menuItemID INT AUTO_INCREMENT PRIMARY KEY,menuItemName VARCHAR(50) NOT NULL,menuItemCost FLOAT(10) NOT NULL,resourceDeductionAverage FLOAT(10))",
+                "CREATE TABLE MENUITEM (menuItemID INT AUTO_INCREMENT PRIMARY KEY,menuItemName VARCHAR(50) NOT NULL,menuItemCost FLOAT(10) NOT NULL, menuCategory VARCHAR(50) NOT NULL)",
                 "CREATE TABLE SUPPLIER (supplierID INT AUTO_INCREMENT PRIMARY KEY,supplierName VARCHAR(50) NOT NULL,supplierContact INT(15) NOT NULL)",
-                "CREATE TABLE RESOURCE (resourceID INT AUTO_INCREMENT PRIMARY KEY,resourceName VARCHAR(50) NOT NULL,resourceCost FLOAT(10) NOT NULL,resourceQuantity INT NOT NULL,resourceDeductionAverage INT NOT NULL,supplierID INT NOT NULL,CONSTRAINT FK_SUP FOREIGN KEY (supplierID) REFERENCES SUPPLIER(supplierID))",
+                "CREATE TABLE RESOURCE (resourceID INT AUTO_INCREMENT PRIMARY KEY,resourceName VARCHAR(50) NOT NULL,resourceCost FLOAT(10) NOT NULL,resourceQuantity INT NOT NULL,supplierID INT NOT NULL,CONSTRAINT FK_SUP FOREIGN KEY (supplierID) REFERENCES SUPPLIER(supplierID))",
                 "CREATE TABLE CUSTOMER (customerID INT AUTO_INCREMENT PRIMARY KEY, customerFirstName VARCHAR(50) NOT NULL, customerLastName VARCHAR(50) NOT NULL, customerContact INT(15) NOT NULL, customerAddress VARCHAR(100) NOT NULL)",
-                "CREATE TABLE SERVICE (serviceID INT AUTO_INCREMENT PRIMARY KEY, serviceName VARCHAR(20) NOT NULL, serviceCost FLOAT(10) NOT NULL, resourceDeductionAverage FLOAT(10), serviceDescription VARCHAR(200) NOT NULL)",
+                "CREATE TABLE SERVICE (serviceID INT AUTO_INCREMENT PRIMARY KEY, serviceName VARCHAR(20) NOT NULL, serviceCost FLOAT(10) NOT NULL, serviceDescription VARCHAR(200) NOT NULL)",
                 "CREATE TABLE CREDENTIALS (userID INT AUTO_INCREMENT PRIMARY KEY, userName VARCHAR(20) NOT NULL, password VARCHAR(20) NOT NULL)",
-                "CREATE TABLE ORDERREQUEST (orderID INT AUTO_INCREMENT PRIMARY KEY, serviceID INT NOT NULL, CONSTRAINT FK_SERVICE FOREIGN KEY (serviceID) REFERENCES SERVICE(serviceId), customerID INT NOT NULL, CONSTRAINT FK_CUST FOREIGN KEY (customerID) REFERENCES CUSTOMER(customerID), userID INT NOT NULL, CONSTRAINT FK_USER FOREIGN KEY (userID) REFERENCES CREDENTIALS(userID), productids VARCHAR(200), scheddatetime DATETIME, deliveryMode VARCHAR(20) NOT NULL, CONSTRAINT CHK_DELIVERY CHECK(deliveryMode IN ('Dine In', 'Take Out', 'Delivery', 'Pick Up', 'N/A')), serviceInstruction VARCHAR(150), totalCost FLOAT(10) NOT NULL, CONSTRAINT CHK_TOTAL CHECK(totalCost > 0), status VARCHAR(20) NOT NULL, CONSTRAINT CHK_STATUS CHECK(deliveryMode IN ('Pending', 'Cancelled', 'Paid')))",
+                "CREATE TABLE ORDERREQUEST (orderID INT AUTO_INCREMENT PRIMARY KEY, serviceID INT NOT NULL, CONSTRAINT FK_SERVICE FOREIGN KEY (serviceID) REFERENCES SERVICE(serviceId), customerID INT NOT NULL, CONSTRAINT FK_CUST FOREIGN KEY (customerID) REFERENCES CUSTOMER(customerID), userID INT NOT NULL, CONSTRAINT FK_USER FOREIGN KEY (userID) REFERENCES CREDENTIALS(userID), productids VARCHAR(200), scheddatetime DATETIME, deliveryMode VARCHAR(20) NOT NULL, CONSTRAINT CHK_DELIVERY CHECK(deliveryMode IN ('Dine In', 'Take Out', 'Delivery', 'Pick Up', 'N/A')), serviceInstruction VARCHAR(150), totalCost FLOAT(10) NOT NULL, CONSTRAINT CHK_TOTAL CHECK(totalCost > 0), status VARCHAR(20) NOT NULL, CONSTRAINT CHK_STATUS CHECK(status IN ('Pending', 'Cancelled', 'Paid', 'Completed')))",
                 "CREATE TABLE RECEIPT (receiptID INT AUTO_INCREMENT PRIMARY KEY, receiptDateTime DATETIME NOT NULL, orderID INT NOT NULL, CONSTRAINT FK_ORDER FOREIGN KEY (orderID) REFERENCES ORDERREQUEST(orderID))"
             };
             try {
@@ -532,11 +476,78 @@ public class DatabaseManager {
         }
     }
     
+    private void setSampleData() {
+        //menu item
+        insertOne("menuitem", "'bacsilog', 80, 'meals'");
+        insertOne("menuitem", "'strawberry shake', 120, 'drinks'");
+        insertOne("menuitem", "'cordon blue', 250, 'tray dishes'");
+        insertOne("menuitem", "'special atchara', 156, 'jar products'");
+        insertOne("menuitem", "'tapsilog', 75, 'meals'");
+        insertOne("menuitem", "'chocolate shake', 110, 'drinks'");
+        insertOne("menuitem", "'anchovies pizza', 750, 'tray dishes'");
+        insertOne("menuitem", "'pickled mangoes', 222, 'jar products'");
+        insertOne("menuitem", "'anchovies pizza', 750, 'meals'");
+        insertOne("menuitem", "'house brew coffee', 100, 'drinks'");
+        insertOne("menuitem", "'pancit canton', 225, 'tray dishes'");
+        insertOne("menuitem", "'crunchy garlic oil', 110, 'jar products'");
+        insertOne("menuitem", "'american breakfast', 125, 'meals'");
+        insertOne("menuitem", "'water', 15, 'drinks'");
+        insertOne("menuitem", "'lechon', 850, 'tray dishes'");
+        insertOne("menuitem", "'pork w/ bagoong', 140, 'jar products'");
+        insertOne("menuitem", "'omelette rice', 70, 'meals'");
+        insertOne("menuitem", "'royal 300ml', 100, 'drinks'");
+        insertOne("menuitem", "'shanghai rolls', 250, 'tray dishes'");
+        insertOne("menuitem", "'assorted candies', 90, 'jar products'");
+        //
+        insertOne("supplier", "'MangArjay Babuyan', 912345678");
+        insertOne("supplier", "'Ellis meat beat', 912345678");
+        insertOne("supplier", "'MangTon tomas', 912345678");
+        insertOne("supplier", "'Bryce public market', 912345678");
+        insertOne("supplier", "'Adams grocery', 912345678");
+        //
+        insertOne("resource", "'Lechon', 10000, 5, 1");
+        insertOne("resource", "'Pork grinds', 333.35, 12, 2");
+        insertOne("resource", "'Sweet & Spices', 200.50, 50, 3");
+        insertOne("resource", "'Pancit', 1000, 15, 4");
+        insertOne("resource", "'royal 300ml', 800, 8, 5");
+        //
+        insertOne("customer", "'John','Caraz', 964820923, 'Blk 1 Lot 2 Nowhere, PH'");
+        insertOne("customer", "'Brunt','Dolfin', 987490149, 'Blk 68 Lot 3 Nowhere, UAE'");
+        insertOne("customer", "'Fran','Yel', 908286732, 'Blk 42 Lot 1 Nowhere, USA'");
+        insertOne("customer", "'Miko','Shin', 964820923, 'Blk 69 Lot 42 Nowhere, JP'");
+        insertOne("customer", "'Leon','Ti', 964820923, 'Blk 4 Lot 11 Nowhere, PH'");
+        //
+        insertOne("service", "'Plated Service', 125.75, 'per pax, eme eme'");
+        insertOne("service", "'Semi-silver Service', 200, 'per pax, mediocre'");
+        insertOne("service", "'Full-silver Service', 300, 'per pax, whole course'");
+        insertOne("service", "'Cafeteria Service', 100, 'per pax, slop'");
+        insertOne("service", "'Family-Style Service', 250.50, 'per pax, family friendly foods'");
+        //
+        insertOne("credentials", "'V','fuhrer'");
+        insertOne("credentials", "'Arjay','boor@t'");
+        insertOne("credentials", "'Ellis','hahaha'");
+        insertOne("credentials", "'Bryce','ch1xx'");
+        insertOne("credentials", "'Adam','n3v3'");
+        //pain cant continue on orderrequest coz of date specifics, requires prepared statement else gg ; so manual; NOW() = date
+        
+        insertOne("orderrequest", "1, 1, 1, '1x2x3x4x5', '2023-02-02 23:00:00', 'Dine In', 'no dairy' , 606.00, 'Completed'");
+        insertOne("orderrequest", "2, 2, 2, '1x2x3x4x5', '2023-02-02 23:00:00', 'pick up', 'no cream' , 616.00, 'Paid'");
+        insertOne("orderrequest", "3, 3, 3, '1x2x3x4x5', '2023-02-02 23:00:00', 'Dine In', 'no cheese' , 2345.00, 'Pending'");
+        insertOne("orderrequest", "4, 4, 4, '1x2x3x4x5', '2023-02-02 23:00:00', 'Delivery', 'no pie' , 123.00, 'Cancelled'");
+        insertOne("orderrequest", "5, 5, 5, '1x2x3x4x5', '2023-02-02 23:00:00', 'Take Out', 'more sauce' , 451.00, 'Pending'");
+        //
+        insertOne("receipt", "'1998-01-23 12:45:56', 1");
+        insertOne("receipt", "'2023-02-02 12:45:56', 2");
+        insertOne("receipt", "'2011-05-30 12:45:56', 3");
+        insertOne("receipt", "'2013-09-23 12:45:56', 4");
+        insertOne("receipt", "'2018-10-23 12:45:56', 5");
+    }
+    
     public static void main(String args[]) {
         DatabaseManager cafeTheaDb = new DatabaseManager();
         //Test case
+        //cafeTheaDb.setSampleData();
         //cafeTheaDb.insertOne("menuitem", "'pineapple pizza large', 690");
-        //cafeTheaDb.insertOne("menuitem", "'peperroni pizza large', 575");//to parse
         //cafeTheaDb.deleteOne("menuitem", "1");
         //cafeTheaDb.dropDatabase("cafetheadb");
         //cafeTheaDb.selectAll("menuitem");

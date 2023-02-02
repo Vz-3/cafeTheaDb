@@ -23,6 +23,8 @@ public class Database extends javax.swing.JFrame {
 
     public Database() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
