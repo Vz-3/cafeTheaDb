@@ -96,9 +96,7 @@
                   <Component id="DrinkButton" min="-2" pref="100" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="SauceButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="DetailsButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="581" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,7 +109,6 @@
                       <Component id="MealButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
                       <Component id="DrinkButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
                       <Component id="SauceButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="DetailsButton" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="9" max="32767" attributes="0"/>
               </Group>
@@ -149,14 +146,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SauceButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="DetailsButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Order Details"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DetailsButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -219,7 +208,7 @@
                               <Component id="PanelL" alignment="1" max="32767" attributes="0"/>
                               <Component id="PanelS" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="1771" max="32767" attributes="0"/>
+                          <EmptySpace pref="1765" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -243,7 +232,7 @@
                     <Property name="verticalGap" type="int" value="1"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel9">
+                    <Component class="javax.swing.JLabel" name="pancitLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tw Cen MT" size="16" style="0"/>
@@ -324,12 +313,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusPC">
+                    <Component class="javax.swing.JButton" name="minusPancit">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusPCActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusPancitActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountPC">
@@ -341,12 +330,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusPC">
+                    <Component class="javax.swing.JButton" name="plusPancit">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusPCActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusPancitActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -369,7 +358,7 @@
                     <Property name="verticalGap" type="int" value="1"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel10">
+                    <Component class="javax.swing.JLabel" name="cordonBlueLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tw Cen MT" size="16" style="0"/>
@@ -450,12 +439,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusCB">
+                    <Component class="javax.swing.JButton" name="minusCordonB">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusCBActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusCordonBActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountCB">
@@ -467,12 +456,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusCB">
+                    <Component class="javax.swing.JButton" name="plusCordonB">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusCBActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusCordonBActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -495,7 +484,7 @@
                     <Property name="verticalGap" type="int" value="1"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel11">
+                    <Component class="javax.swing.JLabel" name="sweetAndSourPorkLabel">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tw Cen MT" size="16" style="0"/>
@@ -576,12 +565,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusSSP">
+                    <Component class="javax.swing.JButton" name="minusSweetSP">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusSSPActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusSweetSPActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountSSP">
@@ -593,12 +582,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusSSP">
+                    <Component class="javax.swing.JButton" name="plusSweetSP">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusSSPActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusSweetSPActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -702,12 +691,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusS">
+                    <Component class="javax.swing.JButton" name="minusShang">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusSActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusShangActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountS">
@@ -719,12 +708,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusS">
+                    <Component class="javax.swing.JButton" name="plusShang">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusSActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusShangActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -783,7 +772,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Price:&lt;br&gt;$$$&lt;/br&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Price:&lt;br&gt;2840&lt;/br&gt;&lt;/html&gt;"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel42">
@@ -828,12 +817,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusSP">
+                    <Component class="javax.swing.JButton" name="minusSteakP">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusSPActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusSteakPActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountSP">
@@ -845,12 +834,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusSP">
+                    <Component class="javax.swing.JButton" name="plusSteakP">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusSPActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusSteakPActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -909,7 +898,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Price:&lt;br&gt;$$$&lt;/br&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Price:&lt;br&gt;1800&lt;/br&gt;&lt;/html&gt;"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel40">
@@ -954,12 +943,12 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JButton" name="MinusL">
+                    <Component class="javax.swing.JButton" name="MinusLiempo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="-"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusLActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MinusLiempoActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TextCountL">
@@ -971,12 +960,12 @@
                         <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PlusL">
+                    <Component class="javax.swing.JButton" name="plusLiempo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="+"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlusLActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusLiempoActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -1264,7 +1253,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPanel32" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
+                              <Component id="PanelW" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
                               <Component id="PanelBS" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
                               <Component id="PanelBR" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
                               <Component id="PanelBC" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
@@ -1296,7 +1285,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jPanel32" max="32767" attributes="0"/>
+                              <Component id="PanelW" max="32767" attributes="0"/>
                               <Component id="PanelCHB" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="1629" max="32767" attributes="0"/>
@@ -1355,7 +1344,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 50"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel22">
@@ -1471,7 +1460,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 50"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel47">
@@ -1587,7 +1576,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 50"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel23">
@@ -1703,7 +1692,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 90"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel51">
@@ -1819,7 +1808,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 120"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel34">
@@ -1935,7 +1924,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price:120"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel54">
@@ -2051,7 +2040,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 120"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel57">
@@ -2117,7 +2106,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="jPanel32">
+                <Container class="javax.swing.JPanel" name="PanelW">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="cc" red="cc" type="rgb"/>
@@ -2167,7 +2156,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 30"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel59">
@@ -2341,7 +2330,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 250"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel62">
@@ -2497,7 +2486,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 250"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel64">
@@ -2613,7 +2602,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 250"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel70">
@@ -2729,7 +2718,7 @@
                           <Font name="Tw Cen MT" size="16" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Price: $$$"/>
+                        <Property name="text" type="java.lang.String" value="Price: 250"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel72">
@@ -3054,7 +3043,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Component id="PlaceOrderButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -3067,7 +3056,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane6" pref="189" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="PlaceOrderButton" min="-2" pref="27" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -3105,13 +3094,16 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="PlaceOrderButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Place Order"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlaceOrderButtonActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane6">
           <AuxValues>
@@ -3127,7 +3119,7 @@
                     <Column editable="false" title="Item" type="java.lang.String"/>
                     <Column editable="false" title="Quantity" type="java.lang.Integer"/>
                     <Column editable="false" title="Price" type="java.lang.Integer"/>
-                    <Column editable="false" title="Status" type="java.lang.String"/>
+                    <Column editable="false" title="Item Total" type="java.lang.Integer"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -3221,7 +3213,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -3314,6 +3306,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Plated Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton2">
           <Properties>
@@ -3325,6 +3320,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Semi-Silver Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton3">
           <Properties>
@@ -3336,6 +3334,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Full-Silver Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton4">
           <Properties>
@@ -3347,6 +3348,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Gueridon Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton5">
           <Properties>
@@ -3358,6 +3362,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Buffet Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton6">
           <Properties>
@@ -3369,6 +3376,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Cafeteria Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton7">
           <Properties>
@@ -3380,6 +3390,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Family-Style Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton8">
           <Properties>
@@ -3391,6 +3404,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Wedding Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton9">
           <Properties>
@@ -3402,6 +3418,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Debut Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton10">
           <Properties>
@@ -3413,6 +3432,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Kiddie Meal Service"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="servicesButtonItemStateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -67,8 +67,7 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
-    
-    public ResultSet getTableSet(String tableName) {
+    public ResultSet getTableSet(String tableName) {//working
         String sql = "SELECT * FROM "+tableName;
         ResultSet stringReturn = null;
         try {
@@ -79,19 +78,7 @@ public class DatabaseManager {
         }
         return stringReturn;
     }
-    
-    public ResultSetMetaData getTableMetaSet(String tableName) {
-        String sql = "SELECT * FROM "+tableName;
-        ResultSetMetaData stringReturn = null;
-        try {
-            ResultSet set = cursor.executeQuery(sql);
-            stringReturn = set.getMetaData();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return stringReturn;
-    }
+   
     public void insertOne(String tableName, String values) {
         try {
             //get column names
@@ -121,7 +108,7 @@ public class DatabaseManager {
             e.printStackTrace();
         }
     }
-    
+    //to be fixed!!!
     public void updateById(String tableName, int idVal) {
         try {
             String idName = getConfigure(tableName);

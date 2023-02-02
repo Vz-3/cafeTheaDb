@@ -8,17 +8,50 @@
  *
  * @author Bryce
  */
+import Utilities.DatabaseManager;
+import javax.swing.table.DefaultTableModel;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.Vector;
 public class DailyOrders extends javax.swing.JFrame {
 
     /**
      * Creates new form DailyOrders
      */
+    DefaultTableModel dynModel;
+    DatabaseManager todayDM;
     public DailyOrders() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setResizable(false);
+        this.setResizable(true);
+        todayDM = new DatabaseManager();
+        setupTable("orderrequest");
     }
 
+    private void setupTable(String tableName) {
+    dynModel=(DefaultTableModel)jTable1.getModel();
+    //
+    try {
+        ResultSet deets = todayDM.getTableSet(tableName);
+        ResultSetMetaData metadeets = deets.getMetaData();
+        dynModel.addColumn("Order ID"); 
+        dynModel.addColumn("Schedule");      
+        System.out.println(metadeets.getColumnCount());
+        // Now populate the table
+        while (deets.next()) { //we only need to fetch the first (orderid) and the 6th, (scheddatetime)
+            Vector row = new Vector();
+            for (int i = 1; i <= metadeets.getColumnCount(); i++) {
+                if (i == 1 || i == 6) {
+                     row.add(deets.getString(i));
+                }
+            }
+            dynModel.addRow(row);
+        }
+    } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,23 +82,12 @@ public class DailyOrders extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Order ID", "Time Slot"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, java.awt.BorderLayout.CENTER);
