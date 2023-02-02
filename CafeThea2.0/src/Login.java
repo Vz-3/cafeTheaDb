@@ -1,4 +1,6 @@
 
+import Utilities.DatabaseManager;
+import Utilities.DatabaseManager.DatabaseSetup;
 import java.awt.Color;
 
 
@@ -14,7 +16,9 @@ import java.awt.Color;
  * @author Bryce
  */
 public class Login extends javax.swing.JFrame {
-
+    
+    private DatabaseManager db;
+    
     /**
      * Creates new form Login
      */
@@ -32,10 +36,10 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        userField = new javax.swing.JTextField();
-        passField = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        usernameTF = new javax.swing.JTextField();
+        passwordTF = new javax.swing.JPasswordField();
+        loginButton = new javax.swing.JButton();
+        loginLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 250));
@@ -43,39 +47,38 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        userField.setForeground(new java.awt.Color(204, 204, 204));
-        userField.setText("Username");
-        userField.addFocusListener(new java.awt.event.FocusAdapter() {
+        usernameTF.setForeground(new java.awt.Color(204, 204, 204));
+        usernameTF.setText("Username");
+        usernameTF.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                userFieldFocusGained(evt);
+                usernameTFFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                userFieldFocusLost(evt);
+                usernameTFFocusLost(evt);
             }
         });
 
-        passField.setForeground(new java.awt.Color(204, 204, 204));
-        passField.setText("Password");
-        passField.addFocusListener(new java.awt.event.FocusAdapter() {
+        passwordTF.setForeground(new java.awt.Color(204, 204, 204));
+        passwordTF.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                passFieldFocusGained(evt);
+                passwordTFFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                passFieldFocusLost(evt);
+                passwordTFFocusLost(evt);
             }
         });
 
-        jButton1.setText("Login");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginButton.setText("Login");
+        loginButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginButtonActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("Login");
+        loginLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        loginLabel.setText("Login");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,30 +87,30 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(167, 167, 167)
-                                .addComponent(jLabel3))
+                                .addComponent(loginLabel))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(68, 68, 68)
-                                .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(usernameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(loginLabel)
                 .addGap(18, 18, 18)
-                .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(usernameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58))
         );
 
@@ -119,58 +122,59 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        if (userField.getText().equals("admin") && passField.getText().equals("pass")){
+        if (usernameTF.getText().equals("user") && passwordTF.getText().equals("password")){
             dispose();
             DailyOrders orderstoday = new DailyOrders();
             orderstoday.show();
+            db = new DatabaseManager();
+        }
+        
             
-        }
-            
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_loginButtonActionPerformed
 
-    private void userFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFieldFocusGained
+    private void usernameTFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTFFocusGained
         // TODO add your handling code here:
-        if(userField.getText().equals("Username"))
+        if(usernameTF.getText().equals("Username"))
         {
-            userField.setText("");
-            userField.setForeground(new Color(153,153,153));
+            usernameTF.setText("");
+            usernameTF.setForeground(new Color(153,153,153));
         } 
-    }//GEN-LAST:event_userFieldFocusGained
+    }//GEN-LAST:event_usernameTFFocusGained
 
-    private void userFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFieldFocusLost
+    private void usernameTFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameTFFocusLost
         // TODO add your handling code here:
-        if(userField.getText().equals(""))
+        if(usernameTF.getText().equals(""))
         {
-            userField.setText("Username");
-            userField.setForeground(new Color(153,153,153));
+            usernameTF.setText("Username");
+            usernameTF.setForeground(new Color(153,153,153));
         }
-    }//GEN-LAST:event_userFieldFocusLost
+    }//GEN-LAST:event_usernameTFFocusLost
 
-    private void passFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passFieldFocusGained
+    private void passwordTFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTFFocusGained
         // TODO add your handling code here:
-        if(passField.getText().equals("Password"))
+        if(passwordTF.getText().equals("Password"))
         {
-            passField.setText("");
-            passField.setForeground(new Color(153,153,153));
+            passwordTF.setText("");
+            passwordTF.setForeground(new Color(153,153,153));
         } 
-    }//GEN-LAST:event_passFieldFocusGained
+    }//GEN-LAST:event_passwordTFFocusGained
 
-    private void passFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passFieldFocusLost
+    private void passwordTFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordTFFocusLost
         // TODO add your handling code here:
-        if(passField.getText().equals(""))
+        if(passwordTF.getText().equals(""))
         {
-            passField.setText("Password");
-            passField.setForeground(new Color(153,153,153));
+            passwordTF.setText("Password");
+            passwordTF.setForeground(new Color(153,153,153));
         }
-    }//GEN-LAST:event_passFieldFocusLost
+    }//GEN-LAST:event_passwordTFFocusLost
 
     /**
      * @param args the command line arguments
@@ -208,10 +212,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField passField;
-    private javax.swing.JTextField userField;
+    private javax.swing.JButton loginButton;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JPasswordField passwordTF;
+    private javax.swing.JTextField usernameTF;
     // End of variables declaration//GEN-END:variables
 }
