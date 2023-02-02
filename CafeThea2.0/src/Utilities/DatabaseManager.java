@@ -4,8 +4,10 @@
  */
 package Utilities;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import javax.swing.JOptionPane;
 /**
  *
@@ -67,6 +69,9 @@ public class DatabaseManager {
         catch (SQLException e) {
             e.printStackTrace();
         }
+        finally {
+            JOptionPane.showMessageDialog(null, "Deleted Entry:"+id);
+        }
     }
     
     public Connection getCon() {
@@ -76,7 +81,7 @@ public class DatabaseManager {
     public Statement getCursor() {
         return cursor;
     }
-    
+            
     public String getColumnName(String tableName, int position) {
         String sql = "SELECT * FROM "+tableName; 
         String columnName = null;
@@ -90,7 +95,11 @@ public class DatabaseManager {
         }
         return columnName;
     }
-    
+    public String getIdRow(String tableName) {
+        String idRow = "";
+        
+        return idRow;
+    }
     public ResultSet getTableSet(String tableName) {//working
         String sql = "SELECT * FROM "+tableName;
         ResultSet stringReturn = null;
@@ -419,6 +428,8 @@ public class DatabaseManager {
     }
     
     private String regexQuery(String query) {
+        List<String> list = new ArrayList<>();
+        
         return null;
     }
     

@@ -625,11 +625,30 @@ public class DynamicDatabase extends javax.swing.JFrame {
 
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
         // TODO add your handling code here:
+        try {
+            newDM.deleteOne(currentTableName, idField.getText());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            setDynamicTable(currentTableName);
+        }
         clearAllFields();
     }//GEN-LAST:event_deleteBtnActionPerformed
 
     private void findBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findBtnActionPerformed
         // TODO add your handling code here:
+        try {
+            String str = getValueString();
+            newDM.getIdRow(currentTableName);
+        }
+        catch (Exception e) {
+            e.printStackTrace();    
+        }
+        finally {
+            setDynamicTable(currentTableName);
+        }
         clearAllFields();
     }//GEN-LAST:event_findBtnActionPerformed
 
