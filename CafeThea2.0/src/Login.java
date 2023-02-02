@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  * @author Bryce
  */
 public class Login extends javax.swing.JFrame {
-
+    //additional funct perhaps - get the password from local mysql root user. or maybe one credential can do such thing.
     /**
      * Creates new form Login
      */
@@ -158,14 +158,6 @@ public class Login extends javax.swing.JFrame {
         catch (Exception e) {
             e.printStackTrace();
         }
-//        if (userField.getText().equalsIgnoreCase(instance.getString("username"))) {
-//            dispose();
-//            DailyOrders orderstoday = new DailyOrders();
-//            orderstoday.show();
-//        }
-//        else {
-//            JOptionPane.showMessageDialog(null, "Wrong credentials!", "System Error", JOptionPane.ERROR_MESSAGE);
-//        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void userFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_userFieldFocusGained

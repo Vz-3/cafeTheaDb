@@ -68,6 +68,14 @@ public class DatabaseManager {
         }
     }
     
+    public Connection getCon() {
+        return con;
+    }
+    
+    public Statement getCursor() {
+        return cursor;
+    }
+    
     public String getColumnName(String tableName, int position) {
         String sql = "SELECT * FROM "+tableName; 
         String columnName = null;
@@ -340,7 +348,7 @@ public class DatabaseManager {
         }
     }
     
-    private String getConfigure(String tableName) {//obsolete
+    public String getConfigure(String tableName) {//obsolete
         String text = "";
         try {
             switch (tableName) {

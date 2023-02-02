@@ -1,3 +1,6 @@
+
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +11,7 @@
  *
  * @author Bryce
  */
+
 public class MainHub extends javax.swing.JFrame {
 
     /**
@@ -17,6 +21,8 @@ public class MainHub extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        this.setTitle("Main Hub");
+        //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -36,10 +42,10 @@ public class MainHub extends javax.swing.JFrame {
         expOrdersTA = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         schedScreenTA = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        OrderServices = new javax.swing.JButton();
+        Database = new javax.swing.JButton();
+        ViewTransactions = new javax.swing.JButton();
+        RequestResupply = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 500));
@@ -87,13 +93,28 @@ public class MainHub extends javax.swing.JFrame {
         schedScreenTA.setText("Schedule Screen");
         jScrollPane2.setViewportView(schedScreenTA);
 
-        jButton1.setText("<html><center>Manage Order<p>and Services</center></html>");
+        OrderServices.setText("<html><center>Manage Order<p>and Services</center></html>");
+        OrderServices.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderServicesActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("<html><center>Manage<p>Database</center></html>");
+        Database.setText("<html><center>Manage<p>Database</center></html>");
+        Database.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DatabaseActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("<html><center>View<p>Transactions</center></html>");
+        ViewTransactions.setText("<html><center>View<p>Transactions</center></html>");
 
-        jButton4.setText("<html><center>Request<p>Resupply</center></html>");
+        RequestResupply.setText("<html><center>Request<p>Resupply</center></html>");
+        RequestResupply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RequestResupplyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -102,16 +123,16 @@ public class MainHub extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(OrderServices, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Database, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(RequestResupply, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ViewTransactions, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -124,10 +145,10 @@ public class MainHub extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(OrderServices, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Database, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ViewTransactions, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RequestResupply, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -142,6 +163,25 @@ public class MainHub extends javax.swing.JFrame {
         Database database = new Database();
         database.show();
     }//GEN-LAST:event_manageDataBtnActionPerformed
+
+    private void OrderServicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderServicesActionPerformed
+        // TODO add your handling code here:
+        Order order = new Order();
+        dispose();
+        order.setVisible(true);
+    }//GEN-LAST:event_OrderServicesActionPerformed
+
+    private void DatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DatabaseActionPerformed
+        // TODO add your handling code here:
+        DynamicDatabase database = new DynamicDatabase();
+        dispose();
+        database.setVisible(true);
+    }//GEN-LAST:event_DatabaseActionPerformed
+
+    private void RequestResupplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RequestResupplyActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_RequestResupplyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,12 +219,12 @@ public class MainHub extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Database;
+    private javax.swing.JButton OrderServices;
+    private javax.swing.JButton RequestResupply;
+    private javax.swing.JButton ViewTransactions;
     private javax.swing.JTable currentOrders;
     private javax.swing.JTextArea expOrdersTA;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

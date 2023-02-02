@@ -1,3 +1,12 @@
+
+import java.sql.ResultSet;
+import Utilities.DatabaseManager;
+import java.awt.CardLayout;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -12,12 +21,20 @@ public class DynamicDatabase extends javax.swing.JFrame {
     /**
      * Creates new form DynamicDatabase
      */
+    
+    CardLayout fieldsPanelCard;
+    
+    DatabaseManager newDM;
     public DynamicDatabase() {
         initComponents();
-        this.setLocationRelativeTo(null);
         this.setResizable(false);
+        this.setSize(915, 610);
+        this.setTitle("CafeThea Database");
+        this.setLocationRelativeTo(null);
+        newDM = new DatabaseManager();
+        fieldsPanelCard = (CardLayout)(fieldsPanel.getLayout());
+        switchPanels(0);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,37 +44,641 @@ public class DynamicDatabase extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        base = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        databaseTable = new javax.swing.JTable();
+        tablePanel = new javax.swing.JPanel();
+        menuitem = new javax.swing.JButton();
+        service = new javax.swing.JButton();
+        resource = new javax.swing.JButton();
+        supplier = new javax.swing.JButton();
+        HomeBtn = new javax.swing.JButton();
+        fieldsPanel = new javax.swing.JPanel();
+        menuPanel = new javax.swing.JPanel();
+        mCostField = new javax.swing.JTextField();
+        mNameField = new javax.swing.JTextField();
+        mCatLabel = new javax.swing.JLabel();
+        mCostLabel = new javax.swing.JLabel();
+        mNameLabel = new javax.swing.JLabel();
+        mComboBox = new javax.swing.JComboBox<>();
+        servicePanel = new javax.swing.JPanel();
+        sNameLabel = new javax.swing.JLabel();
+        sNameField = new javax.swing.JTextField();
+        sCostLabel = new javax.swing.JLabel();
+        sCostField = new javax.swing.JTextField();
+        sDesField = new javax.swing.JTextField();
+        sDesLabel = new javax.swing.JLabel();
+        inventoryPanel = new javax.swing.JPanel();
+        rNameLabel = new javax.swing.JLabel();
+        rNameField = new javax.swing.JTextField();
+        rCostField = new javax.swing.JTextField();
+        rQtyField = new javax.swing.JTextField();
+        rSupField = new javax.swing.JTextField();
+        rSupLabel = new javax.swing.JLabel();
+        rCostLabel = new javax.swing.JLabel();
+        rQtyLabel = new javax.swing.JLabel();
+        supplierPanel = new javax.swing.JPanel();
+        suName = new javax.swing.JTextField();
+        suConField = new javax.swing.JTextField();
+        suNameLabel = new javax.swing.JLabel();
+        suConLabel = new javax.swing.JLabel();
+        crudPanel = new javax.swing.JPanel();
+        findBtn = new javax.swing.JButton();
+        deleteBtn = new javax.swing.JButton();
+        createBtn = new javax.swing.JButton();
+        updateBtn = new javax.swing.JButton();
+        idField = new javax.swing.JTextField();
+        idLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        base.setBackground(new java.awt.Color(255, 255, 204));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 843, Short.MAX_VALUE)
+        databaseTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        databaseTable.setFillsViewportHeight(true);
+        jScrollPane1.setViewportView(databaseTable);
+
+        menuitem.setText("Menu");
+        menuitem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuitemActionPerformed(evt);
+            }
+        });
+
+        service.setText("Service");
+        service.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceActionPerformed(evt);
+            }
+        });
+
+        resource.setText("Inventory");
+        resource.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resourceActionPerformed(evt);
+            }
+        });
+
+        supplier.setText("Supplier");
+        supplier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                supplierActionPerformed(evt);
+            }
+        });
+
+        HomeBtn.setText("Home");
+        HomeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(menuitem)
+                .addGap(18, 18, 18)
+                .addComponent(service)
+                .addGap(18, 18, 18)
+                .addComponent(resource)
+                .addGap(18, 18, 18)
+                .addComponent(supplier)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(HomeBtn)
+                .addGap(15, 15, 15))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 606, Short.MAX_VALUE)
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menuitem, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                    .addComponent(service, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(resource, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(supplier, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(HomeBtn))
+                .addContainerGap())
+        );
+
+        fieldsPanel.setLayout(new java.awt.CardLayout());
+
+        menuPanel.setBackground(new java.awt.Color(51, 255, 204));
+
+        mCatLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        mCatLabel.setText("Category");
+
+        mCostLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        mCostLabel.setText("Menu Cost");
+
+        mNameLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        mNameLabel.setText("Menu Name");
+
+        mComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tray Dishes", "Meals", "Drinks", "Jar Products" }));
+
+        javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
+        menuPanel.setLayout(menuPanelLayout);
+        menuPanelLayout.setHorizontalGroup(
+            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mNameField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(mComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mCostField)
+                    .addGroup(menuPanelLayout.createSequentialGroup()
+                        .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mCostLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mCatLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 8, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        menuPanelLayout.setVerticalGroup(
+            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(mCostLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mCostField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(mCatLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+
+        fieldsPanel.add(menuPanel, "card2");
+
+        servicePanel.setBackground(new java.awt.Color(204, 255, 102));
+
+        sNameLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        sNameLabel.setText("Name");
+
+        sNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sNameFieldActionPerformed(evt);
+            }
+        });
+
+        sCostLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        sCostLabel.setText("Cost");
+
+        sCostField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sCostFieldActionPerformed(evt);
+            }
+        });
+
+        sDesField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sDesFieldActionPerformed(evt);
+            }
+        });
+
+        sDesLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        sDesLabel.setText("Description");
+
+        javax.swing.GroupLayout servicePanelLayout = new javax.swing.GroupLayout(servicePanel);
+        servicePanel.setLayout(servicePanelLayout);
+        servicePanelLayout.setHorizontalGroup(
+            servicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(servicePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(servicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sNameField)
+                    .addGroup(servicePanelLayout.createSequentialGroup()
+                        .addGroup(servicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sCostLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sDesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 8, Short.MAX_VALUE))
+                    .addComponent(sCostField)
+                    .addComponent(sDesField))
+                .addContainerGap())
+        );
+        servicePanelLayout.setVerticalGroup(
+            servicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(servicePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(sCostLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sCostField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(sDesLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sDesField, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        fieldsPanel.add(servicePanel, "card3");
+
+        inventoryPanel.setBackground(new java.awt.Color(204, 0, 255));
+
+        rNameLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        rNameLabel.setText("Name");
+
+        rSupLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        rSupLabel.setText("Supplier");
+
+        rCostLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        rCostLabel.setText("Cost");
+
+        rQtyLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        rQtyLabel.setText("Quantity");
+
+        javax.swing.GroupLayout inventoryPanelLayout = new javax.swing.GroupLayout(inventoryPanel);
+        inventoryPanel.setLayout(inventoryPanelLayout);
+        inventoryPanelLayout.setHorizontalGroup(
+            inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inventoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rNameField)
+                    .addComponent(rQtyField)
+                    .addComponent(rSupField)
+                    .addGroup(inventoryPanelLayout.createSequentialGroup()
+                        .addGroup(inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rSupLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rCostLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rQtyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 8, Short.MAX_VALUE))
+                    .addComponent(rCostField))
+                .addContainerGap())
+        );
+        inventoryPanelLayout.setVerticalGroup(
+            inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inventoryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rCostLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(rCostField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rQtyLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rQtyField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rSupLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rSupField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        fieldsPanel.add(inventoryPanel, "card4");
+
+        supplierPanel.setBackground(new java.awt.Color(204, 102, 0));
+
+        suNameLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        suNameLabel.setText("Name");
+
+        suConLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        suConLabel.setText("Contact");
+
+        javax.swing.GroupLayout supplierPanelLayout = new javax.swing.GroupLayout(supplierPanel);
+        supplierPanel.setLayout(supplierPanelLayout);
+        supplierPanelLayout.setHorizontalGroup(
+            supplierPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(supplierPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(supplierPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(suConField, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                    .addComponent(suName, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(suNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(suConLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        supplierPanelLayout.setVerticalGroup(
+            supplierPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, supplierPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(suNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(suName, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(suConLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(suConField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(170, Short.MAX_VALUE))
+        );
+
+        fieldsPanel.add(supplierPanel, "card5");
+
+        findBtn.setText("FIND");
+        findBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findBtnActionPerformed(evt);
+            }
+        });
+
+        deleteBtn.setText("DELETE");
+        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtnActionPerformed(evt);
+            }
+        });
+
+        createBtn.setText("CREATE");
+        createBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createBtnActionPerformed(evt);
+            }
+        });
+
+        updateBtn.setText("UPDATE");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crudPanelLayout = new javax.swing.GroupLayout(crudPanel);
+        crudPanel.setLayout(crudPanelLayout);
+        crudPanelLayout.setHorizontalGroup(
+            crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crudPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(deleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                    .addComponent(createBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(findBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        crudPanelLayout.setVerticalGroup(
+            crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crudPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(createBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(updateBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(crudPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(deleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addComponent(findBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        idLabel.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        idLabel.setText("ID");
+
+        javax.swing.GroupLayout baseLayout = new javax.swing.GroupLayout(base);
+        base.setLayout(baseLayout);
+        baseLayout.setHorizontalGroup(
+            baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(baseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(baseLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(crudPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fieldsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(idField)
+                            .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        baseLayout.setVerticalGroup(
+            baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, baseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tablePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(baseLayout.createSequentialGroup()
+                        .addComponent(idLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fieldsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(crudPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(base, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(base, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    String currentTableName = "";
+    private void switchPanels(int panelNum) {
+        switch (panelNum) {
+            case 0:
+                fieldsPanelCard.show(fieldsPanel, "card2");
+                currentTableName = "menuitem";
+                break;
+            case 1:
+                fieldsPanelCard.show(fieldsPanel, "card3");
+                currentTableName = "service";
+                break;
+            case 2:
+                fieldsPanelCard.show(fieldsPanel, "card4");
+                currentTableName = "resource";
+                break;
+            case 3:
+                fieldsPanelCard.show(fieldsPanel, "card5");
+                currentTableName = "supplier";
+                break;
+            default:
+                //System.out.println("Error - panelNum out of bounds");
+                break;
+        }
+        //System.out.println("-"+currentTableName);;
+        //setDynamicTable(currentTableName); 
+    }
+    
+    private void setDynamicTable(String tableName) {
+        
+    }
+    private void createBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createBtnActionPerformed
 
+    private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
+        // TODO add your handling code here:
+        MainHub main = new MainHub();
+        dispose();
+        main.setVisible(true);
+    }//GEN-LAST:event_HomeBtnActionPerformed
+
+    private void menuitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuitemActionPerformed
+        // TODO add your handling code here:
+        switchPanels(0);
+    }//GEN-LAST:event_menuitemActionPerformed
+
+    private void serviceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceActionPerformed
+        // TODO add your handling code here:
+        switchPanels(1);
+    }//GEN-LAST:event_serviceActionPerformed
+
+    private void resourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resourceActionPerformed
+        // TODO add your handling code here:
+        switchPanels(2);
+    }//GEN-LAST:event_resourceActionPerformed
+
+    private void supplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supplierActionPerformed
+        // TODO add your handling code here:
+        switchPanels(3);
+    }//GEN-LAST:event_supplierActionPerformed
+
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateBtnActionPerformed
+
+    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteBtnActionPerformed
+
+    private void findBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_findBtnActionPerformed
+
+    private void sNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sNameFieldActionPerformed
+
+    private void sCostFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sCostFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sCostFieldActionPerformed
+
+    private void sDesFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sDesFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sDesFieldActionPerformed
+
+    public void updateById() {
+        try {
+            String tableName = currentTableName;
+            int idVal = 0;
+            String idName = newDM.getConfigure(tableName);
+            String startStatement = "update "+tableName+" set ";
+            //String betweenStatement = updateConfigure(tableName);
+            Statement cursor = newDM.getCursor();
+            Connection con = newDM.getCon();
+            String betweenStatement  = "";
+            //
+            ResultSet resultSet = cursor.executeQuery("SELECT * FROM "+tableName);
+
+            // Get the metadata of the ResultSet
+            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+
+            // Get the number of columns in the ResultSet
+            int columnCount = resultSetMetaData.getColumnCount();
+              // Loop through all columns of the current row
+            for (int i = 1; i <= columnCount; i++) {
+                betweenStatement += resultSetMetaData.getColumnName(i) + " = ?, ";
+            }
+            betweenStatement = betweenStatement.substring(0, betweenStatement.length() - 2);
+            //
+            String endStatement = " where "+idName+" = "+idVal;
+            String query = startStatement+betweenStatement+endStatement;
+            PreparedStatement ps = con.prepareStatement(query);
+            
+            //this entire switch statement heavily relies on the gui component
+            ps.setInt(1, 2);
+            switch (tableName) {
+                case "menuitem":
+                    ps.setString(2, mNameField.getText());
+                    ps.setFloat(3, Integer.parseInt(mCostField.getText()));
+                    ps.setString(4, mComboBox.getSelectedItem().toString());
+                    break;
+                case "supplier":
+                    ps.setString(2, "getComponent");
+                    ps.setInt(2, 10);
+                    break;
+                case "resource":
+                    ps.setString(2, "getComponent");
+                    ps.setFloat(3, 10.0f);
+                    ps.setInt(4, 100);
+                    ps.setInt(5, 10);
+                    ps.setInt(6, 1);
+                    break;
+//                case "customer":
+//                    ps.setString(2, "getComponent");
+//                    ps.setString(3, "fromGUI");
+//                    ps.setInt(4, 123456789); //integer too large, welp
+//                    ps.setString(5, "tightCoupling");
+//                    break;
+                case "service":
+                    ps.setString(2, "getComponent");
+                    ps.setFloat(3, 10.0f);
+                    ps.setFloat(4, 10.0f);
+                    ps.setString(5, "fromGUI");
+                    break;
+//                case "credentials":
+//                    ps.setString(2, "getComponent");
+//                    ps.setString(3, "fromGUI");
+//                    break;
+//                case "orderrequest":
+//                    ps.setInt(2, 10);
+//                    ps.setInt(3, 11);
+//                    ps.setInt(4, 12);
+//                    ps.setString(5, "getComponent");
+//                    //declaration of calendar and date
+//                    cldr = Calendar.getInstance();
+//                    cldr.set(2023, Calendar.JANUARY, 1);//date desired ; year month day
+//                    date = cldr.getTime();
+//                    ps.setDate(6, new java.sql.Date(date.getTime()));
+//                    ps.setString(7, "getComboBox"); //hmmm hope this works
+//                    ps.setString(8, "fromGUI");
+//                    ps.setFloat(9, 10.0f);
+//                    break;
+//                case "receipt":
+//                    cldr = Calendar.getInstance();
+//                    cldr.set(2023, Calendar.JANUARY, 1, 12, 0, 0);//date desired ; year month day hour minute second
+//                    date = cldr.getTime();
+//                    ps.setDate(2, new java.sql.Date(date.getTime()));
+//                    ps.setInt(3, 10);
+//                    break;
+                default:
+                    System.out.println("Error");
+                    break;
+            }
+            //
+            System.out.println(query);
+            ps.executeUpdate();
+            System.out.println(ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -94,6 +715,50 @@ public class DynamicDatabase extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton HomeBtn;
+    private javax.swing.JPanel base;
+    private javax.swing.JButton createBtn;
+    private javax.swing.JPanel crudPanel;
+    private javax.swing.JTable databaseTable;
+    private javax.swing.JButton deleteBtn;
+    private javax.swing.JPanel fieldsPanel;
+    private javax.swing.JButton findBtn;
+    private javax.swing.JTextField idField;
+    private javax.swing.JLabel idLabel;
+    private javax.swing.JPanel inventoryPanel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel mCatLabel;
+    private javax.swing.JComboBox<String> mComboBox;
+    private javax.swing.JTextField mCostField;
+    private javax.swing.JLabel mCostLabel;
+    private javax.swing.JTextField mNameField;
+    private javax.swing.JLabel mNameLabel;
+    private javax.swing.JPanel menuPanel;
+    private javax.swing.JButton menuitem;
+    private javax.swing.JTextField rCostField;
+    private javax.swing.JLabel rCostLabel;
+    private javax.swing.JTextField rNameField;
+    private javax.swing.JLabel rNameLabel;
+    private javax.swing.JTextField rQtyField;
+    private javax.swing.JLabel rQtyLabel;
+    private javax.swing.JTextField rSupField;
+    private javax.swing.JLabel rSupLabel;
+    private javax.swing.JButton resource;
+    private javax.swing.JTextField sCostField;
+    private javax.swing.JLabel sCostLabel;
+    private javax.swing.JTextField sDesField;
+    private javax.swing.JLabel sDesLabel;
+    private javax.swing.JTextField sNameField;
+    private javax.swing.JLabel sNameLabel;
+    private javax.swing.JButton service;
+    private javax.swing.JPanel servicePanel;
+    private javax.swing.JTextField suConField;
+    private javax.swing.JLabel suConLabel;
+    private javax.swing.JTextField suName;
+    private javax.swing.JLabel suNameLabel;
+    private javax.swing.JButton supplier;
+    private javax.swing.JPanel supplierPanel;
+    private javax.swing.JPanel tablePanel;
+    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 }
