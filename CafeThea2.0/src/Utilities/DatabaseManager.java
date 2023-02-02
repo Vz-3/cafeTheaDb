@@ -601,3 +601,101 @@ public class DatabaseManager {
         //cafeTheaDb.updateById("menuitem", 2);
     }
 }
+
+
+//private void updateById() {
+//        try {
+//            String tableName = currentTableName;
+//            int idVal = 0;
+//            String idName = newDM.getConfigure(tableName);
+//            String startStatement = "update "+tableName+" set ";
+//            //String betweenStatement = updateConfigure(tableName);
+//            Statement cursor = newDM.getCursor();
+//            Connection con = newDM.getCon();
+//            String betweenStatement  = "";
+//            //
+//            ResultSet resultSet = cursor.executeQuery("SELECT * FROM "+tableName);
+//
+//            // Get the metadata of the ResultSet
+//            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+//
+//            // Get the number of columns in the ResultSet
+//            int columnCount = resultSetMetaData.getColumnCount();
+//              // Loop through all columns of the current row
+//            for (int i = 1; i <= columnCount; i++) {
+//                betweenStatement += resultSetMetaData.getColumnName(i) + " = ?, ";
+//            }
+//            betweenStatement = betweenStatement.substring(0, betweenStatement.length() - 2);
+//            //
+//            String endStatement = " where "+idName+" = "+idVal;
+//            String query = startStatement+betweenStatement+endStatement;
+//            PreparedStatement ps = con.prepareStatement(query);
+//            
+//            //this entire switch statement heavily relies on the gui component
+//            ps.setInt(1, 2);
+//            switch (tableName) {
+//                case "menuitem":
+//                    ps.setString(2, mNameField.getText());
+//                    ps.setFloat(3, Integer.parseInt(mCostField.getText()));
+//                    ps.setString(4, mComboBox.getSelectedItem().toString());
+//                    break;
+//                case "supplier":
+//                    ps.setString(2, "getComponent");
+//                    ps.setInt(2, 10);
+//                    break;
+//                case "resource":
+//                    ps.setString(2, "getComponent");
+//                    ps.setFloat(3, 10.0f);
+//                    ps.setInt(4, 100);
+//                    ps.setInt(5, 10);
+//                    ps.setInt(6, 1);
+//                    break;
+////                case "customer":
+////                    ps.setString(2, "getComponent");
+////                    ps.setString(3, "fromGUI");
+////                    ps.setInt(4, 123456789); //integer too large, welp
+////                    ps.setString(5, "tightCoupling");
+////                    break;
+//                case "service":
+//                    ps.setString(2, "getComponent");
+//                    ps.setFloat(3, 10.0f);
+//                    ps.setFloat(4, 10.0f);
+//                    ps.setString(5, "fromGUI");
+//                    break;
+////                case "credentials":
+////                    ps.setString(2, "getComponent");
+////                    ps.setString(3, "fromGUI");
+////                    break;
+////                case "orderrequest":
+////                    ps.setInt(2, 10);
+////                    ps.setInt(3, 11);
+////                    ps.setInt(4, 12);
+////                    ps.setString(5, "getComponent");
+////                    //declaration of calendar and date
+////                    cldr = Calendar.getInstance();
+////                    cldr.set(2023, Calendar.JANUARY, 1);//date desired ; year month day
+////                    date = cldr.getTime();
+////                    ps.setDate(6, new java.sql.Date(date.getTime()));
+////                    ps.setString(7, "getComboBox"); //hmmm hope this works
+////                    ps.setString(8, "fromGUI");
+////                    ps.setFloat(9, 10.0f);
+////                    break;
+////                case "receipt":
+////                    cldr = Calendar.getInstance();
+////                    cldr.set(2023, Calendar.JANUARY, 1, 12, 0, 0);//date desired ; year month day hour minute second
+////                    date = cldr.getTime();
+////                    ps.setDate(2, new java.sql.Date(date.getTime()));
+////                    ps.setInt(3, 10);
+////                    break;
+//                default:
+//                    System.out.println("Error");
+//                    break;
+//            }
+//            //
+//            System.out.println(query);
+//            ps.executeUpdate();
+//            System.out.println(ps);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
