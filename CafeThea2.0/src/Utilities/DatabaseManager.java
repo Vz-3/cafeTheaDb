@@ -302,7 +302,7 @@ public class DatabaseManager {
         return list;
     }
     
-    public void selectAll(String tableName) {
+    public ResultSet selectAll(String tableName) {
         try {
             ResultSet resultSet = cursor.executeQuery("SELECT * from "+tableName);
             ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
@@ -314,15 +314,29 @@ public class DatabaseManager {
             while (resultSet.next()) {
               // Loop through all columns of the current row
               for (int i = 1; i <= columnCount; i++) {
-                System.out.print(resultSet.getString(i) + " ");
+                //System.out.print(resultSet.getString(i) + " ");
               }
-              System.out.println();
+              //System.out.println();
             }
+            return resultSet;
         }
         catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         }
+        return null;
     }   
+    public ResultSet selectId2(String tableName, String idVal) {
+        try {
+            String idName = getConfigure(tableName);
+            String query = "SELECT * FROM "+tableName+" WHERE "+idName+ " = "+idVal;
+            ResultSet resultSet = cursor.executeQuery(query);
+            return resultSet;
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     
     public String selectId(String tableName, String idVal) {
         try {
@@ -348,25 +362,42 @@ public class DatabaseManager {
         return null;
     }
             
-    public void selectQuery(String tableName, String statement, String statementVal) {
+    public String selectQuery(String tableName, String statement, String statementVal) {
         try {
             String query = "SELECT * FROM "+tableName+" WHERE "+statement+ " = "+statementVal;
             ResultSet resultSet = cursor.executeQuery(query);
             ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
-
+            String values = "";
             // Get the number of columns in the ResultSet
             int columnCount = resultSetMetaData.getColumnCount();
             while (resultSet.next()) {
               // Loop through all columns of the current row
               for (int i = 1; i <= columnCount; i++) {
-                System.out.print(resultSet.getString(i) + " ");
+                 values += resultSet.getString(i) + "!";
               }
-              System.out.println();
             }
+            values = values.substring(0,values.length()-1);
+            return values;
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
+    }
+    
+    public ResultSet selectQueryRS(String tableName, String statement, String statementVal) {
+        try {
+            String query = "SELECT * FROM "+tableName+" WHERE "+statement+ " = "+statementVal;
+            ResultSet resultSet = cursor.executeQuery(query);
+            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+            // Get the number of columns in the ResultSet
+            int columnCount = resultSetMetaData.getColumnCount();
+            return resultSet;
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
     
     public void sortById(String tableName, boolean asc) {
